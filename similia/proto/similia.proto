@@ -1,0 +1,233 @@
+/*
+This file defines similia protocol buffers that are used to:
+-Define the grpc request/response objects and service definitions such that we can make
+RPC requests between various binaries.
+*/
+
+syntax = "proto3";
+
+package similia.proto;
+
+option java_package = "io.lefty.similia.proto";
+option java_outer_classname = "SimiliaProto";
+
+// protobuf message to store a matrix. Storage is row prior. A(i, j) = element[i * num_cols + j]
+message FloatMatrix {
+  int32 num_rows = 1;
+  int32 num_cols = 2;
+  repeated float element = 3;
+}
+
+// features of an image.
+message Features {
+  // list of features. For GoogLeNet it's 1024 float elements.
+  repeated float element = 1;
+}
+
+message CompressingClustersIds {
+  // 32 char (encoded as varint for convenience)
+  repeated int32 id = 1;
+}
+
+message IndexingClustersIds {
+  // 2 14-bit numbers (encoded as varint for convenience)
+  repeated int32 id = 1;
+}
+
+// CompressedElement is an id and its compressing clusters ids.
+message CompressedElement {
+  string id = 1;
+  CompressingClustersIds compressing_clusters_id = 2;
+}
+
+// Same as above but where its compressing clusters ids are serialized.
+message SerializedCompressedElement {
+  string id = 1;
+  bytes compressing_clusters_id = 2;
+}
+
+// This definition is safer but slower.
+message CompressedElementsCombined {
+  repeated CompressedElement compressed_element = 1;
+}
+
+// Same as above but with compressing clusters ids serialized.
+message SerializedCompressedElementsCombined {
+  repeated SerializedCompressedElement compressed_element = 1;
+}
+
+// This definition doesn't ensure a bijection but leads to faster implementation.
+message CompressedElements {
+  repeated string id = 1;
+  repeated CompressingClustersIds compressing_clusters_id = 2;
+}
+
+// Same as above but with compressing clusters ids serialized.
+message SerializedCompressedElements {
+  repeated string id = 1;
+  repeated bytes compressing_clusters_id = 2;
+}
+
+// This definition is convenient but uselessly slow.
+message CompressedElementsMap {
+  // image_id -> CompressingClustersIds
+  map<string, CompressingClustersIds> compressed_element = 1;
+}
+
+// Request to get similiar images.
+message SimiliaSearchRequest {
+  // image_id of the query image.
+  string image_id = 1;
+
+  // Number of similar images to return.
+  int32 num_nearest = 2;
+
+  // Features of the image. Useful for images that are not indexed.
+  Features features = 3;
+}
+
+// Response to SimiliaSearchRequest.
+message SimiliaSearchResponse {
+  // List of image_id of similar images. Length <= num_nearest in the request.
+  repeated string image_id = 1;
+
+  // Time in millis it took to find similar images.
+  int64 processing_time_ms = 2;
+
+  // List of squared_distance between images features and the request features. Same length as image_id.
+  repeated double squared_distance = 3;
+}
+
+// The service definition for Similia (the search service).
+service Similia {
+  // Search for images similar to the image in the request.
+  rpc SimiliaSearch(SimiliaSearchRequest) returns (SimiliaSearchResponse) {}
+}
+
+// Request to insert element to MultiIndex.
+message MultiIndexAddRequest {
+  // image_id of the corresponding features.
+  string image_id = 1;
+
+  // Indexing Clusters assignments
+  IndexingClustersIds indexing_ids = 2;
+
+  // Compressing Clusters assignments
+  CompressingClustersIds compressing_ids = 3;
+}
+
+// Response to MultiIndexAddRequest.
+message MultiIndexAddResponse {
+  // Time in millis it took to add element to index.
+  int64 processing_time_ms = 2;
+}
+
+// Request to get all elements from a cell.
+message MultiIndexGetRequest {
+  // Indexing Clusters ids.
+  IndexingClustersIds indexing_ids = 1;
+}
+
+// Response to MultiIndexGetRequest.
+message MultiIndexGetResponse {
+  // Time in millis it took to get elements from cell.
+  int64 processing_time_ms = 2;
+
+  // Elements. This is a serialized CompressedElements flatbuffers.
+  bytes compressed_elements = 3;
+}
+
+// Request to get all elements from multiple cells.
+message MultiIndexMultiGetRequest {
+  // Indexing Clusters ids.
+  repeated IndexingClustersIds indexing_ids = 1;
+
+  // Stop querying when this count is attained.
+  int32 count_limit = 2;
+}
+
+// Response to MultiIndexMultiGetRequest.
+message MultiIndexMultiGetResponse {
+  // Time in millis it took to get elements from cell.
+  int64 processing_time_ms = 2;
+
+  // Elements. Same ordering as the indexing_ids of the request. After count_limit images the elements are empty.
+  // These are serialized CompressedElements flatbuffers.
+  repeated bytes compressed_elements = 3;
+}
+
+// Request to get count of images from multiple cells.
+message MultiIndexMultiCountRequest {
+  // Indexing Clusters ids.
+  repeated IndexingClustersIds indexing_ids = 1;
+}
+
+// Response to MultiIndexMultiCountRequest.
+message MultiIndexMultiCountResponse {
+  // Time in millis it took to get elements from cell.
+  int64 processing_time_ms = 2;
+
+  // Elements. Same ordering as the indexing_ids of the request.
+  repeated int32 count = 3;
+}
+
+// Request to insert multiple elements to MultiIndex.
+message MultiIndexMultiAddRequest {
+  // Add requests.
+  repeated MultiIndexAddRequest multi_index_add_request = 1;
+}
+
+// Response to MultiIndexMultiAddRequest.
+message MultiIndexMultiAddResponse {
+  // Time in millis it took to add element to index.
+  int64 processing_time_ms = 2;
+}
+
+// The service definition of the inverted multi index (read by similia and written by index processor)
+service InvertedMultiIndex {
+  // Add element to a cell.
+  rpc Add(MultiIndexAddRequest) returns (MultiIndexAddResponse) {}
+
+  // Get all elements from a cell.
+  rpc Get(MultiIndexGetRequest) returns (MultiIndexGetResponse) {}
+
+  // Get all elements from multiple cells.
+  rpc MultiGet(MultiIndexMultiGetRequest) returns (MultiIndexMultiGetResponse) {}
+
+  // Get images counts from multiple cells.
+  rpc MultiCount(MultiIndexMultiCountRequest) returns (MultiIndexMultiCountResponse) {}
+
+  // Get images counts from multiple cells.
+  rpc MultiCountAtLastStartup(MultiIndexMultiCountRequest) returns (MultiIndexMultiCountResponse) {}
+
+  // Add multiple elements to cells.
+  rpc MultiAdd(MultiIndexMultiAddRequest) returns (MultiIndexMultiAddResponse) {}
+}
+
+// The quantization request
+message QuantizationRequest {
+  // The features to be quantized.
+  Features features = 1;
+
+  // The image id of the corresponding image.
+  string image_id = 2;
+}
+
+// The response to the quantization request.
+message QuantizationResponse {
+  // Time in millis it took to quantize the features.
+  int64 processing_time_ms = 2;
+
+  // Compressing Clusters ids.
+  CompressingClustersIds compressing_ids = 3;
+
+  // Indexing Clusters ids.
+  IndexingClustersIds indexing_ids = 4;
+}
+
+// The service definition of the multi product quantizer (used by index processor)
+service MultiProductQuantizer {
+  // Quantize a vector of features
+  rpc Quantize(QuantizationRequest) returns (QuantizationResponse) {}
+}
+

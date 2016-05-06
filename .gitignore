@@ -1,0 +1,6 @@
+**/*.a
+**/*.cmake
+**/CMakeFiles
+**/CMakeCache.txt
+**/Makefile
+build

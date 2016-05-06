@@ -1,0 +1,16 @@
+// This file describes the compressed elements flatbuffers used in similia.
+
+include "compressing_ids.fbs";
+
+namespace similia.fbs;
+
+table SerializedCompressingIds {
+  compressing_ids:[ubyte] (original_order, nested_flatbuffer: "CompressingIds");
+}
+
+table CompressedElements {
+  id:[string] (original_order);
+  compressing_ids:[SerializedCompressingIds] (original_order);
+}
+
+root_type CompressedElements;

@@ -1,0 +1,10 @@
+// This file describes the compressing ids flatbuffers used in similia.
+
+namespace similia.fbs;
+
+/// The compressing ids are integer between 0 and 255 (encoded as ubyte)
+table CompressingIds {
+  id:[ubyte] (original_order);
+}
+
+root_type CompressingIds;
