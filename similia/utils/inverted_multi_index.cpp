@@ -12,7 +12,7 @@
 #include <rocksdb/table.h>
 #include <rocksdb/write_batch.h>
 
-#include <common/utils/base.h>
+#include <similia/common/utils/base.h>
 #include <similia/proto/compressed_elements_generated.h>
 #include <similia/proto/compressing_ids_generated.h>
 
