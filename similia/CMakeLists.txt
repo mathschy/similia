@@ -71,6 +71,7 @@ add_library(similia_utils_inverted_multi_index_lib
 target_link_libraries(similia_utils_inverted_multi_index_lib
   similia_proto_lib
   rocksdb
+  jemalloc
   z
   bz2
   snappy
