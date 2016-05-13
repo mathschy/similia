@@ -1,5 +1,7 @@
 project(utils)
 
+# activate flag to have caffe's AddMatVector definition
+add_definitions(-DUSE_OPENCV)
 
 add_library(similia_utils_features_utils_lib
   ${PROJECT_SOURCE_DIR}/features_utils.cpp
@@ -63,4 +65,27 @@ target_link_libraries(similia_utils_inverted_multi_index_lib
   bz2
   snappy
   pthread
+)
+
+add_library(similia_utils_cropping_utils_lib
+  ${PROJECT_SOURCE_DIR}/cropping_utils.cpp
+)
+
+target_link_libraries(similia_utils_cropping_utils_lib
+  glog
+  opencv_core
+)
+
+
+add_library(similia_utils_features_extractor_lib
+  ${PROJECT_SOURCE_DIR}/features_extractor.cpp
+)
+
+target_link_libraries(similia_utils_features_extractor_lib
+  similia_utils_cropping_utils_lib
+  /opt/caffe/build/lib/libcaffe.so
+  opencv_core
+  opencv_highgui
+  opencv_imgproc
+  protobuf
 )

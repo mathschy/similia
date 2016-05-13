@@ -1,6 +1,10 @@
 project(similia)
+include_directories(/opt/caffe/build/src)
+include_directories(/opt/caffe/include)
+include_directories(/usr/local/cuda-7.5/include)
 
 add_subdirectory(proto)
 add_subdirectory(common)
 add_subdirectory(utils)
 add_subdirectory(servers)
+add_subdirectory(tools)
