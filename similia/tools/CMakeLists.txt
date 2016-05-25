@@ -22,3 +22,19 @@ target_link_libraries(similia_tools_similia_test_client
   protobuf
   pthread
 )
+
+add_executable(similia_tools_inverted_multi_index_test_client
+  ${PROJECT_SOURCE_DIR}/inverted_multi_index_test_client.cpp
+)
+
+set_target_properties(similia_tools_inverted_multi_index_test_client
+  PROPERTIES OUTPUT_NAME inverted_multi_index_test_client
+)
+
+target_link_libraries(similia_tools_inverted_multi_index_test_client
+  similia_proto_lib
+  ${Boost_LIBRARIES}
+  gflags
+  glog
+  grpc++_unsecure
+)
