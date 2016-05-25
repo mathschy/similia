@@ -5,13 +5,11 @@
 #include <boost/algorithm/string.hpp>
 #include <caffe/caffe.hpp>
 #include <caffe/layers/memory_data_layer.hpp>
-#include <google/protobuf/text_format.h>
 #include <opencv2/opencv.hpp>
 
 namespace similia {
 
 using std::chrono::steady_clock;
-using std::string;
 
 using boost::shared_ptr;
 using caffe::Blob;

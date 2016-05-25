@@ -17,7 +17,6 @@ namespace similia {
 
 using std::chrono::steady_clock;
 
-using boost::filesystem::directory_iterator;
 using boost::filesystem::path;
 
 using common_utils::Timer;

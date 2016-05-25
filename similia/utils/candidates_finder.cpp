@@ -6,8 +6,6 @@
 #include <set>
 #include <utility>
 
-#include <boost/filesystem.hpp>
-#include <boost/tokenizer.hpp>
 #include <glog/logging.h>
 
 #include <similia/common/utils/metrics.h>
@@ -17,12 +15,8 @@
 namespace similia {
 using std::chrono::steady_clock;
 
-using boost::filesystem::path;
-
 using common_utils::Timer;
 using proto::IndexingClustersIds;
-using proto::MultiIndexGetRequest;
-using proto::MultiIndexGetResponse;
 using proto::MultiIndexMultiGetRequest;
 using proto::MultiIndexMultiGetResponse;
 

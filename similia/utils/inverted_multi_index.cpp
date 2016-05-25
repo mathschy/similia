@@ -21,7 +21,6 @@ namespace similia {
 using std::chrono::steady_clock;
 
 using rocksdb::DB;
-using rocksdb::Logger;
 using rocksdb::Options;
 using rocksdb::ReadOptions;
 using rocksdb::Slice;

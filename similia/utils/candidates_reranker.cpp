@@ -3,10 +3,7 @@
 #include <chrono>
 #include <fstream>
 
-#include <boost/filesystem.hpp>
 #include <glog/logging.h>
-#include <boost/token_functions.hpp>
-#include <boost/tokenizer.hpp>
 
 #include <similia/utils/features_utils.h>
 #include <similia/utils/matrix_utils.h>
@@ -14,8 +11,6 @@
 
 namespace similia {
 using std::chrono::steady_clock;
-
-using boost::filesystem::path;
 
 template<typename T>
 std::vector<int> SortIndexes(const std::vector<T>& v) {
