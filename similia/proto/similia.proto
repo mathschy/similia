@@ -183,6 +183,22 @@ message MultiIndexMultiAddResponse {
   int64 processing_time_ms = 2;
 }
 
+// Request to delete an element in the MultiIndex.
+message MultiIndexDeleteRequest {
+  // id of the corresponding element.
+  string id = 1;
+
+  // Indexing Clusters assignments
+  IndexingClustersIds indexing_ids = 2;
+}
+
+// Response to MultiIndexDeleteRequest.
+message MultiIndexDeleteResponse {
+  // Time in millis it took to delete element from index.
+  int64 processing_time_ms = 2;
+}
+
+
 // The service definition of the inverted multi index (read by similia and written by index processor)
 service InvertedMultiIndex {
   // Add element to a cell.
@@ -190,6 +206,9 @@ service InvertedMultiIndex {
 
   // Get all elements from a cell.
   rpc Get(MultiIndexGetRequest) returns (MultiIndexGetResponse) {}
+
+  // Delete an element
+  rpc Delete(MultiIndexDeleteRequest) returns (MultiIndexDeleteResponse) {}
 
   // Get all elements from multiple cells.
   rpc MultiGet(MultiIndexMultiGetRequest) returns (MultiIndexMultiGetResponse) {}

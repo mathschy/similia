@@ -49,6 +49,8 @@ class FloatMatrix;
 class IndexingClustersIds;
 class MultiIndexAddRequest;
 class MultiIndexAddResponse;
+class MultiIndexDeleteRequest;
+class MultiIndexDeleteResponse;
 class MultiIndexGetRequest;
 class MultiIndexGetResponse;
 class MultiIndexMultiAddRequest;
@@ -2160,6 +2162,177 @@ class MultiIndexMultiAddResponse : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
+class MultiIndexDeleteRequest : public ::google::protobuf::Message {
+ public:
+  MultiIndexDeleteRequest();
+  virtual ~MultiIndexDeleteRequest();
+
+  MultiIndexDeleteRequest(const MultiIndexDeleteRequest& from);
+
+  inline MultiIndexDeleteRequest& operator=(const MultiIndexDeleteRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const MultiIndexDeleteRequest& default_instance();
+
+  void Swap(MultiIndexDeleteRequest* other);
+
+  // implements Message ----------------------------------------------
+
+  inline MultiIndexDeleteRequest* New() const { return New(NULL); }
+
+  MultiIndexDeleteRequest* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const MultiIndexDeleteRequest& from);
+  void MergeFrom(const MultiIndexDeleteRequest& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(MultiIndexDeleteRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string id = 1;
+  void clear_id();
+  static const int kIdFieldNumber = 1;
+  const ::std::string& id() const;
+  void set_id(const ::std::string& value);
+  void set_id(const char* value);
+  void set_id(const char* value, size_t size);
+  ::std::string* mutable_id();
+  ::std::string* release_id();
+  void set_allocated_id(::std::string* id);
+
+  // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+  bool has_indexing_ids() const;
+  void clear_indexing_ids();
+  static const int kIndexingIdsFieldNumber = 2;
+  const ::similia::proto::IndexingClustersIds& indexing_ids() const;
+  ::similia::proto::IndexingClustersIds* mutable_indexing_ids();
+  ::similia::proto::IndexingClustersIds* release_indexing_ids();
+  void set_allocated_indexing_ids(::similia::proto::IndexingClustersIds* indexing_ids);
+
+  // @@protoc_insertion_point(class_scope:similia.proto.MultiIndexDeleteRequest)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr id_;
+  ::similia::proto::IndexingClustersIds* indexing_ids_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto();
+  friend void protobuf_AssignDesc_similia_2fproto_2fsimilia_2eproto();
+  friend void protobuf_ShutdownFile_similia_2fproto_2fsimilia_2eproto();
+
+  void InitAsDefaultInstance();
+  static MultiIndexDeleteRequest* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class MultiIndexDeleteResponse : public ::google::protobuf::Message {
+ public:
+  MultiIndexDeleteResponse();
+  virtual ~MultiIndexDeleteResponse();
+
+  MultiIndexDeleteResponse(const MultiIndexDeleteResponse& from);
+
+  inline MultiIndexDeleteResponse& operator=(const MultiIndexDeleteResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const MultiIndexDeleteResponse& default_instance();
+
+  void Swap(MultiIndexDeleteResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  inline MultiIndexDeleteResponse* New() const { return New(NULL); }
+
+  MultiIndexDeleteResponse* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const MultiIndexDeleteResponse& from);
+  void MergeFrom(const MultiIndexDeleteResponse& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(MultiIndexDeleteResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int64 processing_time_ms = 2;
+  void clear_processing_time_ms();
+  static const int kProcessingTimeMsFieldNumber = 2;
+  ::google::protobuf::int64 processing_time_ms() const;
+  void set_processing_time_ms(::google::protobuf::int64 value);
+
+  // @@protoc_insertion_point(class_scope:similia.proto.MultiIndexDeleteResponse)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::int64 processing_time_ms_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto();
+  friend void protobuf_AssignDesc_similia_2fproto_2fsimilia_2eproto();
+  friend void protobuf_ShutdownFile_similia_2fproto_2fsimilia_2eproto();
+
+  void InitAsDefaultInstance();
+  static MultiIndexDeleteResponse* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class QuantizationRequest : public ::google::protobuf::Message {
  public:
   QuantizationRequest();
@@ -3678,6 +3851,108 @@ inline void MultiIndexMultiAddResponse::set_processing_time_ms(::google::protobu
 
 // -------------------------------------------------------------------
 
+// MultiIndexDeleteRequest
+
+// optional string id = 1;
+inline void MultiIndexDeleteRequest::clear_id() {
+  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MultiIndexDeleteRequest::id() const {
+  // @@protoc_insertion_point(field_get:similia.proto.MultiIndexDeleteRequest.id)
+  return id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MultiIndexDeleteRequest::set_id(const ::std::string& value) {
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:similia.proto.MultiIndexDeleteRequest.id)
+}
+inline void MultiIndexDeleteRequest::set_id(const char* value) {
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:similia.proto.MultiIndexDeleteRequest.id)
+}
+inline void MultiIndexDeleteRequest::set_id(const char* value, size_t size) {
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:similia.proto.MultiIndexDeleteRequest.id)
+}
+inline ::std::string* MultiIndexDeleteRequest::mutable_id() {
+  
+  // @@protoc_insertion_point(field_mutable:similia.proto.MultiIndexDeleteRequest.id)
+  return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MultiIndexDeleteRequest::release_id() {
+  
+  return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MultiIndexDeleteRequest::set_allocated_id(::std::string* id) {
+  if (id != NULL) {
+    
+  } else {
+    
+  }
+  id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
+  // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexDeleteRequest.id)
+}
+
+// optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+inline bool MultiIndexDeleteRequest::has_indexing_ids() const {
+  return !_is_default_instance_ && indexing_ids_ != NULL;
+}
+inline void MultiIndexDeleteRequest::clear_indexing_ids() {
+  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) delete indexing_ids_;
+  indexing_ids_ = NULL;
+}
+inline const ::similia::proto::IndexingClustersIds& MultiIndexDeleteRequest::indexing_ids() const {
+  // @@protoc_insertion_point(field_get:similia.proto.MultiIndexDeleteRequest.indexing_ids)
+  return indexing_ids_ != NULL ? *indexing_ids_ : *default_instance_->indexing_ids_;
+}
+inline ::similia::proto::IndexingClustersIds* MultiIndexDeleteRequest::mutable_indexing_ids() {
+  
+  if (indexing_ids_ == NULL) {
+    indexing_ids_ = new ::similia::proto::IndexingClustersIds;
+  }
+  // @@protoc_insertion_point(field_mutable:similia.proto.MultiIndexDeleteRequest.indexing_ids)
+  return indexing_ids_;
+}
+inline ::similia::proto::IndexingClustersIds* MultiIndexDeleteRequest::release_indexing_ids() {
+  
+  ::similia::proto::IndexingClustersIds* temp = indexing_ids_;
+  indexing_ids_ = NULL;
+  return temp;
+}
+inline void MultiIndexDeleteRequest::set_allocated_indexing_ids(::similia::proto::IndexingClustersIds* indexing_ids) {
+  delete indexing_ids_;
+  indexing_ids_ = indexing_ids;
+  if (indexing_ids) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexDeleteRequest.indexing_ids)
+}
+
+// -------------------------------------------------------------------
+
+// MultiIndexDeleteResponse
+
+// optional int64 processing_time_ms = 2;
+inline void MultiIndexDeleteResponse::clear_processing_time_ms() {
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 MultiIndexDeleteResponse::processing_time_ms() const {
+  // @@protoc_insertion_point(field_get:similia.proto.MultiIndexDeleteResponse.processing_time_ms)
+  return processing_time_ms_;
+}
+inline void MultiIndexDeleteResponse::set_processing_time_ms(::google::protobuf::int64 value) {
+  
+  processing_time_ms_ = value;
+  // @@protoc_insertion_point(field_set:similia.proto.MultiIndexDeleteResponse.processing_time_ms)
+}
+
+// -------------------------------------------------------------------
+
 // QuantizationRequest
 
 // optional .similia.proto.Features features = 1;
@@ -3853,6 +4128,10 @@ inline void QuantizationResponse::set_allocated_indexing_ids(::similia::proto::I
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

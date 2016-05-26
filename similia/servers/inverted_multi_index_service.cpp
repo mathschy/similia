@@ -29,7 +29,7 @@ Status InvertedMultiIndexService::Add(ServerContext* context,
   inverted_multi_index_->AddResidualCompressedToCluster(request->indexing_ids().id(0), request->indexing_ids().id(1),
                                                         compressed_residual);
 
-  int processing_time = time_add.Stop();
+  int64_t processing_time = time_add.Stop();
   response->set_processing_time_ms(processing_time);
   steady_clock::time_point after_add = steady_clock::now();
   LOG(INFO) << "Add took: "
@@ -51,7 +51,7 @@ Status InvertedMultiIndexService::Get(ServerContext* context,
                                                                                  request->indexing_ids().id(1),
                                                                                  &count));
 
-  int processing_time = time_get.Stop();
+  int64_t processing_time = time_get.Stop();
   response->set_processing_time_ms(processing_time);
   steady_clock::time_point after_get = steady_clock::now();
   LOG(INFO) << "Get " << count << " elements took: "
@@ -61,11 +61,31 @@ Status InvertedMultiIndexService::Get(ServerContext* context,
   return Status::OK;
 }
 
+Status InvertedMultiIndexService::Delete(ServerContext* context,
+                                         const proto::MultiIndexDeleteRequest* request,
+                                         proto::MultiIndexDeleteResponse* response) {
+  LOG(INFO) << "Delete Request for id: " << request->id();
+  Timer time_delete("inverted_multi_index_service.delete.processing");
+  steady_clock::time_point before_delete = steady_clock::now();
+
+  inverted_multi_index_->DeleteResidualInCluster(request->indexing_ids().id(0), request->indexing_ids().id(1),
+                                                 request->id());
+
+  int64_t processing_time = time_delete.Stop();
+  response->set_processing_time_ms(processing_time);
+  steady_clock::time_point after_delete = steady_clock::now();
+  LOG(INFO) << "Delete took: "
+      << std::chrono::duration_cast<std::chrono::microseconds>(after_delete-before_delete).count()
+      << " us.";
+
+  return Status::OK;
+}
+
 Status InvertedMultiIndexService::MultiGet(ServerContext* context,
                                            const proto::MultiIndexMultiGetRequest* request,
                                            proto::MultiIndexMultiGetResponse* response) {
   LOG(INFO) << "MultiGet Request...";
-  Timer time_get("inverted_multi_index_service.multi_get.processing");
+  Timer time_multi_get("inverted_multi_index_service.multi_get.processing");
 
   int num_images = 0;
   int time_get_only_ms = 0;
@@ -84,7 +104,7 @@ Status InvertedMultiIndexService::MultiGet(ServerContext* context,
   }
 
   time_get_only_ms /= 1000;
-  int processing_time = time_get.Stop();
+  int64_t processing_time = time_multi_get.Stop();
   response->set_processing_time_ms(processing_time);
   LOG(INFO) << "MultiGet " << response->compressed_elements_size() << " clusters with " << num_images <<
       " elements took: " << processing_time << " ms.";
@@ -110,7 +130,7 @@ Status InvertedMultiIndexService::MultiCount(ServerContext* context,
         << " us.";
   }
 
-  int processing_time = time_get.Stop();
+  int64_t processing_time = time_get.Stop();
   response->set_processing_time_ms(processing_time);
   LOG(INFO) << "MultiCount " << response->count_size() << " counts took: " << processing_time << " ms.";
 
@@ -134,7 +154,7 @@ Status InvertedMultiIndexService::MultiCountAtLastStartup(ServerContext* context
         << " us.";
   }
 
-  int processing_time = time_get.Stop();
+  int64_t processing_time = time_get.Stop();
   response->set_processing_time_ms(processing_time);
   LOG(INFO) << "MultiCount " << response->count_size() << " counts took: " << processing_time << " ms.";
 
@@ -155,7 +175,7 @@ Status InvertedMultiIndexService::MultiAdd(ServerContext* context,
                                                           add_request.indexing_ids().id(1), compressed_residual);
   }
 
-  int processing_time = time_add.Stop();
+  int64_t processing_time = time_add.Stop();
   response->set_processing_time_ms(processing_time);
   LOG(INFO) << "MultiAdd with " << request->multi_index_add_request_size() << " additions took: " << processing_time
       << " ms.";

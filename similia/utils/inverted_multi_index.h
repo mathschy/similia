@@ -22,6 +22,9 @@ class InvertedMultiIndex {
   // Set the count to the number of residuals in the cluster.
   std::string GetResidualsInCluster(int cluster_id1, int cluster_id2, int* count);
 
+  // Delete a residual in a cluster.
+  void DeleteResidualInCluster(int cluster_id1, int cluster_id2, const std::string& residual_id);
+
   // This queries the key that contains the compressed elements.
   // It is slower than GetCountFromCache but it is up-to-date.
   int GetCountForCluster(int cluster_id1, int cluster_id2);

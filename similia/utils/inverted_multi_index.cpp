@@ -175,4 +175,9 @@ int InvertedMultiIndex::GetCountAtLastStartup(int cluster_id1, int cluster_id2) 
   return counts_(cluster_id1, cluster_id2);
 }
 
+void InvertedMultiIndex::DeleteResidualInCluster(int cluster_id1, int cluster_id2, const std::string& residual_id) {
+  const std::string& key = BuildKeyPrefix(cluster_id1, cluster_id2) + residual_id;
+  Status s = db_->Delete(WriteOptions(), key);
+  CHECK(s.ok()) << s.ToString();
+}
 }  // namespace similia

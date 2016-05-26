@@ -124,6 +124,11 @@ class InvertedMultiIndex GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexGetResponse>> AsyncGet(::grpc::ClientContext* context, const ::similia::proto::MultiIndexGetRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexGetResponse>>(AsyncGetRaw(context, request, cq));
     }
+    // Delete an element
+    virtual ::grpc::Status Delete(::grpc::ClientContext* context, const ::similia::proto::MultiIndexDeleteRequest& request, ::similia::proto::MultiIndexDeleteResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexDeleteResponse>> AsyncDelete(::grpc::ClientContext* context, const ::similia::proto::MultiIndexDeleteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexDeleteResponse>>(AsyncDeleteRaw(context, request, cq));
+    }
     // Get all elements from multiple cells.
     virtual ::grpc::Status MultiGet(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiGetRequest& request, ::similia::proto::MultiIndexMultiGetResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiGetResponse>> AsyncMultiGet(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiGetRequest& request, ::grpc::CompletionQueue* cq) {
@@ -147,6 +152,7 @@ class InvertedMultiIndex GRPC_FINAL {
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexAddResponse>* AsyncAddRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexAddRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexGetResponse>* AsyncGetRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexGetRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexDeleteResponse>* AsyncDeleteRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexDeleteRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiGetResponse>* AsyncMultiGetRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiGetRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiCountResponse>* AsyncMultiCountRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiCountResponse>* AsyncMultiCountAtLastStartupRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -162,6 +168,10 @@ class InvertedMultiIndex GRPC_FINAL {
     ::grpc::Status Get(::grpc::ClientContext* context, const ::similia::proto::MultiIndexGetRequest& request, ::similia::proto::MultiIndexGetResponse* response) GRPC_OVERRIDE;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexGetResponse>> AsyncGet(::grpc::ClientContext* context, const ::similia::proto::MultiIndexGetRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexGetResponse>>(AsyncGetRaw(context, request, cq));
+    }
+    ::grpc::Status Delete(::grpc::ClientContext* context, const ::similia::proto::MultiIndexDeleteRequest& request, ::similia::proto::MultiIndexDeleteResponse* response) GRPC_OVERRIDE;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexDeleteResponse>> AsyncDelete(::grpc::ClientContext* context, const ::similia::proto::MultiIndexDeleteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexDeleteResponse>>(AsyncDeleteRaw(context, request, cq));
     }
     ::grpc::Status MultiGet(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiGetRequest& request, ::similia::proto::MultiIndexMultiGetResponse* response) GRPC_OVERRIDE;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiGetResponse>> AsyncMultiGet(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiGetRequest& request, ::grpc::CompletionQueue* cq) {
@@ -184,12 +194,14 @@ class InvertedMultiIndex GRPC_FINAL {
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexAddResponse>* AsyncAddRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexAddRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexGetResponse>* AsyncGetRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexGetRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
+    ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexDeleteResponse>* AsyncDeleteRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexDeleteRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiGetResponse>* AsyncMultiGetRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiGetRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiCountResponse>* AsyncMultiCountRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiCountResponse>* AsyncMultiCountAtLastStartupRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiAddResponse>* AsyncMultiAddRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     const ::grpc::RpcMethod rpcmethod_Add_;
     const ::grpc::RpcMethod rpcmethod_Get_;
+    const ::grpc::RpcMethod rpcmethod_Delete_;
     const ::grpc::RpcMethod rpcmethod_MultiGet_;
     const ::grpc::RpcMethod rpcmethod_MultiCount_;
     const ::grpc::RpcMethod rpcmethod_MultiCountAtLastStartup_;
@@ -205,6 +217,8 @@ class InvertedMultiIndex GRPC_FINAL {
     virtual ::grpc::Status Add(::grpc::ServerContext* context, const ::similia::proto::MultiIndexAddRequest* request, ::similia::proto::MultiIndexAddResponse* response);
     // Get all elements from a cell.
     virtual ::grpc::Status Get(::grpc::ServerContext* context, const ::similia::proto::MultiIndexGetRequest* request, ::similia::proto::MultiIndexGetResponse* response);
+    // Delete an element
+    virtual ::grpc::Status Delete(::grpc::ServerContext* context, const ::similia::proto::MultiIndexDeleteRequest* request, ::similia::proto::MultiIndexDeleteResponse* response);
     // Get all elements from multiple cells.
     virtual ::grpc::Status MultiGet(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiGetRequest* request, ::similia::proto::MultiIndexMultiGetResponse* response);
     // Get images counts from multiple cells.
@@ -255,12 +269,32 @@ class InvertedMultiIndex GRPC_FINAL {
     }
   };
   template <class BaseClass>
+  class WithAsyncMethod_Delete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_Delete() {
+      ::grpc::Service::MarkMethodAsync(2);
+    }
+    ~WithAsyncMethod_Delete() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Delete(::grpc::ServerContext* context, const ::similia::proto::MultiIndexDeleteRequest* request, ::similia::proto::MultiIndexDeleteResponse* response) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDelete(::grpc::ServerContext* context, ::similia::proto::MultiIndexDeleteRequest* request, ::grpc::ServerAsyncResponseWriter< ::similia::proto::MultiIndexDeleteResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithAsyncMethod_MultiGet : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_MultiGet() {
-      ::grpc::Service::MarkMethodAsync(2);
+      ::grpc::Service::MarkMethodAsync(3);
     }
     ~WithAsyncMethod_MultiGet() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -271,7 +305,7 @@ class InvertedMultiIndex GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestMultiGet(::grpc::ServerContext* context, ::similia::proto::MultiIndexMultiGetRequest* request, ::grpc::ServerAsyncResponseWriter< ::similia::proto::MultiIndexMultiGetResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -280,7 +314,7 @@ class InvertedMultiIndex GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_MultiCount() {
-      ::grpc::Service::MarkMethodAsync(3);
+      ::grpc::Service::MarkMethodAsync(4);
     }
     ~WithAsyncMethod_MultiCount() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -291,7 +325,7 @@ class InvertedMultiIndex GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestMultiCount(::grpc::ServerContext* context, ::similia::proto::MultiIndexMultiCountRequest* request, ::grpc::ServerAsyncResponseWriter< ::similia::proto::MultiIndexMultiCountResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -300,7 +334,7 @@ class InvertedMultiIndex GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_MultiCountAtLastStartup() {
-      ::grpc::Service::MarkMethodAsync(4);
+      ::grpc::Service::MarkMethodAsync(5);
     }
     ~WithAsyncMethod_MultiCountAtLastStartup() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -311,7 +345,7 @@ class InvertedMultiIndex GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestMultiCountAtLastStartup(::grpc::ServerContext* context, ::similia::proto::MultiIndexMultiCountRequest* request, ::grpc::ServerAsyncResponseWriter< ::similia::proto::MultiIndexMultiCountResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -320,7 +354,7 @@ class InvertedMultiIndex GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_MultiAdd() {
-      ::grpc::Service::MarkMethodAsync(5);
+      ::grpc::Service::MarkMethodAsync(6);
     }
     ~WithAsyncMethod_MultiAdd() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -331,10 +365,10 @@ class InvertedMultiIndex GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestMultiAdd(::grpc::ServerContext* context, ::similia::proto::MultiIndexMultiAddRequest* request, ::grpc::ServerAsyncResponseWriter< ::similia::proto::MultiIndexMultiAddResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_Add<WithAsyncMethod_Get<WithAsyncMethod_MultiGet<WithAsyncMethod_MultiCount<WithAsyncMethod_MultiCountAtLastStartup<WithAsyncMethod_MultiAdd<Service > > > > > > AsyncService;
+  typedef WithAsyncMethod_Add<WithAsyncMethod_Get<WithAsyncMethod_Delete<WithAsyncMethod_MultiGet<WithAsyncMethod_MultiCount<WithAsyncMethod_MultiCountAtLastStartup<WithAsyncMethod_MultiAdd<Service > > > > > > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_Add : public BaseClass {
    private:
@@ -370,12 +404,29 @@ class InvertedMultiIndex GRPC_FINAL {
     }
   };
   template <class BaseClass>
+  class WithGenericMethod_Delete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_Delete() {
+      ::grpc::Service::MarkMethodGeneric(2);
+    }
+    ~WithGenericMethod_Delete() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Delete(::grpc::ServerContext* context, const ::similia::proto::MultiIndexDeleteRequest* request, ::similia::proto::MultiIndexDeleteResponse* response) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
   class WithGenericMethod_MultiGet : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_MultiGet() {
-      ::grpc::Service::MarkMethodGeneric(2);
+      ::grpc::Service::MarkMethodGeneric(3);
     }
     ~WithGenericMethod_MultiGet() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -392,7 +443,7 @@ class InvertedMultiIndex GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_MultiCount() {
-      ::grpc::Service::MarkMethodGeneric(3);
+      ::grpc::Service::MarkMethodGeneric(4);
     }
     ~WithGenericMethod_MultiCount() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -409,7 +460,7 @@ class InvertedMultiIndex GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_MultiCountAtLastStartup() {
-      ::grpc::Service::MarkMethodGeneric(4);
+      ::grpc::Service::MarkMethodGeneric(5);
     }
     ~WithGenericMethod_MultiCountAtLastStartup() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -426,7 +477,7 @@ class InvertedMultiIndex GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_MultiAdd() {
-      ::grpc::Service::MarkMethodGeneric(5);
+      ::grpc::Service::MarkMethodGeneric(6);
     }
     ~WithGenericMethod_MultiAdd() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);

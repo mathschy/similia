@@ -66,7 +66,7 @@ Status SimiliaService::SimiliaSearch(ServerContext* context,
     response->add_image_id(it.id);
     response->add_squared_distance(it.squared_distance);
   }
-  int elapsed_time = timer.Stop();
+  int64_t elapsed_time = timer.Stop();
   LOG(INFO) << "total elapsed time: " << elapsed_time;
   response->set_processing_time_ms(elapsed_time);
 

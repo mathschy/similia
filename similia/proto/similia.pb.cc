@@ -92,6 +92,12 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* MultiIndexMultiAddResponse_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   MultiIndexMultiAddResponse_reflection_ = NULL;
+const ::google::protobuf::Descriptor* MultiIndexDeleteRequest_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  MultiIndexDeleteRequest_reflection_ = NULL;
+const ::google::protobuf::Descriptor* MultiIndexDeleteResponse_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  MultiIndexDeleteResponse_reflection_ = NULL;
 const ::google::protobuf::Descriptor* QuantizationRequest_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   QuantizationRequest_reflection_ = NULL;
@@ -470,7 +476,38 @@ void protobuf_AssignDesc_similia_2fproto_2fsimilia_2eproto() {
       sizeof(MultiIndexMultiAddResponse),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiAddResponse, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiAddResponse, _is_default_instance_));
-  QuantizationRequest_descriptor_ = file->message_type(23);
+  MultiIndexDeleteRequest_descriptor_ = file->message_type(23);
+  static const int MultiIndexDeleteRequest_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteRequest, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteRequest, indexing_ids_),
+  };
+  MultiIndexDeleteRequest_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      MultiIndexDeleteRequest_descriptor_,
+      MultiIndexDeleteRequest::default_instance_,
+      MultiIndexDeleteRequest_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(MultiIndexDeleteRequest),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteRequest, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteRequest, _is_default_instance_));
+  MultiIndexDeleteResponse_descriptor_ = file->message_type(24);
+  static const int MultiIndexDeleteResponse_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteResponse, processing_time_ms_),
+  };
+  MultiIndexDeleteResponse_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      MultiIndexDeleteResponse_descriptor_,
+      MultiIndexDeleteResponse::default_instance_,
+      MultiIndexDeleteResponse_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(MultiIndexDeleteResponse),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteResponse, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteResponse, _is_default_instance_));
+  QuantizationRequest_descriptor_ = file->message_type(25);
   static const int QuantizationRequest_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, features_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, image_id_),
@@ -486,7 +523,7 @@ void protobuf_AssignDesc_similia_2fproto_2fsimilia_2eproto() {
       sizeof(QuantizationRequest),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, _is_default_instance_));
-  QuantizationResponse_descriptor_ = file->message_type(24);
+  QuantizationResponse_descriptor_ = file->message_type(26);
   static const int QuantizationResponse_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationResponse, processing_time_ms_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationResponse, compressing_ids_),
@@ -571,6 +608,10 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       MultiIndexMultiAddResponse_descriptor_, &MultiIndexMultiAddResponse::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      MultiIndexDeleteRequest_descriptor_, &MultiIndexDeleteRequest::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      MultiIndexDeleteResponse_descriptor_, &MultiIndexDeleteResponse::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       QuantizationRequest_descriptor_, &QuantizationRequest::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       QuantizationResponse_descriptor_, &QuantizationResponse::default_instance());
@@ -625,6 +666,10 @@ void protobuf_ShutdownFile_similia_2fproto_2fsimilia_2eproto() {
   delete MultiIndexMultiAddRequest_reflection_;
   delete MultiIndexMultiAddResponse::default_instance_;
   delete MultiIndexMultiAddResponse_reflection_;
+  delete MultiIndexDeleteRequest::default_instance_;
+  delete MultiIndexDeleteRequest_reflection_;
+  delete MultiIndexDeleteResponse::default_instance_;
+  delete MultiIndexDeleteResponse_reflection_;
   delete QuantizationRequest::default_instance_;
   delete QuantizationRequest_reflection_;
   delete QuantizationResponse::default_instance_;
@@ -690,35 +735,41 @@ void protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto() {
     "Request\022D\n\027multi_index_add_request\030\001 \003(\013"
     "2#.similia.proto.MultiIndexAddRequest\"8\n"
     "\032MultiIndexMultiAddResponse\022\032\n\022processin"
-    "g_time_ms\030\002 \001(\003\"R\n\023QuantizationRequest\022)"
-    "\n\010features\030\001 \001(\0132\027.similia.proto.Feature"
-    "s\022\020\n\010image_id\030\002 \001(\t\"\254\001\n\024QuantizationResp"
-    "onse\022\032\n\022processing_time_ms\030\002 \001(\003\022>\n\017comp"
-    "ressing_ids\030\003 \001(\0132%.similia.proto.Compre"
-    "ssingClustersIds\0228\n\014indexing_ids\030\004 \001(\0132\""
-    ".similia.proto.IndexingClustersIds2g\n\007Si"
-    "milia\022\\\n\rSimiliaSearch\022#.similia.proto.S"
-    "imiliaSearchRequest\032$.similia.proto.Simi"
-    "liaSearchResponse\"\0002\341\004\n\022InvertedMultiInd"
-    "ex\022R\n\003Add\022#.similia.proto.MultiIndexAddR"
-    "equest\032$.similia.proto.MultiIndexAddResp"
-    "onse\"\000\022R\n\003Get\022#.similia.proto.MultiIndex"
-    "GetRequest\032$.similia.proto.MultiIndexGet"
-    "Response\"\000\022a\n\010MultiGet\022(.similia.proto.M"
-    "ultiIndexMultiGetRequest\032).similia.proto"
-    ".MultiIndexMultiGetResponse\"\000\022g\n\nMultiCo"
-    "unt\022*.similia.proto.MultiIndexMultiCount"
-    "Request\032+.similia.proto.MultiIndexMultiC"
-    "ountResponse\"\000\022t\n\027MultiCountAtLastStartu"
-    "p\022*.similia.proto.MultiIndexMultiCountRe"
-    "quest\032+.similia.proto.MultiIndexMultiCou"
-    "ntResponse\"\000\022a\n\010MultiAdd\022(.similia.proto"
-    ".MultiIndexMultiAddRequest\032).similia.pro"
-    "to.MultiIndexMultiAddResponse\"\0002n\n\025Multi"
-    "ProductQuantizer\022U\n\010Quantize\022\".similia.p"
-    "roto.QuantizationRequest\032#.similia.proto"
-    ".QuantizationResponse\"\000B&\n\026io.lefty.simi"
-    "lia.protoB\014SimiliaProtob\006proto3", 3231);
+    "g_time_ms\030\002 \001(\003\"_\n\027MultiIndexDeleteReque"
+    "st\022\n\n\002id\030\001 \001(\t\0228\n\014indexing_ids\030\002 \001(\0132\".s"
+    "imilia.proto.IndexingClustersIds\"6\n\030Mult"
+    "iIndexDeleteResponse\022\032\n\022processing_time_"
+    "ms\030\002 \001(\003\"R\n\023QuantizationRequest\022)\n\010featu"
+    "res\030\001 \001(\0132\027.similia.proto.Features\022\020\n\010im"
+    "age_id\030\002 \001(\t\"\254\001\n\024QuantizationResponse\022\032\n"
+    "\022processing_time_ms\030\002 \001(\003\022>\n\017compressing"
+    "_ids\030\003 \001(\0132%.similia.proto.CompressingCl"
+    "ustersIds\0228\n\014indexing_ids\030\004 \001(\0132\".simili"
+    "a.proto.IndexingClustersIds2g\n\007Similia\022\\"
+    "\n\rSimiliaSearch\022#.similia.proto.SimiliaS"
+    "earchRequest\032$.similia.proto.SimiliaSear"
+    "chResponse\"\0002\276\005\n\022InvertedMultiIndex\022R\n\003A"
+    "dd\022#.similia.proto.MultiIndexAddRequest\032"
+    "$.similia.proto.MultiIndexAddResponse\"\000\022"
+    "R\n\003Get\022#.similia.proto.MultiIndexGetRequ"
+    "est\032$.similia.proto.MultiIndexGetRespons"
+    "e\"\000\022[\n\006Delete\022&.similia.proto.MultiIndex"
+    "DeleteRequest\032\'.similia.proto.MultiIndex"
+    "DeleteResponse\"\000\022a\n\010MultiGet\022(.similia.p"
+    "roto.MultiIndexMultiGetRequest\032).similia"
+    ".proto.MultiIndexMultiGetResponse\"\000\022g\n\nM"
+    "ultiCount\022*.similia.proto.MultiIndexMult"
+    "iCountRequest\032+.similia.proto.MultiIndex"
+    "MultiCountResponse\"\000\022t\n\027MultiCountAtLast"
+    "Startup\022*.similia.proto.MultiIndexMultiC"
+    "ountRequest\032+.similia.proto.MultiIndexMu"
+    "ltiCountResponse\"\000\022a\n\010MultiAdd\022(.similia"
+    ".proto.MultiIndexMultiAddRequest\032).simil"
+    "ia.proto.MultiIndexMultiAddResponse\"\0002n\n"
+    "\025MultiProductQuantizer\022U\n\010Quantize\022\".sim"
+    "ilia.proto.QuantizationRequest\032#.similia"
+    ".proto.QuantizationResponse\"\000B&\n\026io.left"
+    "y.similia.protoB\014SimiliaProtob\006proto3", 3477);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "similia/proto/similia.proto", &protobuf_RegisterTypes);
   FloatMatrix::default_instance_ = new FloatMatrix();
@@ -744,6 +795,8 @@ void protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto() {
   MultiIndexMultiCountResponse::default_instance_ = new MultiIndexMultiCountResponse();
   MultiIndexMultiAddRequest::default_instance_ = new MultiIndexMultiAddRequest();
   MultiIndexMultiAddResponse::default_instance_ = new MultiIndexMultiAddResponse();
+  MultiIndexDeleteRequest::default_instance_ = new MultiIndexDeleteRequest();
+  MultiIndexDeleteResponse::default_instance_ = new MultiIndexDeleteResponse();
   QuantizationRequest::default_instance_ = new QuantizationRequest();
   QuantizationResponse::default_instance_ = new QuantizationResponse();
   FloatMatrix::default_instance_->InitAsDefaultInstance();
@@ -769,6 +822,8 @@ void protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto() {
   MultiIndexMultiCountResponse::default_instance_->InitAsDefaultInstance();
   MultiIndexMultiAddRequest::default_instance_->InitAsDefaultInstance();
   MultiIndexMultiAddResponse::default_instance_->InitAsDefaultInstance();
+  MultiIndexDeleteRequest::default_instance_->InitAsDefaultInstance();
+  MultiIndexDeleteResponse::default_instance_->InitAsDefaultInstance();
   QuantizationRequest::default_instance_->InitAsDefaultInstance();
   QuantizationResponse::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_similia_2fproto_2fsimilia_2eproto);
@@ -7847,6 +7902,583 @@ void MultiIndexMultiAddResponse::clear_processing_time_ms() {
   
   processing_time_ms_ = value;
   // @@protoc_insertion_point(field_set:similia.proto.MultiIndexMultiAddResponse.processing_time_ms)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int MultiIndexDeleteRequest::kIdFieldNumber;
+const int MultiIndexDeleteRequest::kIndexingIdsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+MultiIndexDeleteRequest::MultiIndexDeleteRequest()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:similia.proto.MultiIndexDeleteRequest)
+}
+
+void MultiIndexDeleteRequest::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+  indexing_ids_ = const_cast< ::similia::proto::IndexingClustersIds*>(&::similia::proto::IndexingClustersIds::default_instance());
+}
+
+MultiIndexDeleteRequest::MultiIndexDeleteRequest(const MultiIndexDeleteRequest& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexDeleteRequest)
+}
+
+void MultiIndexDeleteRequest::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  indexing_ids_ = NULL;
+}
+
+MultiIndexDeleteRequest::~MultiIndexDeleteRequest() {
+  // @@protoc_insertion_point(destructor:similia.proto.MultiIndexDeleteRequest)
+  SharedDtor();
+}
+
+void MultiIndexDeleteRequest::SharedDtor() {
+  id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+    delete indexing_ids_;
+  }
+}
+
+void MultiIndexDeleteRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* MultiIndexDeleteRequest::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return MultiIndexDeleteRequest_descriptor_;
+}
+
+const MultiIndexDeleteRequest& MultiIndexDeleteRequest::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto();
+  return *default_instance_;
+}
+
+MultiIndexDeleteRequest* MultiIndexDeleteRequest::default_instance_ = NULL;
+
+MultiIndexDeleteRequest* MultiIndexDeleteRequest::New(::google::protobuf::Arena* arena) const {
+  MultiIndexDeleteRequest* n = new MultiIndexDeleteRequest;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void MultiIndexDeleteRequest::Clear() {
+  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) delete indexing_ids_;
+  indexing_ids_ = NULL;
+}
+
+bool MultiIndexDeleteRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexDeleteRequest)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string id = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->id().data(), this->id().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "similia.proto.MultiIndexDeleteRequest.id"));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_indexing_ids;
+        break;
+      }
+
+      // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_indexing_ids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_indexing_ids()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:similia.proto.MultiIndexDeleteRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:similia.proto.MultiIndexDeleteRequest)
+  return false;
+#undef DO_
+}
+
+void MultiIndexDeleteRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexDeleteRequest)
+  // optional string id = 1;
+  if (this->id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "similia.proto.MultiIndexDeleteRequest.id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->id(), output);
+  }
+
+  // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+  if (this->has_indexing_ids()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, *this->indexing_ids_, output);
+  }
+
+  // @@protoc_insertion_point(serialize_end:similia.proto.MultiIndexDeleteRequest)
+}
+
+::google::protobuf::uint8* MultiIndexDeleteRequest::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexDeleteRequest)
+  // optional string id = 1;
+  if (this->id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "similia.proto.MultiIndexDeleteRequest.id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->id(), target);
+  }
+
+  // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+  if (this->has_indexing_ids()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, *this->indexing_ids_, target);
+  }
+
+  // @@protoc_insertion_point(serialize_to_array_end:similia.proto.MultiIndexDeleteRequest)
+  return target;
+}
+
+int MultiIndexDeleteRequest::ByteSize() const {
+  int total_size = 0;
+
+  // optional string id = 1;
+  if (this->id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->id());
+  }
+
+  // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+  if (this->has_indexing_ids()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->indexing_ids_);
+  }
+
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void MultiIndexDeleteRequest::MergeFrom(const ::google::protobuf::Message& from) {
+  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  const MultiIndexDeleteRequest* source = 
+      ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexDeleteRequest>(
+          &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void MultiIndexDeleteRequest::MergeFrom(const MultiIndexDeleteRequest& from) {
+  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  if (from.id().size() > 0) {
+
+    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+  }
+  if (from.has_indexing_ids()) {
+    mutable_indexing_ids()->::similia::proto::IndexingClustersIds::MergeFrom(from.indexing_ids());
+  }
+}
+
+void MultiIndexDeleteRequest::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void MultiIndexDeleteRequest::CopyFrom(const MultiIndexDeleteRequest& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MultiIndexDeleteRequest::IsInitialized() const {
+
+  return true;
+}
+
+void MultiIndexDeleteRequest::Swap(MultiIndexDeleteRequest* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void MultiIndexDeleteRequest::InternalSwap(MultiIndexDeleteRequest* other) {
+  id_.Swap(&other->id_);
+  std::swap(indexing_ids_, other->indexing_ids_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata MultiIndexDeleteRequest::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = MultiIndexDeleteRequest_descriptor_;
+  metadata.reflection = MultiIndexDeleteRequest_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// MultiIndexDeleteRequest
+
+// optional string id = 1;
+void MultiIndexDeleteRequest::clear_id() {
+  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& MultiIndexDeleteRequest::id() const {
+  // @@protoc_insertion_point(field_get:similia.proto.MultiIndexDeleteRequest.id)
+  return id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void MultiIndexDeleteRequest::set_id(const ::std::string& value) {
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:similia.proto.MultiIndexDeleteRequest.id)
+}
+ void MultiIndexDeleteRequest::set_id(const char* value) {
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:similia.proto.MultiIndexDeleteRequest.id)
+}
+ void MultiIndexDeleteRequest::set_id(const char* value, size_t size) {
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:similia.proto.MultiIndexDeleteRequest.id)
+}
+ ::std::string* MultiIndexDeleteRequest::mutable_id() {
+  
+  // @@protoc_insertion_point(field_mutable:similia.proto.MultiIndexDeleteRequest.id)
+  return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* MultiIndexDeleteRequest::release_id() {
+  
+  return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void MultiIndexDeleteRequest::set_allocated_id(::std::string* id) {
+  if (id != NULL) {
+    
+  } else {
+    
+  }
+  id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
+  // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexDeleteRequest.id)
+}
+
+// optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+bool MultiIndexDeleteRequest::has_indexing_ids() const {
+  return !_is_default_instance_ && indexing_ids_ != NULL;
+}
+void MultiIndexDeleteRequest::clear_indexing_ids() {
+  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) delete indexing_ids_;
+  indexing_ids_ = NULL;
+}
+const ::similia::proto::IndexingClustersIds& MultiIndexDeleteRequest::indexing_ids() const {
+  // @@protoc_insertion_point(field_get:similia.proto.MultiIndexDeleteRequest.indexing_ids)
+  return indexing_ids_ != NULL ? *indexing_ids_ : *default_instance_->indexing_ids_;
+}
+::similia::proto::IndexingClustersIds* MultiIndexDeleteRequest::mutable_indexing_ids() {
+  
+  if (indexing_ids_ == NULL) {
+    indexing_ids_ = new ::similia::proto::IndexingClustersIds;
+  }
+  // @@protoc_insertion_point(field_mutable:similia.proto.MultiIndexDeleteRequest.indexing_ids)
+  return indexing_ids_;
+}
+::similia::proto::IndexingClustersIds* MultiIndexDeleteRequest::release_indexing_ids() {
+  
+  ::similia::proto::IndexingClustersIds* temp = indexing_ids_;
+  indexing_ids_ = NULL;
+  return temp;
+}
+void MultiIndexDeleteRequest::set_allocated_indexing_ids(::similia::proto::IndexingClustersIds* indexing_ids) {
+  delete indexing_ids_;
+  indexing_ids_ = indexing_ids;
+  if (indexing_ids) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexDeleteRequest.indexing_ids)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int MultiIndexDeleteResponse::kProcessingTimeMsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+MultiIndexDeleteResponse::MultiIndexDeleteResponse()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:similia.proto.MultiIndexDeleteResponse)
+}
+
+void MultiIndexDeleteResponse::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+MultiIndexDeleteResponse::MultiIndexDeleteResponse(const MultiIndexDeleteResponse& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexDeleteResponse)
+}
+
+void MultiIndexDeleteResponse::SharedCtor() {
+    _is_default_instance_ = false;
+  _cached_size_ = 0;
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
+}
+
+MultiIndexDeleteResponse::~MultiIndexDeleteResponse() {
+  // @@protoc_insertion_point(destructor:similia.proto.MultiIndexDeleteResponse)
+  SharedDtor();
+}
+
+void MultiIndexDeleteResponse::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void MultiIndexDeleteResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* MultiIndexDeleteResponse::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return MultiIndexDeleteResponse_descriptor_;
+}
+
+const MultiIndexDeleteResponse& MultiIndexDeleteResponse::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto();
+  return *default_instance_;
+}
+
+MultiIndexDeleteResponse* MultiIndexDeleteResponse::default_instance_ = NULL;
+
+MultiIndexDeleteResponse* MultiIndexDeleteResponse::New(::google::protobuf::Arena* arena) const {
+  MultiIndexDeleteResponse* n = new MultiIndexDeleteResponse;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void MultiIndexDeleteResponse::Clear() {
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
+}
+
+bool MultiIndexDeleteResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexDeleteResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int64 processing_time_ms = 2;
+      case 2: {
+        if (tag == 16) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &processing_time_ms_)));
+
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:similia.proto.MultiIndexDeleteResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:similia.proto.MultiIndexDeleteResponse)
+  return false;
+#undef DO_
+}
+
+void MultiIndexDeleteResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexDeleteResponse)
+  // optional int64 processing_time_ms = 2;
+  if (this->processing_time_ms() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->processing_time_ms(), output);
+  }
+
+  // @@protoc_insertion_point(serialize_end:similia.proto.MultiIndexDeleteResponse)
+}
+
+::google::protobuf::uint8* MultiIndexDeleteResponse::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexDeleteResponse)
+  // optional int64 processing_time_ms = 2;
+  if (this->processing_time_ms() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->processing_time_ms(), target);
+  }
+
+  // @@protoc_insertion_point(serialize_to_array_end:similia.proto.MultiIndexDeleteResponse)
+  return target;
+}
+
+int MultiIndexDeleteResponse::ByteSize() const {
+  int total_size = 0;
+
+  // optional int64 processing_time_ms = 2;
+  if (this->processing_time_ms() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->processing_time_ms());
+  }
+
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void MultiIndexDeleteResponse::MergeFrom(const ::google::protobuf::Message& from) {
+  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  const MultiIndexDeleteResponse* source = 
+      ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexDeleteResponse>(
+          &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void MultiIndexDeleteResponse::MergeFrom(const MultiIndexDeleteResponse& from) {
+  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  if (from.processing_time_ms() != 0) {
+    set_processing_time_ms(from.processing_time_ms());
+  }
+}
+
+void MultiIndexDeleteResponse::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void MultiIndexDeleteResponse::CopyFrom(const MultiIndexDeleteResponse& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MultiIndexDeleteResponse::IsInitialized() const {
+
+  return true;
+}
+
+void MultiIndexDeleteResponse::Swap(MultiIndexDeleteResponse* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void MultiIndexDeleteResponse::InternalSwap(MultiIndexDeleteResponse* other) {
+  std::swap(processing_time_ms_, other->processing_time_ms_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata MultiIndexDeleteResponse::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = MultiIndexDeleteResponse_descriptor_;
+  metadata.reflection = MultiIndexDeleteResponse_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// MultiIndexDeleteResponse
+
+// optional int64 processing_time_ms = 2;
+void MultiIndexDeleteResponse::clear_processing_time_ms() {
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
+}
+ ::google::protobuf::int64 MultiIndexDeleteResponse::processing_time_ms() const {
+  // @@protoc_insertion_point(field_get:similia.proto.MultiIndexDeleteResponse.processing_time_ms)
+  return processing_time_ms_;
+}
+ void MultiIndexDeleteResponse::set_processing_time_ms(::google::protobuf::int64 value) {
+  
+  processing_time_ms_ = value;
+  // @@protoc_insertion_point(field_set:similia.proto.MultiIndexDeleteResponse.processing_time_ms)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
