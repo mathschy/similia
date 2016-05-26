@@ -1,7 +1,5 @@
 project(utils)
 
-# activate flag to have caffe's AddMatVector definition
-add_definitions(-DUSE_OPENCV)
 
 add_library(similia_utils_features_utils_lib
   ${PROJECT_SOURCE_DIR}/features_utils.cpp
@@ -89,3 +87,10 @@ target_link_libraries(similia_utils_features_extractor_lib
   opencv_imgproc
   protobuf
 )
+
+IF (DEFINED SIMILIA_CPU_ONLY)
+  # activate flag to define CPU_ONLY so that caffe doesn't look for cublas
+  target_compile_definitions(similia_utils_features_extractor_lib PUBLIC CPU_ONLY=1)
+ENDIF()
+# activate flag to have caffe's AddMatVector definition
+target_compile_definitions(similia_utils_features_extractor_lib PRIVATE USE_OPENCV=1)
