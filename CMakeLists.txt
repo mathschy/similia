@@ -11,4 +11,8 @@ add_definitions(
   -std=c++11
 )
 
+IF (DEFINED SIMILIA_CPU_ONLY)
+  add_definitions(-DCPU_ONLY)
+ENDIF()
+
 add_subdirectory(similia)
