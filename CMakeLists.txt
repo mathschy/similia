@@ -11,4 +11,7 @@ add_definitions(
   -std=c++11
 )
 
+find_package(Boost 1.55 COMPONENTS system filesystem REQUIRED)
+
+
 add_subdirectory(similia)
