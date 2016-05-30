@@ -38,3 +38,19 @@ target_link_libraries(similia_tools_inverted_multi_index_test_client
   glog
   grpc++_unsecure
 )
+
+add_executable(similia_tools_extract_features
+  ${PROJECT_SOURCE_DIR}/extract_features.cpp
+)
+
+set_target_properties(similia_tools_extract_features
+  PROPERTIES OUTPUT_NAME extract_features
+)
+
+target_link_libraries(similia_tools_extract_features
+  similia_common_utils_lib
+  similia_utils_features_extractor_lib
+  ${Boost_LIBRARIES}
+  gflags
+  glog
+)
