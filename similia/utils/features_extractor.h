@@ -32,7 +32,7 @@ class FeaturesExtractor {
  private:
   std::vector<float> ExtractFeatures(const cv::Mat& image);
 
-  std::unique_ptr<caffe::Net<float> > net_;
+  std::unique_ptr<caffe::Net<float>> net_;
   std::vector<std::string> blob_names_;
   std::string path_to_caffe_model_weights_;
   std::string path_to_deploy_prototxt_;

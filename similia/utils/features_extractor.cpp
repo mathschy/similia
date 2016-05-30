@@ -41,7 +41,7 @@ FeaturesExtractor::FeaturesExtractor(const std::string& path_to_caffe_model_weig
   LOG(INFO) << "Don't log INFO messages during net initialiation...";
   int min_log_level = FLAGS_minloglevel;
   FLAGS_minloglevel = 1;
-  this->net_ = std::unique_ptr<Net<float> >(new Net<float>(path_to_deploy_prototxt, caffe::TEST));
+  this->net_ = std::unique_ptr<Net<float>>(new Net<float>(path_to_deploy_prototxt, caffe::TEST));
   FLAGS_minloglevel = min_log_level;  // set minloglevel back to what it was.
   LOG(INFO) << "Net initialized. Back to previous minloglevel.";
   this->net_->CopyTrainedLayersFrom(path_to_caffe_model_weights);
@@ -140,7 +140,7 @@ std::vector<float> FeaturesExtractor::ExtractFeatures(const cv::Mat& img) {
     VLOG(1) << "Forwarded";
     LOG(INFO) << "num_extracted_layers = " << num_extracted_layers;
     for (int i = 0; i < num_extracted_layers; ++i) { // only 1 for us
-      const shared_ptr<Blob<float> > feature_blob = net_->blob_by_name(blob_names_[i]);
+      const shared_ptr<Blob<float>> feature_blob = net_->blob_by_name(blob_names_[i]);
       int batch_size = feature_blob->num();
       int dim_features = feature_blob->count() / batch_size;
       const float* feature_blob_data;
