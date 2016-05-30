@@ -14,6 +14,7 @@ target_link_libraries(similia_tests_inverted_multi_index_test
   protobuf
   gtest
   gtest_main
+  pthread
 )
 
 set_target_properties(similia_tests_inverted_multi_index_test
