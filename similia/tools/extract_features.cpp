@@ -41,7 +41,10 @@ int main(int argc, char* argv[]) {
   path images_path(FLAGS_images_dir);
   CHECK(boost::filesystem::is_directory(images_path)) << ": " << FLAGS_images_dir << " is not a directory.";
   std::vector<path> image_paths;
-  std::copy(directory_iterator(images_path), directory_iterator(), std::back_inserter(image_paths));
+  std::copy_if(directory_iterator(images_path), directory_iterator(), std::back_inserter(image_paths),
+               [](const path& it) {
+                 return boost::filesystem::is_regular_file(it);
+               });
   LOG(INFO) << "There are " << image_paths.size() << " files in folder " << images_path;
   // we sort the paths to guarantee we have the same order.
   std::sort(image_paths.begin(), image_paths.end());
@@ -50,16 +53,24 @@ int main(int argc, char* argv[]) {
 
   std::ofstream output_stream(FLAGS_output_file);
   int num_extracted = 0;
+  int min_log_level;
   for (const path& image_path : image_paths) {
+    // set minloglevel to error to reduce amount of logs
+    min_log_level = FLAGS_minloglevel;
+    FLAGS_minloglevel = 2;
     std::vector<float> features = fe.CropAndExtractFeatures(common_utils::ReadFromFileOrDie(image_path));
-    CHECK_EQ(similia::kFeatureDimensions, features.size());
+    FLAGS_minloglevel = min_log_level;  // set minloglevel back to what it was.
+    CHECK_EQ(similia::kFeatureDimensions, features.size()) << "Features from: " << image_path
+                                                           << " could not be extracted.";
     output_stream << features[0];
     for (int i = 1; i < similia::kFeatureDimensions; ++i) {
       output_stream << ", " << features[i];
     }
     output_stream << std::endl;
     ++num_extracted;
-    LOG(INFO) << "extracted features for " << num_extracted << " images.";
+    if (num_extracted % 1000 == 0) {
+      LOG(INFO) << "extracted features for " << num_extracted << " images.";
+    }
   }
   output_stream.close();
   return 0;
