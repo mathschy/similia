@@ -89,8 +89,11 @@ target_link_libraries(similia_utils_features_extractor_lib
 )
 
 IF (SIMILIA_CPU_ONLY)
+  message(STATUS "SIMILIA_CPU_ONLY is true")
   # activate flag to define CPU_ONLY so that caffe doesn't look for cublas
   target_compile_definitions(similia_utils_features_extractor_lib PUBLIC CPU_ONLY=1)
+ELSE()
+  message(STATUS "SIMILIA_CPU_ONLY is false")
 ENDIF()
 # activate flag to have caffe's AddMatVector definition
 target_compile_definitions(similia_utils_features_extractor_lib PRIVATE USE_OPENCV=1)
