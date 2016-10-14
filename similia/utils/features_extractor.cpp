@@ -35,8 +35,20 @@ cv::Mat DecodeImage(const std::string& image) {
 FeaturesExtractor::FeaturesExtractor(const std::string& path_to_caffe_model_weights,
                                      const std::string& path_to_deploy_prototxt,
                                      const std::string& blob_names,
-                                     const int gpu)
-{
+                                     const int gpu) {
+  if (gpu >= 0) {
+    LOG(INFO) << "Querying GPU devices...";
+    Caffe::DeviceQuery();
+    LOG(INFO) << "Device id " << gpu << " status: " << Caffe::CheckDevice(gpu);
+    LOG(INFO) << "Activating GPU mode with device ID = " << gpu;
+    Caffe::SetDevice(gpu);
+    Caffe::set_mode(Caffe::GPU);
+    LOG(INFO) << "Caffe is in GPU mode.";
+    Caffe::DeviceQuery();
+    gpu_ = gpu;
+  } else {
+    LOG(INFO) << "Caffe is in CPU mode.";
+  }
   // set loglevel to 1 to avoid a bunch of INFO messages when initiliazing the net.
   LOG(INFO) << "Don't log INFO messages during net initialiation...";
   int min_log_level = FLAGS_minloglevel;
@@ -45,18 +57,6 @@ FeaturesExtractor::FeaturesExtractor(const std::string& path_to_caffe_model_weig
   FLAGS_minloglevel = min_log_level;  // set minloglevel back to what it was.
   LOG(INFO) << "Net initialized. Back to previous minloglevel.";
   this->net_->CopyTrainedLayersFrom(path_to_caffe_model_weights);
-  if (gpu >= 0) {
-    LOG(INFO) << "Querying GPU devices...";
-    Caffe::DeviceQuery();
-    LOG(INFO) << "Activating GPU mode with device ID = " << gpu;
-    Caffe::SetDevice(gpu);
-    Caffe::set_mode(Caffe::GPU);
-    LOG(INFO) << "Caffe is in GPU mode.";
-    gpu_ = gpu;
-  } else {
-    LOG(INFO) << "Caffe is in CPU mode.";
-  }
-
   boost::split(blob_names_, blob_names, boost::is_any_of(","));
 }
 
@@ -100,6 +100,7 @@ std::vector<float> FeaturesExtractor::ExtractFeatures(const cv::Mat& img) {
   // We have to reactivate gpu mode.
   if (gpu_ >= 0 && Caffe::mode() != Caffe::GPU) {
     LOG(INFO) << "Reactivating GPU mode with device ID = " << gpu_;
+    Caffe::SetDevice(gpu_);
     Caffe::set_mode(Caffe::GPU);
     CHECK(Caffe::mode() == Caffe::GPU);
   }
