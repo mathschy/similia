@@ -88,7 +88,7 @@ target_link_libraries(similia_utils_features_extractor_lib
   protobuf
 )
 
-IF (DEFINED SIMILIA_CPU_ONLY)
+IF (SIMILIA_CPU_ONLY)
   # activate flag to define CPU_ONLY so that caffe doesn't look for cublas
   target_compile_definitions(similia_utils_features_extractor_lib PUBLIC CPU_ONLY=1)
 ENDIF()
