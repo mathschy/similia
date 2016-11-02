@@ -14,6 +14,7 @@
 
 #include <grpc++/impl/codegen/async_stream.h>
 #include <grpc++/impl/codegen/async_unary_call.h>
+#include <grpc++/impl/codegen/method_handler_impl.h>
 #include <grpc++/impl/codegen/proto_utils.h>
 #include <grpc++/impl/codegen/rpc_method.h>
 #include <grpc++/impl/codegen/service_type.h>
@@ -106,6 +107,27 @@ class Similia GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_SimiliaSearch : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_SimiliaSearch() {
+      ::grpc::Service::MarkMethodStreamedUnary(0,
+        new ::grpc::StreamedUnaryHandler< ::similia::proto::SimiliaSearchRequest, ::similia::proto::SimiliaSearchResponse>(std::bind(&WithStreamedUnaryMethod_SimiliaSearch<BaseClass>::StreamedSimiliaSearch, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_SimiliaSearch() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status SimiliaSearch(::grpc::ServerContext* context, const ::similia::proto::SimiliaSearchRequest* request, ::similia::proto::SimiliaSearchResponse* response) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedSimiliaSearch(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::similia::proto::SimiliaSearchRequest,::similia::proto::SimiliaSearchResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_SimiliaSearch<Service > StreamedUnaryService;
 };
 
 // The service definition of the inverted multi index (read by similia and written by index processor)
@@ -139,11 +161,6 @@ class InvertedMultiIndex GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiCountResponse>> AsyncMultiCount(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiCountResponse>>(AsyncMultiCountRaw(context, request, cq));
     }
-    // Get images counts from multiple cells.
-    virtual ::grpc::Status MultiCountAtLastStartup(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::similia::proto::MultiIndexMultiCountResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiCountResponse>> AsyncMultiCountAtLastStartup(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiCountResponse>>(AsyncMultiCountAtLastStartupRaw(context, request, cq));
-    }
     // Add multiple elements to cells.
     virtual ::grpc::Status MultiAdd(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::similia::proto::MultiIndexMultiAddResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiAddResponse>> AsyncMultiAdd(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::grpc::CompletionQueue* cq) {
@@ -155,7 +172,6 @@ class InvertedMultiIndex GRPC_FINAL {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexDeleteResponse>* AsyncDeleteRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexDeleteRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiGetResponse>* AsyncMultiGetRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiGetRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiCountResponse>* AsyncMultiCountRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiCountResponse>* AsyncMultiCountAtLastStartupRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiAddResponse>* AsyncMultiAddRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub GRPC_FINAL : public StubInterface {
@@ -181,10 +197,6 @@ class InvertedMultiIndex GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiCountResponse>> AsyncMultiCount(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiCountResponse>>(AsyncMultiCountRaw(context, request, cq));
     }
-    ::grpc::Status MultiCountAtLastStartup(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::similia::proto::MultiIndexMultiCountResponse* response) GRPC_OVERRIDE;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiCountResponse>> AsyncMultiCountAtLastStartup(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiCountResponse>>(AsyncMultiCountAtLastStartupRaw(context, request, cq));
-    }
     ::grpc::Status MultiAdd(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::similia::proto::MultiIndexMultiAddResponse* response) GRPC_OVERRIDE;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiAddResponse>> AsyncMultiAdd(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiAddResponse>>(AsyncMultiAddRaw(context, request, cq));
@@ -197,14 +209,12 @@ class InvertedMultiIndex GRPC_FINAL {
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexDeleteResponse>* AsyncDeleteRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexDeleteRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiGetResponse>* AsyncMultiGetRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiGetRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiCountResponse>* AsyncMultiCountRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
-    ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiCountResponse>* AsyncMultiCountAtLastStartupRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiAddResponse>* AsyncMultiAddRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     const ::grpc::RpcMethod rpcmethod_Add_;
     const ::grpc::RpcMethod rpcmethod_Get_;
     const ::grpc::RpcMethod rpcmethod_Delete_;
     const ::grpc::RpcMethod rpcmethod_MultiGet_;
     const ::grpc::RpcMethod rpcmethod_MultiCount_;
-    const ::grpc::RpcMethod rpcmethod_MultiCountAtLastStartup_;
     const ::grpc::RpcMethod rpcmethod_MultiAdd_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -223,8 +233,6 @@ class InvertedMultiIndex GRPC_FINAL {
     virtual ::grpc::Status MultiGet(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiGetRequest* request, ::similia::proto::MultiIndexMultiGetResponse* response);
     // Get images counts from multiple cells.
     virtual ::grpc::Status MultiCount(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiCountRequest* request, ::similia::proto::MultiIndexMultiCountResponse* response);
-    // Get images counts from multiple cells.
-    virtual ::grpc::Status MultiCountAtLastStartup(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiCountRequest* request, ::similia::proto::MultiIndexMultiCountResponse* response);
     // Add multiple elements to cells.
     virtual ::grpc::Status MultiAdd(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiAddRequest* request, ::similia::proto::MultiIndexMultiAddResponse* response);
   };
@@ -329,32 +337,12 @@ class InvertedMultiIndex GRPC_FINAL {
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_MultiCountAtLastStartup : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
-   public:
-    WithAsyncMethod_MultiCountAtLastStartup() {
-      ::grpc::Service::MarkMethodAsync(5);
-    }
-    ~WithAsyncMethod_MultiCountAtLastStartup() GRPC_OVERRIDE {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status MultiCountAtLastStartup(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiCountRequest* request, ::similia::proto::MultiIndexMultiCountResponse* response) GRPC_FINAL GRPC_OVERRIDE {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestMultiCountAtLastStartup(::grpc::ServerContext* context, ::similia::proto::MultiIndexMultiCountRequest* request, ::grpc::ServerAsyncResponseWriter< ::similia::proto::MultiIndexMultiCountResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
   class WithAsyncMethod_MultiAdd : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_MultiAdd() {
-      ::grpc::Service::MarkMethodAsync(6);
+      ::grpc::Service::MarkMethodAsync(5);
     }
     ~WithAsyncMethod_MultiAdd() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -365,10 +353,10 @@ class InvertedMultiIndex GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestMultiAdd(::grpc::ServerContext* context, ::similia::proto::MultiIndexMultiAddRequest* request, ::grpc::ServerAsyncResponseWriter< ::similia::proto::MultiIndexMultiAddResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_Add<WithAsyncMethod_Get<WithAsyncMethod_Delete<WithAsyncMethod_MultiGet<WithAsyncMethod_MultiCount<WithAsyncMethod_MultiCountAtLastStartup<WithAsyncMethod_MultiAdd<Service > > > > > > > AsyncService;
+  typedef WithAsyncMethod_Add<WithAsyncMethod_Get<WithAsyncMethod_Delete<WithAsyncMethod_MultiGet<WithAsyncMethod_MultiCount<WithAsyncMethod_MultiAdd<Service > > > > > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_Add : public BaseClass {
    private:
@@ -455,29 +443,12 @@ class InvertedMultiIndex GRPC_FINAL {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_MultiCountAtLastStartup : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
-   public:
-    WithGenericMethod_MultiCountAtLastStartup() {
-      ::grpc::Service::MarkMethodGeneric(5);
-    }
-    ~WithGenericMethod_MultiCountAtLastStartup() GRPC_OVERRIDE {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status MultiCountAtLastStartup(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiCountRequest* request, ::similia::proto::MultiIndexMultiCountResponse* response) GRPC_FINAL GRPC_OVERRIDE {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
   class WithGenericMethod_MultiAdd : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_MultiAdd() {
-      ::grpc::Service::MarkMethodGeneric(6);
+      ::grpc::Service::MarkMethodGeneric(5);
     }
     ~WithGenericMethod_MultiAdd() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -488,6 +459,127 @@ class InvertedMultiIndex GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_Add : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_Add() {
+      ::grpc::Service::MarkMethodStreamedUnary(0,
+        new ::grpc::StreamedUnaryHandler< ::similia::proto::MultiIndexAddRequest, ::similia::proto::MultiIndexAddResponse>(std::bind(&WithStreamedUnaryMethod_Add<BaseClass>::StreamedAdd, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_Add() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status Add(::grpc::ServerContext* context, const ::similia::proto::MultiIndexAddRequest* request, ::similia::proto::MultiIndexAddResponse* response) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedAdd(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::similia::proto::MultiIndexAddRequest,::similia::proto::MultiIndexAddResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_Get : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_Get() {
+      ::grpc::Service::MarkMethodStreamedUnary(1,
+        new ::grpc::StreamedUnaryHandler< ::similia::proto::MultiIndexGetRequest, ::similia::proto::MultiIndexGetResponse>(std::bind(&WithStreamedUnaryMethod_Get<BaseClass>::StreamedGet, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_Get() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status Get(::grpc::ServerContext* context, const ::similia::proto::MultiIndexGetRequest* request, ::similia::proto::MultiIndexGetResponse* response) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGet(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::similia::proto::MultiIndexGetRequest,::similia::proto::MultiIndexGetResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_Delete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_Delete() {
+      ::grpc::Service::MarkMethodStreamedUnary(2,
+        new ::grpc::StreamedUnaryHandler< ::similia::proto::MultiIndexDeleteRequest, ::similia::proto::MultiIndexDeleteResponse>(std::bind(&WithStreamedUnaryMethod_Delete<BaseClass>::StreamedDelete, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_Delete() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status Delete(::grpc::ServerContext* context, const ::similia::proto::MultiIndexDeleteRequest* request, ::similia::proto::MultiIndexDeleteResponse* response) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedDelete(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::similia::proto::MultiIndexDeleteRequest,::similia::proto::MultiIndexDeleteResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_MultiGet : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_MultiGet() {
+      ::grpc::Service::MarkMethodStreamedUnary(3,
+        new ::grpc::StreamedUnaryHandler< ::similia::proto::MultiIndexMultiGetRequest, ::similia::proto::MultiIndexMultiGetResponse>(std::bind(&WithStreamedUnaryMethod_MultiGet<BaseClass>::StreamedMultiGet, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_MultiGet() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status MultiGet(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiGetRequest* request, ::similia::proto::MultiIndexMultiGetResponse* response) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedMultiGet(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::similia::proto::MultiIndexMultiGetRequest,::similia::proto::MultiIndexMultiGetResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_MultiCount : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_MultiCount() {
+      ::grpc::Service::MarkMethodStreamedUnary(4,
+        new ::grpc::StreamedUnaryHandler< ::similia::proto::MultiIndexMultiCountRequest, ::similia::proto::MultiIndexMultiCountResponse>(std::bind(&WithStreamedUnaryMethod_MultiCount<BaseClass>::StreamedMultiCount, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_MultiCount() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status MultiCount(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiCountRequest* request, ::similia::proto::MultiIndexMultiCountResponse* response) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedMultiCount(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::similia::proto::MultiIndexMultiCountRequest,::similia::proto::MultiIndexMultiCountResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_MultiAdd : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_MultiAdd() {
+      ::grpc::Service::MarkMethodStreamedUnary(5,
+        new ::grpc::StreamedUnaryHandler< ::similia::proto::MultiIndexMultiAddRequest, ::similia::proto::MultiIndexMultiAddResponse>(std::bind(&WithStreamedUnaryMethod_MultiAdd<BaseClass>::StreamedMultiAdd, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_MultiAdd() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status MultiAdd(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiAddRequest* request, ::similia::proto::MultiIndexMultiAddResponse* response) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedMultiAdd(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::similia::proto::MultiIndexMultiAddRequest,::similia::proto::MultiIndexMultiAddResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_Add<WithStreamedUnaryMethod_Get<WithStreamedUnaryMethod_Delete<WithStreamedUnaryMethod_MultiGet<WithStreamedUnaryMethod_MultiCount<WithStreamedUnaryMethod_MultiAdd<Service > > > > > > StreamedUnaryService;
 };
 
 // The service definition of the multi product quantizer (used by index processor)
@@ -564,6 +656,27 @@ class MultiProductQuantizer GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_Quantize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_Quantize() {
+      ::grpc::Service::MarkMethodStreamedUnary(0,
+        new ::grpc::StreamedUnaryHandler< ::similia::proto::QuantizationRequest, ::similia::proto::QuantizationResponse>(std::bind(&WithStreamedUnaryMethod_Quantize<BaseClass>::StreamedQuantize, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_Quantize() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status Quantize(::grpc::ServerContext* context, const ::similia::proto::QuantizationRequest* request, ::similia::proto::QuantizationResponse* response) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedQuantize(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::similia::proto::QuantizationRequest,::similia::proto::QuantizationResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_Quantize<Service > StreamedUnaryService;
 };
 
 }  // namespace proto

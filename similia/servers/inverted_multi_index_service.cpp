@@ -137,30 +137,6 @@ Status InvertedMultiIndexService::MultiCount(ServerContext* context,
   return Status::OK;
 }
 
-Status InvertedMultiIndexService::MultiCountAtLastStartup(ServerContext* context,
-                                                          const proto::MultiIndexMultiCountRequest* request,
-                                                          proto::MultiIndexMultiCountResponse* response) {
-  LOG(INFO) << "MultiCountFromCache Request...";
-  Timer time_get("inverted_multi_index_service.multi_count.processing");
-
-  int num_images = 0;
-  for (const auto& it : request->indexing_ids()) {
-    steady_clock::time_point before_getcount = steady_clock::now();
-    num_images = inverted_multi_index_->GetCountAtLastStartup(it.id(0), it.id(1));
-    response->add_count(num_images);
-    steady_clock::time_point after_getcount = steady_clock::now();
-    VLOG(2) << "Get count " << num_images << " images took: "
-        << std::chrono::duration_cast<std::chrono::microseconds>(after_getcount-before_getcount).count()
-        << " us.";
-  }
-
-  int64_t processing_time = time_get.Stop();
-  response->set_processing_time_ms(processing_time);
-  LOG(INFO) << "MultiCount " << response->count_size() << " counts took: " << processing_time << " ms.";
-
-  return Status::OK;
-}
-
 Status InvertedMultiIndexService::MultiAdd(ServerContext* context,
                                            const proto::MultiIndexMultiAddRequest* request,
                                            proto::MultiIndexMultiAddResponse* response) {

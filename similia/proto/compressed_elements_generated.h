@@ -9,19 +9,14 @@
 
 namespace similia {
 namespace fbs {
-struct CompressingIds;
-}  // namespace fbs
-}  // namespace similia
-
-namespace similia {
-namespace fbs {
 
 struct SerializedCompressingIds;
+
 struct CompressedElements;
 
 struct SerializedCompressingIds FLATBUFFERS_FINAL_CLASS : private flatbuffers::Table {
   enum {
-    VT_COMPRESSING_IDS = 4,
+    VT_COMPRESSING_IDS = 4
   };
   const flatbuffers::Vector<uint8_t> *compressing_ids() const { return GetPointer<const flatbuffers::Vector<uint8_t> *>(VT_COMPRESSING_IDS); }
   flatbuffers::Vector<uint8_t> *mutable_compressing_ids() { return GetPointer<flatbuffers::Vector<uint8_t> *>(VT_COMPRESSING_IDS); }
@@ -56,7 +51,7 @@ inline flatbuffers::Offset<SerializedCompressingIds> CreateSerializedCompressing
 struct CompressedElements FLATBUFFERS_FINAL_CLASS : private flatbuffers::Table {
   enum {
     VT_ID = 4,
-    VT_COMPRESSING_IDS = 6,
+    VT_COMPRESSING_IDS = 6
   };
   const flatbuffers::Vector<flatbuffers::Offset<flatbuffers::String>> *id() const { return GetPointer<const flatbuffers::Vector<flatbuffers::Offset<flatbuffers::String>> *>(VT_ID); }
   flatbuffers::Vector<flatbuffers::Offset<flatbuffers::String>> *mutable_id() { return GetPointer<flatbuffers::Vector<flatbuffers::Offset<flatbuffers::String>> *>(VT_ID); }

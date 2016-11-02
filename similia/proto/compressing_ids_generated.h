@@ -5,7 +5,6 @@
 
 #include "flatbuffers/flatbuffers.h"
 
-
 namespace similia {
 namespace fbs {
 
@@ -14,7 +13,7 @@ struct CompressingIds;
 /// The compressing ids are integer between 0 and 255 (encoded as ubyte)
 struct CompressingIds FLATBUFFERS_FINAL_CLASS : private flatbuffers::Table {
   enum {
-    VT_ID = 4,
+    VT_ID = 4
   };
   const flatbuffers::Vector<uint8_t> *id() const { return GetPointer<const flatbuffers::Vector<uint8_t> *>(VT_ID); }
   flatbuffers::Vector<uint8_t> *mutable_id() { return GetPointer<flatbuffers::Vector<uint8_t> *>(VT_ID); }

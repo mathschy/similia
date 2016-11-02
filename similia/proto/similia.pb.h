@@ -69,7 +69,7 @@ class SimiliaSearchResponse;
 
 // ===================================================================
 
-class FloatMatrix : public ::google::protobuf::Message {
+class FloatMatrix : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.FloatMatrix) */ {
  public:
   FloatMatrix();
   virtual ~FloatMatrix();
@@ -103,7 +103,11 @@ class FloatMatrix : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -168,7 +172,7 @@ class FloatMatrix : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Features : public ::google::protobuf::Message {
+class Features : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.Features) */ {
  public:
   Features();
   virtual ~Features();
@@ -202,7 +206,11 @@ class Features : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -253,7 +261,7 @@ class Features : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class CompressingClustersIds : public ::google::protobuf::Message {
+class CompressingClustersIds : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.CompressingClustersIds) */ {
  public:
   CompressingClustersIds();
   virtual ~CompressingClustersIds();
@@ -287,7 +295,11 @@ class CompressingClustersIds : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -338,7 +350,7 @@ class CompressingClustersIds : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class IndexingClustersIds : public ::google::protobuf::Message {
+class IndexingClustersIds : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.IndexingClustersIds) */ {
  public:
   IndexingClustersIds();
   virtual ~IndexingClustersIds();
@@ -372,7 +384,11 @@ class IndexingClustersIds : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -423,7 +439,7 @@ class IndexingClustersIds : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class CompressedElement : public ::google::protobuf::Message {
+class CompressedElement : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.CompressedElement) */ {
  public:
   CompressedElement();
   virtual ~CompressedElement();
@@ -457,7 +473,11 @@ class CompressedElement : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -516,7 +536,7 @@ class CompressedElement : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class SerializedCompressedElement : public ::google::protobuf::Message {
+class SerializedCompressedElement : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.SerializedCompressedElement) */ {
  public:
   SerializedCompressedElement();
   virtual ~SerializedCompressedElement();
@@ -550,7 +570,11 @@ class SerializedCompressedElement : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -611,7 +635,7 @@ class SerializedCompressedElement : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class CompressedElementsCombined : public ::google::protobuf::Message {
+class CompressedElementsCombined : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.CompressedElementsCombined) */ {
  public:
   CompressedElementsCombined();
   virtual ~CompressedElementsCombined();
@@ -645,7 +669,11 @@ class CompressedElementsCombined : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -695,7 +723,7 @@ class CompressedElementsCombined : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class SerializedCompressedElementsCombined : public ::google::protobuf::Message {
+class SerializedCompressedElementsCombined : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.SerializedCompressedElementsCombined) */ {
  public:
   SerializedCompressedElementsCombined();
   virtual ~SerializedCompressedElementsCombined();
@@ -729,7 +757,11 @@ class SerializedCompressedElementsCombined : public ::google::protobuf::Message 
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -779,7 +811,7 @@ class SerializedCompressedElementsCombined : public ::google::protobuf::Message 
 };
 // -------------------------------------------------------------------
 
-class CompressedElements : public ::google::protobuf::Message {
+class CompressedElements : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.CompressedElements) */ {
  public:
   CompressedElements();
   virtual ~CompressedElements();
@@ -813,7 +845,11 @@ class CompressedElements : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -880,7 +916,7 @@ class CompressedElements : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class SerializedCompressedElements : public ::google::protobuf::Message {
+class SerializedCompressedElements : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.SerializedCompressedElements) */ {
  public:
   SerializedCompressedElements();
   virtual ~SerializedCompressedElements();
@@ -914,7 +950,11 @@ class SerializedCompressedElements : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -985,7 +1025,7 @@ class SerializedCompressedElements : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class CompressedElementsMap : public ::google::protobuf::Message {
+class CompressedElementsMap : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.CompressedElementsMap) */ {
  public:
   CompressedElementsMap();
   virtual ~CompressedElementsMap();
@@ -1019,7 +1059,11 @@ class CompressedElementsMap : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1077,7 +1121,7 @@ class CompressedElementsMap : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class SimiliaSearchRequest : public ::google::protobuf::Message {
+class SimiliaSearchRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.SimiliaSearchRequest) */ {
  public:
   SimiliaSearchRequest();
   virtual ~SimiliaSearchRequest();
@@ -1111,7 +1155,11 @@ class SimiliaSearchRequest : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1177,7 +1225,7 @@ class SimiliaSearchRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class SimiliaSearchResponse : public ::google::protobuf::Message {
+class SimiliaSearchResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.SimiliaSearchResponse) */ {
  public:
   SimiliaSearchResponse();
   virtual ~SimiliaSearchResponse();
@@ -1211,7 +1259,11 @@ class SimiliaSearchResponse : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1286,7 +1338,7 @@ class SimiliaSearchResponse : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexAddRequest : public ::google::protobuf::Message {
+class MultiIndexAddRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexAddRequest) */ {
  public:
   MultiIndexAddRequest();
   virtual ~MultiIndexAddRequest();
@@ -1320,7 +1372,11 @@ class MultiIndexAddRequest : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1389,7 +1445,7 @@ class MultiIndexAddRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexAddResponse : public ::google::protobuf::Message {
+class MultiIndexAddResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexAddResponse) */ {
  public:
   MultiIndexAddResponse();
   virtual ~MultiIndexAddResponse();
@@ -1423,7 +1479,11 @@ class MultiIndexAddResponse : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1467,7 +1527,7 @@ class MultiIndexAddResponse : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexGetRequest : public ::google::protobuf::Message {
+class MultiIndexGetRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexGetRequest) */ {
  public:
   MultiIndexGetRequest();
   virtual ~MultiIndexGetRequest();
@@ -1501,7 +1561,11 @@ class MultiIndexGetRequest : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1548,7 +1612,7 @@ class MultiIndexGetRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexGetResponse : public ::google::protobuf::Message {
+class MultiIndexGetResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexGetResponse) */ {
  public:
   MultiIndexGetResponse();
   virtual ~MultiIndexGetResponse();
@@ -1582,7 +1646,11 @@ class MultiIndexGetResponse : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1638,7 +1706,7 @@ class MultiIndexGetResponse : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexMultiGetRequest : public ::google::protobuf::Message {
+class MultiIndexMultiGetRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexMultiGetRequest) */ {
  public:
   MultiIndexMultiGetRequest();
   virtual ~MultiIndexMultiGetRequest();
@@ -1672,7 +1740,11 @@ class MultiIndexMultiGetRequest : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1729,7 +1801,7 @@ class MultiIndexMultiGetRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexMultiGetResponse : public ::google::protobuf::Message {
+class MultiIndexMultiGetResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexMultiGetResponse) */ {
  public:
   MultiIndexMultiGetResponse();
   virtual ~MultiIndexMultiGetResponse();
@@ -1763,7 +1835,11 @@ class MultiIndexMultiGetResponse : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1824,7 +1900,7 @@ class MultiIndexMultiGetResponse : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexMultiCountRequest : public ::google::protobuf::Message {
+class MultiIndexMultiCountRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexMultiCountRequest) */ {
  public:
   MultiIndexMultiCountRequest();
   virtual ~MultiIndexMultiCountRequest();
@@ -1858,7 +1934,11 @@ class MultiIndexMultiCountRequest : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1908,7 +1988,7 @@ class MultiIndexMultiCountRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexMultiCountResponse : public ::google::protobuf::Message {
+class MultiIndexMultiCountResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexMultiCountResponse) */ {
  public:
   MultiIndexMultiCountResponse();
   virtual ~MultiIndexMultiCountResponse();
@@ -1942,7 +2022,11 @@ class MultiIndexMultiCountResponse : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -2000,7 +2084,7 @@ class MultiIndexMultiCountResponse : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexMultiAddRequest : public ::google::protobuf::Message {
+class MultiIndexMultiAddRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexMultiAddRequest) */ {
  public:
   MultiIndexMultiAddRequest();
   virtual ~MultiIndexMultiAddRequest();
@@ -2034,7 +2118,11 @@ class MultiIndexMultiAddRequest : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -2084,7 +2172,7 @@ class MultiIndexMultiAddRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexMultiAddResponse : public ::google::protobuf::Message {
+class MultiIndexMultiAddResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexMultiAddResponse) */ {
  public:
   MultiIndexMultiAddResponse();
   virtual ~MultiIndexMultiAddResponse();
@@ -2118,7 +2206,11 @@ class MultiIndexMultiAddResponse : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -2162,7 +2254,7 @@ class MultiIndexMultiAddResponse : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexDeleteRequest : public ::google::protobuf::Message {
+class MultiIndexDeleteRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexDeleteRequest) */ {
  public:
   MultiIndexDeleteRequest();
   virtual ~MultiIndexDeleteRequest();
@@ -2196,7 +2288,11 @@ class MultiIndexDeleteRequest : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -2255,7 +2351,7 @@ class MultiIndexDeleteRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class MultiIndexDeleteResponse : public ::google::protobuf::Message {
+class MultiIndexDeleteResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.MultiIndexDeleteResponse) */ {
  public:
   MultiIndexDeleteResponse();
   virtual ~MultiIndexDeleteResponse();
@@ -2289,7 +2385,11 @@ class MultiIndexDeleteResponse : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -2333,7 +2433,7 @@ class MultiIndexDeleteResponse : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class QuantizationRequest : public ::google::protobuf::Message {
+class QuantizationRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.QuantizationRequest) */ {
  public:
   QuantizationRequest();
   virtual ~QuantizationRequest();
@@ -2367,7 +2467,11 @@ class QuantizationRequest : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -2426,7 +2530,7 @@ class QuantizationRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class QuantizationResponse : public ::google::protobuf::Message {
+class QuantizationResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:similia.proto.QuantizationResponse) */ {
  public:
   QuantizationResponse();
   virtual ~QuantizationResponse();
@@ -2460,7 +2564,11 @@ class QuantizationResponse : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -2724,6 +2832,7 @@ inline ::std::string* CompressedElement::mutable_id() {
   return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* CompressedElement::release_id() {
+  // @@protoc_insertion_point(field_release:similia.proto.CompressedElement.id)
   
   return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2758,6 +2867,7 @@ inline ::similia::proto::CompressingClustersIds* CompressedElement::mutable_comp
   return compressing_clusters_id_;
 }
 inline ::similia::proto::CompressingClustersIds* CompressedElement::release_compressing_clusters_id() {
+  // @@protoc_insertion_point(field_release:similia.proto.CompressedElement.compressing_clusters_id)
   
   ::similia::proto::CompressingClustersIds* temp = compressing_clusters_id_;
   compressing_clusters_id_ = NULL;
@@ -2808,6 +2918,7 @@ inline ::std::string* SerializedCompressedElement::mutable_id() {
   return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SerializedCompressedElement::release_id() {
+  // @@protoc_insertion_point(field_release:similia.proto.SerializedCompressedElement.id)
   
   return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2851,6 +2962,7 @@ inline ::std::string* SerializedCompressedElement::mutable_compressing_clusters_
   return compressing_clusters_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SerializedCompressedElement::release_compressing_clusters_id() {
+  // @@protoc_insertion_point(field_release:similia.proto.SerializedCompressedElement.compressing_clusters_id)
   
   return compressing_clusters_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2965,6 +3077,7 @@ inline void CompressedElements::set_id(int index, const char* value, size_t size
   // @@protoc_insertion_point(field_set_pointer:similia.proto.CompressedElements.id)
 }
 inline ::std::string* CompressedElements::add_id() {
+  // @@protoc_insertion_point(field_add_mutable:similia.proto.CompressedElements.id)
   return id_.Add();
 }
 inline void CompressedElements::add_id(const ::std::string& value) {
@@ -3053,6 +3166,7 @@ inline void SerializedCompressedElements::set_id(int index, const char* value, s
   // @@protoc_insertion_point(field_set_pointer:similia.proto.SerializedCompressedElements.id)
 }
 inline ::std::string* SerializedCompressedElements::add_id() {
+  // @@protoc_insertion_point(field_add_mutable:similia.proto.SerializedCompressedElements.id)
   return id_.Add();
 }
 inline void SerializedCompressedElements::add_id(const ::std::string& value) {
@@ -3107,6 +3221,7 @@ inline void SerializedCompressedElements::set_compressing_clusters_id(int index,
   // @@protoc_insertion_point(field_set_pointer:similia.proto.SerializedCompressedElements.compressing_clusters_id)
 }
 inline ::std::string* SerializedCompressedElements::add_compressing_clusters_id() {
+  // @@protoc_insertion_point(field_add_mutable:similia.proto.SerializedCompressedElements.compressing_clusters_id)
   return compressing_clusters_id_.Add();
 }
 inline void SerializedCompressedElements::add_compressing_clusters_id(const ::std::string& value) {
@@ -3188,6 +3303,7 @@ inline ::std::string* SimiliaSearchRequest::mutable_image_id() {
   return image_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SimiliaSearchRequest::release_image_id() {
+  // @@protoc_insertion_point(field_release:similia.proto.SimiliaSearchRequest.image_id)
   
   return image_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3236,6 +3352,7 @@ inline ::similia::proto::Features* SimiliaSearchRequest::mutable_features() {
   return features_;
 }
 inline ::similia::proto::Features* SimiliaSearchRequest::release_features() {
+  // @@protoc_insertion_point(field_release:similia.proto.SimiliaSearchRequest.features)
   
   ::similia::proto::Features* temp = features_;
   features_ = NULL;
@@ -3285,6 +3402,7 @@ inline void SimiliaSearchResponse::set_image_id(int index, const char* value, si
   // @@protoc_insertion_point(field_set_pointer:similia.proto.SimiliaSearchResponse.image_id)
 }
 inline ::std::string* SimiliaSearchResponse::add_image_id() {
+  // @@protoc_insertion_point(field_add_mutable:similia.proto.SimiliaSearchResponse.image_id)
   return image_id_.Add();
 }
 inline void SimiliaSearchResponse::add_image_id(const ::std::string& value) {
@@ -3388,6 +3506,7 @@ inline ::std::string* MultiIndexAddRequest::mutable_image_id() {
   return image_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MultiIndexAddRequest::release_image_id() {
+  // @@protoc_insertion_point(field_release:similia.proto.MultiIndexAddRequest.image_id)
   
   return image_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3422,6 +3541,7 @@ inline ::similia::proto::IndexingClustersIds* MultiIndexAddRequest::mutable_inde
   return indexing_ids_;
 }
 inline ::similia::proto::IndexingClustersIds* MultiIndexAddRequest::release_indexing_ids() {
+  // @@protoc_insertion_point(field_release:similia.proto.MultiIndexAddRequest.indexing_ids)
   
   ::similia::proto::IndexingClustersIds* temp = indexing_ids_;
   indexing_ids_ = NULL;
@@ -3459,6 +3579,7 @@ inline ::similia::proto::CompressingClustersIds* MultiIndexAddRequest::mutable_c
   return compressing_ids_;
 }
 inline ::similia::proto::CompressingClustersIds* MultiIndexAddRequest::release_compressing_ids() {
+  // @@protoc_insertion_point(field_release:similia.proto.MultiIndexAddRequest.compressing_ids)
   
   ::similia::proto::CompressingClustersIds* temp = compressing_ids_;
   compressing_ids_ = NULL;
@@ -3518,6 +3639,7 @@ inline ::similia::proto::IndexingClustersIds* MultiIndexGetRequest::mutable_inde
   return indexing_ids_;
 }
 inline ::similia::proto::IndexingClustersIds* MultiIndexGetRequest::release_indexing_ids() {
+  // @@protoc_insertion_point(field_release:similia.proto.MultiIndexGetRequest.indexing_ids)
   
   ::similia::proto::IndexingClustersIds* temp = indexing_ids_;
   indexing_ids_ = NULL;
@@ -3582,6 +3704,7 @@ inline ::std::string* MultiIndexGetResponse::mutable_compressed_elements() {
   return compressed_elements_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MultiIndexGetResponse::release_compressed_elements() {
+  // @@protoc_insertion_point(field_release:similia.proto.MultiIndexGetResponse.compressed_elements)
   
   return compressed_elements_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3690,6 +3813,7 @@ inline void MultiIndexMultiGetResponse::set_compressed_elements(int index, const
   // @@protoc_insertion_point(field_set_pointer:similia.proto.MultiIndexMultiGetResponse.compressed_elements)
 }
 inline ::std::string* MultiIndexMultiGetResponse::add_compressed_elements() {
+  // @@protoc_insertion_point(field_add_mutable:similia.proto.MultiIndexMultiGetResponse.compressed_elements)
   return compressed_elements_.Add();
 }
 inline void MultiIndexMultiGetResponse::add_compressed_elements(const ::std::string& value) {
@@ -3883,6 +4007,7 @@ inline ::std::string* MultiIndexDeleteRequest::mutable_id() {
   return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MultiIndexDeleteRequest::release_id() {
+  // @@protoc_insertion_point(field_release:similia.proto.MultiIndexDeleteRequest.id)
   
   return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3917,6 +4042,7 @@ inline ::similia::proto::IndexingClustersIds* MultiIndexDeleteRequest::mutable_i
   return indexing_ids_;
 }
 inline ::similia::proto::IndexingClustersIds* MultiIndexDeleteRequest::release_indexing_ids() {
+  // @@protoc_insertion_point(field_release:similia.proto.MultiIndexDeleteRequest.indexing_ids)
   
   ::similia::proto::IndexingClustersIds* temp = indexing_ids_;
   indexing_ids_ = NULL;
@@ -3976,6 +4102,7 @@ inline ::similia::proto::Features* QuantizationRequest::mutable_features() {
   return features_;
 }
 inline ::similia::proto::Features* QuantizationRequest::release_features() {
+  // @@protoc_insertion_point(field_release:similia.proto.QuantizationRequest.features)
   
   ::similia::proto::Features* temp = features_;
   features_ = NULL;
@@ -4022,6 +4149,7 @@ inline ::std::string* QuantizationRequest::mutable_image_id() {
   return image_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* QuantizationRequest::release_image_id() {
+  // @@protoc_insertion_point(field_release:similia.proto.QuantizationRequest.image_id)
   
   return image_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4074,6 +4202,7 @@ inline ::similia::proto::CompressingClustersIds* QuantizationResponse::mutable_c
   return compressing_ids_;
 }
 inline ::similia::proto::CompressingClustersIds* QuantizationResponse::release_compressing_ids() {
+  // @@protoc_insertion_point(field_release:similia.proto.QuantizationResponse.compressing_ids)
   
   ::similia::proto::CompressingClustersIds* temp = compressing_ids_;
   compressing_ids_ = NULL;
@@ -4111,6 +4240,7 @@ inline ::similia::proto::IndexingClustersIds* QuantizationResponse::mutable_inde
   return indexing_ids_;
 }
 inline ::similia::proto::IndexingClustersIds* QuantizationResponse::release_indexing_ids() {
+  // @@protoc_insertion_point(field_release:similia.proto.QuantizationResponse.indexing_ids)
   
   ::similia::proto::IndexingClustersIds* temp = indexing_ids_;
   indexing_ids_ = NULL;

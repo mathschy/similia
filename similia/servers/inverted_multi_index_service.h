@@ -31,10 +31,6 @@ class InvertedMultiIndexService final: public proto::InvertedMultiIndex::Service
                           const proto::MultiIndexMultiCountRequest* request,
                           proto::MultiIndexMultiCountResponse* response) override;
 
-  grpc::Status MultiCountAtLastStartup(grpc::ServerContext* context,
-                                       const proto::MultiIndexMultiCountRequest* request,
-                                       proto::MultiIndexMultiCountResponse* response) override;
-
   grpc::Status MultiAdd(grpc::ServerContext* context,
                         const proto::MultiIndexMultiAddRequest* request,
                         proto::MultiIndexMultiAddResponse* response) override;

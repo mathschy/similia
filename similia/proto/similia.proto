@@ -216,9 +216,6 @@ service InvertedMultiIndex {
   // Get images counts from multiple cells.
   rpc MultiCount(MultiIndexMultiCountRequest) returns (MultiIndexMultiCountResponse) {}
 
-  // Get images counts from multiple cells.
-  rpc MultiCountAtLastStartup(MultiIndexMultiCountRequest) returns (MultiIndexMultiCountResponse) {}
-
   // Add multiple elements to cells.
   rpc MultiAdd(MultiIndexMultiAddRequest) returns (MultiIndexMultiAddResponse) {}
 }

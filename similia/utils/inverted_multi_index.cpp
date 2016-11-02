@@ -82,7 +82,6 @@ InvertedMultiIndex::InvertedMultiIndex(const std::string& db_path) {
   Status s = DB::Open(options, db_path, &db_p);
   db_.reset(db_p);
   CHECK(s.ok()) << s.ToString();
-  CacheAllCounts();
 }
 
 std::string InvertedMultiIndex::GetResidualsInCluster(int cluster_id1, int cluster_id2, int* count) {
@@ -140,39 +139,6 @@ void InvertedMultiIndex::AddResidualCompressedToCluster(int cluster_id1, int clu
   }
   Status s = db_->Write(WriteOptions(), &batch);
   CHECK(s.ok()) << s.ToString();
-}
-
-void InvertedMultiIndex::AddToCounts(const rocksdb::Iterator& it) {
-  std::vector<std::string> tokens;
-  std::string key(it.key().data(), kKeyPrefixLength - 1);  // - 1 to ignore "."
-  boost::split(tokens, key, boost::is_any_of(","));
-  CHECK_EQ(tokens.size(), 2);
-  counts_(std::stoi(tokens[0]), std::stoi(tokens[1])) += 1;
-}
-
-void InvertedMultiIndex::CacheAllCounts() {
-  steady_clock::time_point before_cache_all_counts = steady_clock::now();
-  rocksdb::ReadOptions read_options;
-  read_options.total_order_seek = true;  // We need to specify this not to use prefix extractor.
-  std::unique_ptr<rocksdb::Iterator> it(db_->NewIterator(read_options));
-  int count = 0;
-  for (it->SeekToFirst(); it->Valid(); it->Next()) {
-    AddToCounts(*it);
-    ++count;
-    if (count % 10000000 == 0) {  // log every 10M elements
-      LOG(INFO) << "cached " << count << " elements.";
-    }
-  }
-  Status s = it->status();
-  CHECK(s.ok()) << s.ToString();
-  steady_clock::time_point after_cache_all_counts = steady_clock::now();
-  LOG(INFO) << "finished. cached " << count << " elements in "
-      << std::chrono::duration_cast<std::chrono::milliseconds>(after_cache_all_counts-before_cache_all_counts).count()
-      << " ms.";
-}
-
-int InvertedMultiIndex::GetCountAtLastStartup(int cluster_id1, int cluster_id2) {
-  return counts_(cluster_id1, cluster_id2);
 }
 
 void InvertedMultiIndex::DeleteResidualInCluster(int cluster_id1, int cluster_id2, const std::string& residual_id) {
