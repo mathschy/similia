@@ -34,8 +34,13 @@ int main(int argc, char* argv[]) {
   const std::string inverted_multi_index_server_address = FLAGS_inverted_multi_index_server_host + ":" +
       std::to_string(FLAGS_inverted_multi_index_server_port);
   LOG(INFO) << "connection to inverted_multi_index: " << inverted_multi_index_server_address;
-  std::shared_ptr<grpc::Channel> channel = grpc::CreateChannel(inverted_multi_index_server_address,
-                                                               grpc::InsecureChannelCredentials());
+  grpc::ChannelArguments channel_arguments;
+  // Allow this channel to receive 100MB message max.
+  channel_arguments.SetInt(GRPC_ARG_MAX_RECEIVE_MESSAGE_LENGTH, 100 * 1024 * 1024);
+  std::shared_ptr<grpc::Channel> channel = grpc::CreateCustomChannel(
+      inverted_multi_index_server_address,
+      grpc::InsecureChannelCredentials(),
+      channel_arguments);
   std::unique_ptr<InvertedMultiIndex::Stub> inverted_multi_index_client = InvertedMultiIndex::NewStub(channel);
 
   // initialize classes

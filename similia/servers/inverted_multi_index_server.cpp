@@ -25,7 +25,8 @@ int main(int argc, char* argv[]) {
 
   const std::string address = "0.0.0.0:" + std::to_string(FLAGS_port);
   std::unique_ptr<grpc::ServerBuilder> builder(new grpc::ServerBuilder());
-  builder->SetMaxMessageSize(100 * 1024 * 1024);  // 100 MB.
+  // Allow this server to send message of 100 MB max.
+  builder->SetMaxSendMessageSize(100 * 1024 * 1024);
   builder->AddListeningPort(address, grpc::InsecureServerCredentials());
   builder->RegisterService(&service);
   std::unique_ptr<grpc::Server> server(builder->BuildAndStart());
