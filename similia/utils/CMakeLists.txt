@@ -59,6 +59,7 @@ target_link_libraries(similia_utils_inverted_multi_index_lib
   similia_proto_lib
   rocksdb
   jemalloc
+  lz4
   z
   bz2
   snappy
