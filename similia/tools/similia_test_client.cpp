@@ -5,6 +5,7 @@
 //
 // Sample usage:
 // ./build/similia_test_client --logtostderr --image path/to/queryimage.jpg
+#include <chrono>
 #include <string>
 
 #include <boost/filesystem/path.hpp>
@@ -71,6 +72,7 @@ int main(int argc, char* argv[]) {
   LOG(INFO) << "sending request...";
   SimiliaSearchResponse response;
   grpc::ClientContext context;
+  context.set_deadline(std::chrono::system_clock::now() + std::chrono::seconds(5));
   grpc::Status status = client->SimiliaSearch(&context, request, &response);
   if (status.ok()) {
     std::string out;

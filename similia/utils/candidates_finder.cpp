@@ -93,7 +93,9 @@ std::vector<std::pair<int, int>> MultiSequenceAlgorithm(const std::vector<float>
   return ordered_indexes;
 }
 
-std::vector<Candidate> CandidatesFinder::GetCandidates(const std::vector<float>& features, int list_length) const {
+std::vector<Candidate> CandidatesFinder::GetCandidates(
+    const std::vector<float>& features, int list_length,
+    const grpc::ServerContext& server_context) const {
   std::vector<float> features1(features.begin(), features.begin() + kIndexingSubfeaturesDimensions);
   std::vector<float> features2(features.begin() + kIndexingSubfeaturesDimensions, features.end());
   VLOG(1) << "features1.size() = " << features1.size();
@@ -131,9 +133,9 @@ std::vector<Candidate> CandidatesFinder::GetCandidates(const std::vector<float>&
     indexing_clusters_ids->add_id(std::stoi(clusters2[indexes[i].second].id));
   }
   MultiIndexMultiGetResponse multi_get_response;
-  grpc::ClientContext context;
+  std::unique_ptr<grpc::ClientContext> context = grpc::ClientContext::FromServerContext(server_context);
   steady_clock::time_point before_get = steady_clock::now();
-  grpc::Status status = inverted_multi_index_client_->MultiGet(&context, multi_get_request, &multi_get_response);
+  grpc::Status status = inverted_multi_index_client_->MultiGet(context.get(), multi_get_request, &multi_get_response);
   steady_clock::time_point after_get = steady_clock::now();
   LOG(INFO) << "MultiGet took: "
             << std::chrono::duration_cast<std::chrono::milliseconds>(after_get - before_get).count()

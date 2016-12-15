@@ -52,7 +52,8 @@ Status SimiliaService::SimiliaSearch(ServerContext* context,
   // Find candidates
   Timer timer_candidates_finder("similia.images.candidates_finder");
   std::vector<Candidate> candidates_list = candidates_finder_->GetCandidates(features_normalized,
-                                                                             kCandidatesListLength);
+                                                                             kCandidatesListLength,
+                                                                             *context);
   LOG(INFO) << "elapsed time for candidates finder: " << timer_candidates_finder.Stop() << " ms";
   LOG(INFO) << "got a list of " << candidates_list.size() << " candidates. reranking it...";
 

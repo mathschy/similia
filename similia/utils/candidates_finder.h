@@ -42,7 +42,8 @@ class CandidatesFinder {
                    std::unique_ptr<proto::InvertedMultiIndex::Stub> inverted_multi_index_client);
 
   // takes a vector of features and return a list of candidates for nearest neighbor.
-  std::vector<Candidate> GetCandidates(const std::vector<float>& features, int list_length) const;
+  std::vector<Candidate> GetCandidates(const std::vector<float>& features, int list_length,
+                                       const grpc::ServerContext& server_context) const;
 
  private:
   FeaturesLibrary indexing_clusters_1_;
