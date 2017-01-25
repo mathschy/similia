@@ -1,3 +1,5 @@
+*.pyc
+*.cbp
 **/*.a
 **/*.cmake
 **/CMakeFiles
