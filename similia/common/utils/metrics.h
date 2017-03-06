@@ -16,7 +16,7 @@ class MetricsImplementation {
 };
 
 // Helper class to time events: the timer starts when the object is created, and calls MetricsImplementation::Time
-// when it is destroyed.
+// when it is destroyed. Thus all timers must be destroyed before MetricsImplementation::instance_ is destroyed.
 // It is not necessary to manually stop the timer but it is possible in case one wants
 // to manually access the value.
 // The timer is not thread-safe and shouldn't be started/stopped in 2 different threads.

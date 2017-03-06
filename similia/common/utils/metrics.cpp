@@ -34,9 +34,8 @@ Timer::~Timer() {
   } else {
     elapsed_ms = ElapsedMs();
   }
-  if (MetricsImplementation::instance_ != nullptr) {
-    MetricsImplementation::instance_->Time(name_, elapsed_ms);
-  }
+  CHECK(MetricsImplementation::instance_ != nullptr) << "All timers must be destroyed before MetricsImplementation::instance_ is destroyed";
+  MetricsImplementation::instance_->Time(name_, elapsed_ms);
 }
 }  // namespace common_utils
 
