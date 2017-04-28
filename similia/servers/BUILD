@@ -58,4 +58,5 @@ cc_library(
     "//similia/utils:features_library",
     "//similia/utils:matrix_utils",
   ],
+  visibility = ["//visibility:public"],
 )
