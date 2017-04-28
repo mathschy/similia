@@ -1,5 +1,4 @@
-#ifndef SIMILIA_UTILS_CROPPING_UTILS_H
-#define SIMILIA_UTILS_CROPPING_UTILS_H
+#pragma once
 
 #include <opencv2/opencv.hpp>
 
@@ -17,5 +16,3 @@ CropBounds CannyGetCropBounds(const cv::Mat& src, int lower_thresh, int upper_th
 cv::Mat CropImage(const cv::Mat& src, const CropBounds& crop_bounds);
 CropBounds ComputeCropBounds(const std::string& image);
 }  // namespace similia
-
-#endif // SIMILIA_UTILS_CROPPING_UTILS_H

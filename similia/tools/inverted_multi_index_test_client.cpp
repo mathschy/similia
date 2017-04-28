@@ -12,9 +12,9 @@
 #include <google/protobuf/text_format.h>
 #include <grpc++/grpc++.h>
 
-#include <similia/proto/compressed_elements_generated.h>
-#include <similia/proto/similia.pb.h>
-#include <similia/proto/similia.grpc.pb.h>
+#include "similia/proto/compressed_elements_generated.h"
+#include "similia/proto/similia.pb.h"
+#include "similia/proto/similia.grpc.pb.h"
 
 namespace fbs = similia::fbs;
 using similia::proto::IndexingClustersIds;
@@ -70,10 +70,10 @@ int main(int argc, char* argv[]) {
         reinterpret_cast<const uint8_t*>(response.compressed_elements().data()));
     LOG(INFO) << "There are " << compressed_elements->id()->size() << " elements in cluster " << FLAGS_key;
     CHECK_EQ(compressed_elements->id()->size(), compressed_elements->compressing_ids()->size());
-    for (int i = 0; i < compressed_elements->id()->size(); ++i) {
+    for (std::size_t i = 0; i < compressed_elements->id()->size(); ++i) {
       std::string line;
       line += "id: " + std::string(compressed_elements->id()->Get(i)->data()) + " , compressing_ids: [";
-      for (int j = 0; j < compressed_elements->compressing_ids()->Get(i)->compressing_ids()->size(); ++j) {
+      for (std::size_t j = 0; j < compressed_elements->compressing_ids()->Get(i)->compressing_ids()->size(); ++j) {
         line += std::to_string(compressed_elements->compressing_ids()->Get(i)->compressing_ids()->Get(j)) + ", ";
       }
       line.pop_back();

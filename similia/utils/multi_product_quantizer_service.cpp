@@ -1,4 +1,4 @@
-#include <similia/utils/multi_product_quantizer_service.h>
+#include "similia/utils/multi_product_quantizer_service.h"
 
 #include <chrono>
 #include <sstream>
@@ -6,8 +6,8 @@
 #include <glog/logging.h>
 #include <google/protobuf/text_format.h>
 
-#include <similia/common/utils/metrics.h>
-#include <similia/utils/features_utils.h>
+#include "similia/common/utils/metrics.h"
+#include "similia/utils/features_utils.h"
 
 
 namespace similia {

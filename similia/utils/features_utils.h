@@ -42,7 +42,7 @@ void LoadFeaturesFromfileOrDie(const std::string &path_to_features_file, int dim
   }
   CHECK_EQ(count_features, num_features);
   features->derived().resize(features_vec.size(), dim_features);
-  for (int i_row = 0; i_row < features_vec.size(); ++i_row) {
+  for (std::size_t i_row = 0; i_row < features_vec.size(); ++i_row) {
     features->derived().row(i_row) =
         Eigen::RowVectorXf::Map(&(features_vec[i_row][0]), features_vec[i_row].size());
     if (normalize) {

@@ -1,12 +1,11 @@
-#ifndef SIMILIA_UTILS_MULTI_PRODUCT_QUANTIZER_SERVICE_H_
-#define SIMILIA_UTILS_MULTI_PRODUCT_QUANTIZER_SERVICE_H_
+#pragma once
 
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Dense>
 
-#include <similia/proto/similia.grpc.pb.h>
-#include <similia/utils/features_utils.h>
-#include <similia/utils/matrix_utils.h>
+#include "similia/proto/similia.grpc.pb.h"
+#include "similia/utils/features_utils.h"
+#include "similia/utils/matrix_utils.h"
 
 
 namespace similia {
@@ -24,12 +23,12 @@ class MultiProductQuantizerService final: public proto::MultiProductQuantizer::S
     LoadFloatMatrixFromFileOrDie(path_to_indexing_rotation_matrix, &indexing_rotation_matrix_);
     LoadFloatMatrixFromFileOrDie(path_to_compressing_rotation_matrix, &compressing_rotation_matrix_);
     std::chrono::steady_clock::time_point before_norms = std::chrono::steady_clock::now();
-    for (int i = 0; i < indexing_clusters_features_.size(); ++i) {
+    for (std::size_t i = 0; i < indexing_clusters_features_.size(); ++i) {
       indexing_clusters_norms_.push_back(indexing_clusters_features_[i].rowwise().squaredNorm());
       CHECK_EQ(kNumIndexingClustersPerDimensionDivision, indexing_clusters_norms_.back().rows());
       CHECK_EQ(1, indexing_clusters_norms_.back().cols());
     }
-    for (int i = 0; i < compressing_clusters_features_.size(); ++i) {
+    for (std::size_t i = 0; i < compressing_clusters_features_.size(); ++i) {
       compressing_clusters_norms_.push_back(compressing_clusters_features_[i].rowwise().squaredNorm());
       CHECK_EQ(kNumCompressingClustersPerDimensionDivision, compressing_clusters_norms_.back().rows());
       CHECK_EQ(1, compressing_clusters_norms_.back().cols());
@@ -64,6 +63,3 @@ class MultiProductQuantizerService final: public proto::MultiProductQuantizer::S
   Eigen::MatrixXf compressing_rotation_matrix_;
 };
 }  // namespace similia
-
-#endif  // SIMILIA_UTILS_MULTI_PRODUCT_QUANTIZER_SERVICE_H_
-

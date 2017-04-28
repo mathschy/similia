@@ -1,8 +1,7 @@
-#ifndef SIMILIA_SERVERS_INVERTED_MULTI_INDEX_SERVICE_H_
-#define SIMILIA_SERVERS_INVERTED_MULTI_INDEX_SERVICE_H_
+#pragma once
 
-#include <similia/proto/similia.grpc.pb.h>
-#include <similia/utils/inverted_multi_index.h>
+#include "similia/proto/similia.grpc.pb.h"
+#include "similia/utils/inverted_multi_index.h"
 
 namespace similia {
 
@@ -39,6 +38,3 @@ class InvertedMultiIndexService final: public proto::InvertedMultiIndex::Service
   InvertedMultiIndex* inverted_multi_index_;  // not owned.
 };
 }  // namespace similia
-
-#endif  // SIMILIA_SERVERS_INVERTED_MULTI_INDEX_SERVICE_H_
-

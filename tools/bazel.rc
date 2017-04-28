@@ -1,0 +1,4 @@
+build --cxxopt=-std=c++11
+build --cxxopt=-I/usr/local/cuda/include
+build --cxxopt=-DCPU_ONLY=1
+build --linkopt=-L/usr/local/lib

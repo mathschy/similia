@@ -1,9 +1,9 @@
-#include <similia/servers/similia_service.h>
+#include "similia/servers/similia_service.h"
 
 #include <glog/logging.h>
 #include <google/protobuf/text_format.h>
 
-#include <similia/common/utils/metrics.h>
+#include "similia/common/utils/metrics.h"
 
 using grpc::Status;
 using grpc::StatusCode;
@@ -75,4 +75,3 @@ Status SimiliaService::SimiliaSearch(ServerContext* context,
 }
 
 }  // namespace similia
-

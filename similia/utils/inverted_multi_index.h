@@ -1,5 +1,4 @@
-#ifndef SIMILIA_UTILS_INVERTED_MULTI_INDEX_H
-#define SIMILIA_UTILS_INVERTED_MULTI_INDEX_H
+#pragma once
 
 #include <memory>
 
@@ -7,8 +6,8 @@
 #include <rocksdb/db.h>
 #include <rocksdb/merge_operator.h>
 
-#include <similia/proto/similia.pb.h>
-#include <similia/utils/features_utils.h>
+#include "similia/proto/similia.pb.h"
+#include "similia/utils/features_utils.h"
 
 namespace similia {
 
@@ -39,5 +38,3 @@ class InvertedMultiIndex {
 std::string SerializeCompressingClustersIdAsFlatbuffers(const proto::CompressingClustersIds& compressing_clusters_ids);
 
 }  // namespace similia
-
-#endif  // SIMILIA_UTILS_INVERTED_MULTI_INDEX_H

@@ -1,5 +1,4 @@
-#ifndef SIMILIA_UTILS_FEATURES_LIBRARY_H
-#define SIMILIA_UTILS_FEATURES_LIBRARY_H
+#pragma once
 
 #include <string>
 
@@ -38,5 +37,3 @@ class FeaturesLibrary {
 
 };
 }  // namespace similia
-
-#endif  // SIMILIA_UTILS_FEATURES_LIBRARY_H

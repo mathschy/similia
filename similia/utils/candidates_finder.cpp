@@ -1,4 +1,4 @@
-#include <similia/utils/candidates_finder.h>
+#include "similia/utils/candidates_finder.h"
 
 #include <algorithm>
 #include <chrono>
@@ -8,9 +8,9 @@
 
 #include <glog/logging.h>
 
-#include <similia/common/utils/metrics.h>
-#include <similia/proto/compressed_elements_generated.h>
-#include <similia/proto/compressing_ids_generated.h>
+#include "similia/common/utils/metrics.h"
+#include "similia/proto/compressed_elements_generated.h"
+#include "similia/proto/compressing_ids_generated.h"
 
 namespace similia {
 using std::chrono::steady_clock;
@@ -28,9 +28,9 @@ typedef Eigen::Matrix<bool, kNumClosestIndexingSubClusters, kNumClosestIndexingS
 CandidatesFinder::CandidatesFinder(const std::string& path_to_indexing_clusters_1_features_file,
                                    const std::string& path_to_indexing_clusters_2_features_file,
                                    std::unique_ptr<proto::InvertedMultiIndex::Stub> inverted_multi_index_client)
-    : indexing_clusters_1_(path_to_indexing_clusters_1_features_file, kNumIndexingClustersPerDimensionDivision, 
+    : indexing_clusters_1_(path_to_indexing_clusters_1_features_file, kNumIndexingClustersPerDimensionDivision,
                            kIndexingSubfeaturesDimensions, false, false),
-      indexing_clusters_2_(path_to_indexing_clusters_2_features_file, kNumIndexingClustersPerDimensionDivision, 
+      indexing_clusters_2_(path_to_indexing_clusters_2_features_file, kNumIndexingClustersPerDimensionDivision,
                            kIndexingSubfeaturesDimensions, false, false),
       inverted_multi_index_client_(std::move(inverted_multi_index_client)) {
 
@@ -48,17 +48,19 @@ IndexedValue BuildIndexedValue(int idx1, int idx2, float value) {
 // http://download.yandex.ru/company/cvpr2012.pdf
 // s1 and s1 are ordered by increasing order.
 // return a list of indexes i,j that sort s1[i]+s2[j] in increasing order.
-std::vector<std::pair<int, int>> MultiSequenceAlgorithm(const std::vector<float>& s1, const std::vector<float>& s2) {
-  int idx1 = 0;
-  int idx2 = 0;
+std::vector<std::pair<std::size_t, std::size_t>> MultiSequenceAlgorithm(
+    const std::vector<float>& s1,
+    const std::vector<float>& s2) {
+  std::size_t idx1 = 0;
+  std::size_t idx2 = 0;
   MatrixNCISCb selected = MatrixNCISCb::Constant(false);
   std::set<IndexedValue, IndexedValueComparator> queue_set;
-  std::vector<std::pair<int, int>> ordered_indexes;  // we return this
+  std::vector<std::pair<std::size_t, std::size_t>> ordered_indexes;  // we return this
   ordered_indexes.push_back({idx1, idx2});
   selected(idx1, idx2) = true;
   queue_set.insert(BuildIndexedValue(idx1 + 1, idx2, s1[idx1 + 1] + s2[idx2]));
   queue_set.insert(BuildIndexedValue(idx1, idx2 + 1, s1[idx1] + s2[idx2 + 1]));
-  int max_number_selected = kNumClosestIndexingSubClusters * kNumClosestIndexingSubClusters;
+  std::size_t max_number_selected = kNumClosestIndexingSubClusters * kNumClosestIndexingSubClusters;
   ordered_indexes.reserve(max_number_selected);
   IndexedValue min_element;
   while (ordered_indexes.size() < max_number_selected) { // for now we reorder everything
@@ -117,7 +119,8 @@ std::vector<Candidate> CandidatesFinder::GetCandidates(
 
   LOG(INFO) << "performing multisequence algorithm...";
   Timer timer_multisequence("similia.images.multisequence");
-  std::vector<std::pair<int, int>> indexes = MultiSequenceAlgorithm(squared_distances1, squared_distances2);
+  std::vector<std::pair<std::size_t, std::size_t>> indexes = MultiSequenceAlgorithm(
+      squared_distances1, squared_distances2);
   LOG(INFO) << "multisequence algorithm took : " << timer_multisequence.Stop() << " ms";
   VLOG(1) << "size of s1 : " << squared_distances1.size();
   VLOG(1) << "size of s2 : " << squared_distances2.size();
@@ -153,7 +156,7 @@ std::vector<Candidate> CandidatesFinder::GetCandidates(
         VLOG(1) << "visiting the " << i << " cluster: " << "num_images in cluster ("
             << multi_get_request.indexing_ids(i).id(0) << ", " << multi_get_request.indexing_ids(i).id(1) << ") : "
             << compressed_elements->id()->size();
-        for (int j = 0; j < compressed_elements->id()->size(); ++j) {
+        for (std::size_t j = 0; j < compressed_elements->id()->size(); ++j) {
           candidate.image_id = std::string(compressed_elements->id()->Get(j)->data(),
                                            compressed_elements->id()->Get(j)->size());
           candidate.dot_product = clusters1[indexes[i].first].dot_product + clusters2[indexes[i].second].dot_product;

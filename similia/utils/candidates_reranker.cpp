@@ -1,12 +1,12 @@
-#include <similia/utils/candidates_reranker.h>
+#include "similia/utils/candidates_reranker.h"
 
 #include <chrono>
 #include <fstream>
 
 #include <glog/logging.h>
 
-#include <similia/utils/features_utils.h>
-#include <similia/utils/matrix_utils.h>
+#include "similia/utils/features_utils.h"
+#include "similia/utils/matrix_utils.h"
 
 
 namespace similia {
@@ -17,7 +17,7 @@ std::vector<int> SortIndexes(const std::vector<T>& v) {
   // Sort by increasing values of v
   // initialize original index locations
   std::vector<int> idx(v.size());
-  for (int i = 0; i != idx.size(); ++i) {
+  for (std::size_t i = 0; i != idx.size(); ++i) {
     idx[i] = i;
   }
 
@@ -103,7 +103,7 @@ CandidatesReranker::CandidatesReranker(const std::string& root_path_to_indexing_
 
 std::vector<IdAndComputation> CandidatesReranker::RerankCandidates(const std::vector<Candidate>& candidates,
                                                                    const std::vector<float>& query_features,
-                                                                   int num_nearest) {
+                                                                   std::size_t num_nearest) {
   steady_clock::time_point before_table = steady_clock::now();
   // We rotate the query features with Rc (they already have been rotated with Ri in candidates_finder).
   Eigen::Matrix<float, kFeatureDimensions, 1> features = Eigen::VectorXf::Map(&query_features[0], query_features.size());
@@ -130,13 +130,13 @@ std::vector<IdAndComputation> CandidatesReranker::RerankCandidates(const std::ve
   // squared_distance is ||candidate_features||^2 - 2 * <candidate_features, query_features> + ||query_features||^2
   // candidate_features is approximated by its closest clusters assignments.
   // ||candidate_features||^2 is read from a table that was precomputed at class construction.
-  for (int i_candidate = 0; i_candidate < candidates.size(); ++i_candidate) {
+  for (std::size_t i_candidate = 0; i_candidate < candidates.size(); ++i_candidate) {
     // This is ||query_features||^2 - part of 2 * <candidate_features, query_features>
     squared_distances[i_candidate] -= 2 * candidates[i_candidate].dot_product;
   }
-  for (int i_compress = 0; i_compress < kCompressingDimensionDivision; ++i_compress) {
+  for (std::size_t i_compress = 0; i_compress < kCompressingDimensionDivision; ++i_compress) {
     i_index = i_compress / ratio;
-    for (int i_candidate = 0; i_candidate < candidates.size(); ++i_candidate) {
+    for (std::size_t i_candidate = 0; i_candidate < candidates.size(); ++i_candidate) {
       int j = static_cast<int>(candidates[i_candidate].compressing_clusters_ids[i_compress]);
       // This is part of 2 * <candidate_features, query_features>
       squared_distances[i_candidate] -= 2 * table(i_compress, j);

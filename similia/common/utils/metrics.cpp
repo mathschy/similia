@@ -1,4 +1,4 @@
-#include <similia/common/utils/metrics.h>
+#include "similia/common/utils/metrics.h"
 
 #include <gflags/gflags.h>
 #include <glog/logging.h>
@@ -38,4 +38,3 @@ Timer::~Timer() {
   MetricsImplementation::instance_->Time(name_, elapsed_ms);
 }
 }  // namespace common_utils
-

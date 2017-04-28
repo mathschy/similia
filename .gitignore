@@ -9,3 +9,10 @@ build
 .idea
 Testing
 data
+
+/bazel-bin
+/bazel-genfiles
+/bazel-out
+/bazel-similia
+/bazel-testlogs
+/test

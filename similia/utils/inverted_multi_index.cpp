@@ -1,4 +1,4 @@
-#include <similia/utils/inverted_multi_index.h>
+#include "similia/utils/inverted_multi_index.h"
 
 #include <algorithm>
 #include <chrono>
@@ -12,9 +12,9 @@
 #include <rocksdb/table.h>
 #include <rocksdb/write_batch.h>
 
-#include <similia/common/utils/base.h>
-#include <similia/proto/compressed_elements_generated.h>
-#include <similia/proto/compressing_ids_generated.h>
+#include "similia/common/utils/base.h"
+#include "similia/proto/compressed_elements_generated.h"
+#include "similia/proto/compressing_ids_generated.h"
 
 
 namespace similia {
@@ -86,7 +86,6 @@ InvertedMultiIndex::InvertedMultiIndex(const std::string& db_path) {
 
 std::string InvertedMultiIndex::GetResidualsInCluster(int cluster_id1, int cluster_id2, int* count) {
   std::string key_prefix = BuildKeyPrefix(cluster_id1, cluster_id2);
-  steady_clock::time_point before_db_get = steady_clock::now();
   std::unique_ptr<rocksdb::Iterator> it(db_->NewIterator(ReadOptions()));
   steady_clock::time_point after_seek;
   int next_only_time_us = 0;

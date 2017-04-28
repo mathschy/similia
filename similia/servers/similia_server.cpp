@@ -5,10 +5,10 @@
 #include <glog/logging.h>
 #include <grpc++/grpc++.h>
 
-#include <similia/servers/similia_service.h>
-#include <similia/utils/candidates_finder.h>
-#include <similia/utils/candidates_reranker.h>
-#include <similia/utils/features_library.h>
+#include "similia/servers/similia_service.h"
+#include "similia/utils/candidates_finder.h"
+#include "similia/utils/candidates_reranker.h"
+#include "similia/utils/features_library.h"
 
 
 DEFINE_string(icf_root, "similia/data/indexing_clusters_features_",

@@ -1,4 +1,4 @@
-#include <similia/utils/features_extractor.h>
+#include "similia/utils/features_extractor.h"
 
 #include <chrono>
 
@@ -140,7 +140,7 @@ std::vector<float> FeaturesExtractor::ExtractFeatures(const cv::Mat& img) {
     net_->Forward();
     VLOG(1) << "Forwarded";
     LOG(INFO) << "num_extracted_layers = " << num_extracted_layers;
-    for (int i = 0; i < num_extracted_layers; ++i) { // only 1 for us
+    for (std::size_t i = 0; i < num_extracted_layers; ++i) { // only 1 for us
       const shared_ptr<Blob<float>> feature_blob = net_->blob_by_name(blob_names_[i]);
       int batch_size = feature_blob->num();
       int dim_features = feature_blob->count() / batch_size;
@@ -163,4 +163,3 @@ std::vector<float> FeaturesExtractor::ExtractFeatures(const cv::Mat& img) {
 }
 
 }  // namespace similia
-

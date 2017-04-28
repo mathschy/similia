@@ -7,9 +7,9 @@
 #include <gflags/gflags.h>
 #include <glog/logging.h>
 
-#include <similia/common/utils/file_utils.h>
-#include <similia/utils/features_extractor.h>
-#include <similia/utils/features_utils.h>
+#include "similia/common/utils/file_utils.h"
+#include "similia/utils/features_extractor.h"
+#include "similia/utils/features_utils.h"
 
 using boost::filesystem::directory_iterator;
 using boost::filesystem::path;

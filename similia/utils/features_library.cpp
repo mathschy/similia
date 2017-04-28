@@ -1,4 +1,4 @@
-#include <similia/utils/features_library.h>
+#include "similia/utils/features_library.h"
 
 #include <chrono>
 
@@ -7,9 +7,9 @@
 #include <boost/filesystem/fstream.hpp>
 #include <glog/logging.h>
 
-#include <similia/common/utils/metrics.h>
-#include <similia/proto/similia.pb.h>
-#include <similia/utils/features_utils.h>
+#include "similia/common/utils/metrics.h"
+#include "similia/proto/similia.pb.h"
+#include "similia/utils/features_utils.h"
 
 
 
@@ -29,7 +29,7 @@ std::vector<int> SortIndexes(const Eigen::MatrixBase<Derived>& v, bool decreasin
   VLOG(1) << "index vector creation took: "
       << std::chrono::duration_cast<std::chrono::microseconds>(after_index_vector_creation-before_index_vector_creation).count()
       << " us.";
-  for (int i = 0; i != idx.size(); ++i) {
+  for (std::size_t i = 0; i != idx.size(); ++i) {
     idx[i] = i;
   }
   steady_clock::time_point after_index_vector_initialization = steady_clock::now();

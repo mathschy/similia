@@ -1,5 +1,4 @@
-#ifndef SIMILIA_UTILS_MATRIX_UTILS_H
-#define SIMILIA_UTILS_MATRIX_UTILS_H
+#pragma once
 
 #include <fstream>
 
@@ -8,8 +7,8 @@
 #include <eigen3/Eigen/Dense>
 #include <glog/logging.h>
 
-#include <similia/common/utils/file_utils.h>
-#include <similia/proto/similia.pb.h>
+#include "similia/common/utils/file_utils.h"
+#include "similia/proto/similia.pb.h"
 
 namespace similia {
 
@@ -45,5 +44,3 @@ void SaveFloatMatrixToFileOrDie(const Eigen::MatrixBase<Derived>& float_matrix, 
 }
 
 }  // namespace similia
-
-#endif  // SIMILIA_UTILS_MATRIX_UTILS_H

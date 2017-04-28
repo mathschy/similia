@@ -1,10 +1,10 @@
-#include <similia/servers/inverted_multi_index_service.h>
+#include "similia/servers/inverted_multi_index_service.h"
 
 #include <chrono>
 
 #include <glog/logging.h>
 
-#include <similia/common/utils/metrics.h>
+#include "similia/common/utils/metrics.h"
 
 namespace similia {
 

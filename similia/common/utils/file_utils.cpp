@@ -1,4 +1,4 @@
-#include <similia/common/utils/file_utils.h>
+#include "similia/common/utils/file_utils.h"
 
 #include <stdio.h>
 #include <sstream>
@@ -28,7 +28,7 @@ std::string ReadFromFileOrDie(const path& file) {
   boost::filesystem::ifstream in;
   in.open(file, std::ios::binary | std::ios::in);
   CHECK(in) << "file couldn't be opened for reading: " << file.string();
-  
+
   std::stringstream out;
   out << in.rdbuf();
   in.close();
@@ -36,4 +36,3 @@ std::string ReadFromFileOrDie(const path& file) {
 }
 
 }  // namespace common_utils
-

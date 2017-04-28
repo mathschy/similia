@@ -13,12 +13,12 @@
 #include <glog/logging.h>
 #include <google/protobuf/text_format.h>
 #include <grpc++/grpc++.h>
-#include <similia/proto/similia.pb.h>
-#include <similia/proto/similia.grpc.pb.h>
 
-#include <similia/common/utils/file_utils.h>
-#include <similia/utils/cropping_utils.h>
-#include <similia/utils/features_extractor.h>
+#include "similia/common/utils/file_utils.h"
+#include "similia/proto/similia.pb.h"
+#include "similia/proto/similia.grpc.pb.h"
+#include "similia/utils/cropping_utils.h"
+#include "similia/utils/features_extractor.h"
 
 
 using boost::filesystem::path;
@@ -85,4 +85,3 @@ int main(int argc, char* argv[]) {
   }
 
 }
-

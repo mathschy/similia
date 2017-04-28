@@ -8,10 +8,10 @@
 #include <gtest/gtest.h>
 #include <google/protobuf/util/message_differencer.h>
 
-#include <similia/proto/compressed_elements_generated.h>
-#include <similia/proto/compressing_ids_generated.h>
-#include <similia/proto/similia.pb.h>
-#include <similia/utils/inverted_multi_index.h>
+#include "similia/proto/compressed_elements_generated.h"
+#include "similia/proto/compressing_ids_generated.h"
+#include "similia/proto/similia.pb.h"
+#include "similia/utils/inverted_multi_index.h"
 
 namespace fbs = similia::fbs;
 using similia::InvertedMultiIndex;
@@ -46,13 +46,13 @@ CompressedElements ConvertFlatbuffersToCompressedElements(const std::string& fla
   CompressedElements compressed_elements_out;
   const fbs::CompressedElements* compressed_elements =
       fbs::GetCompressedElements(reinterpret_cast<const uint8_t*>(flatbuffer_string.data()));
-  for (int i = 0; i < compressed_elements->id()->size(); ++i) {
+  for (std::size_t i = 0; i < compressed_elements->id()->size(); ++i) {
     compressed_elements_out.add_id(compressed_elements->id()->Get(i)->data(),
                                    compressed_elements->id()->Get(i)->size());
     CompressingClustersIds* compressing_clusters_ids = compressed_elements_out.add_compressing_clusters_id();
     const fbs::CompressingIds* compressing_ids =
         compressed_elements->compressing_ids()->Get(i)->compressing_ids_nested_root();
-    for (int j = 0; j < compressing_ids->id()->size(); ++j) {
+    for (std::size_t j = 0; j < compressing_ids->id()->size(); ++j) {
       compressing_clusters_ids->add_id(compressing_ids->id()->Get(j));
     }
   }

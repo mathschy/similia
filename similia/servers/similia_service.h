@@ -1,11 +1,10 @@
-#ifndef SIMILIA_SERVERS_SIMILIA_SERVICE_H_
-#define SIMILIA_SERVERS_SIMILIA_SERVICE_H_
+#pragma once
 
-#include <similia/proto/similia.grpc.pb.h>
-#include <similia/utils/candidates_finder.h>
-#include <similia/utils/candidates_reranker.h>
-#include <similia/utils/features_library.h>
-#include <similia/utils/matrix_utils.h>
+#include "similia/proto/similia.grpc.pb.h"
+#include "similia/utils/candidates_finder.h"
+#include "similia/utils/candidates_reranker.h"
+#include "similia/utils/features_library.h"
+#include "similia/utils/matrix_utils.h"
 
 namespace similia {
 
@@ -34,6 +33,3 @@ class SimiliaService final: public proto::Similia::Service {
   Eigen::MatrixXf compressing_rotation_matrix_;
 };
 }  // namespace similia
-
-#endif  // SIMILIA_SERVERS_SIMILIA_SERVICE_H_
-

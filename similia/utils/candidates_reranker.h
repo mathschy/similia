@@ -1,7 +1,6 @@
-#ifndef SIMILIA_UTILS_CANDIDATES_RERANKER_H
-#define SIMILIA_UTILS_CANDIDATES_RERANKER_H
+#pragma once
 
-#include <similia/utils/candidates_finder.h>
+#include "similia/utils/candidates_finder.h"
 
 namespace similia {
 
@@ -14,7 +13,7 @@ class CandidatesReranker {
 
   std::vector<IdAndComputation> RerankCandidates(const std::vector<Candidate>& candidates,
                                                  const std::vector<float>& query_features,
-                                                 int num_nearest);
+                                                 std::size_t num_nearest);
 
  private:
   // 8 matrices of shape 2^8 = 256, 1024/8 = 128
@@ -41,5 +40,3 @@ class CandidatesReranker {
 };
 
 }  // namespace similia
-
-#endif  //SIMILIA_UTILS_CANDIDATES_RERANKER_H

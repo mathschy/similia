@@ -1,12 +1,11 @@
-#ifndef SIMILIA_UTILS_CANDIDATES_FINDER_H
-#define SIMILIA_UTILS_CANDIDATES_FINDER_H
+#pragma once
 
 #include <map>
 #include <string>
 
-#include <similia/proto/similia.grpc.pb.h>
-#include <similia/utils/features_library.h>
-#include <similia/utils/features_utils.h>
+#include "similia/proto/similia.grpc.pb.h"
+#include "similia/utils/features_library.h"
+#include "similia/utils/features_utils.h"
 
 namespace similia {
 
@@ -52,5 +51,3 @@ class CandidatesFinder {
 
 };
 }  // namespace similia
-
-#endif  // SIMILIA_UTILS_CANDIDATES_FINDER_H

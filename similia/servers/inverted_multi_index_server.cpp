@@ -5,8 +5,8 @@
 #include <glog/logging.h>
 #include <grpc++/grpc++.h>
 
-#include <similia/servers/inverted_multi_index_service.h>
-#include <similia/utils/inverted_multi_index.h>
+#include "similia/servers/inverted_multi_index_service.h"
+#include "similia/utils/inverted_multi_index.h"
 
 
 DEFINE_string(db_path, "test", "path to a folder that will contain the rocksdb files.");

@@ -1,6 +1,5 @@
 // This file defines various basic utilities (for strings, maps, etc...)
-#ifndef COMMON_UTILS_BASE_H_
-#define COMMON_UTILS_BASE_H_
+#pragma once
 
 #include <string>
 
@@ -13,5 +12,3 @@ std::string SerializeToStringOrDie(const M& message) {
   CHECK(message.SerializeToString(&r));
   return r;
 }
-
-#endif  // COMMON_UTILS_BASE_H_

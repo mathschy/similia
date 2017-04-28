@@ -1,13 +1,12 @@
-#ifndef SIMILIA_UTILS_FEATURES_EXTRACTOR_H_
-#define SIMILIA_UTILS_FEATURES_EXTRACTOR_H_
+#pragma once
 
 #include <memory>
 #include <string>
 #include <vector>
 
-#include <caffe/net.hpp>
+#include "caffe/net.hpp"
 
-#include <similia/utils/cropping_utils.h>
+#include "similia/utils/cropping_utils.h"
 
 
 namespace similia {
@@ -18,7 +17,7 @@ class FeaturesExtractor {
                     const std::string& path_to_deploy_prototxt,
                     const std::string& blob_names,
                     const int gpu);
-  
+
   // Extracts and returns the features for a given image. 'image' must be the raw image data,
   std::vector<float> ExtractFeatures(const std::string& image);
 
@@ -28,7 +27,7 @@ class FeaturesExtractor {
   // Same as above but compute the crop_bounds.
   std::vector<float> CropAndExtractFeatures(const std::string& image);
 
- 
+
  private:
   std::vector<float> ExtractFeatures(const cv::Mat& image);
 
@@ -37,9 +36,6 @@ class FeaturesExtractor {
   std::string path_to_caffe_model_weights_;
   std::string path_to_deploy_prototxt_;
   int gpu_{-1};
-  
+
 };
 } // namespace similia
-
-#endif // SIMILIA_UTILS_FEATURES_EXTRACTOR_H_
-
