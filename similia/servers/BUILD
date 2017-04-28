@@ -26,6 +26,7 @@ cc_library(
     "//similia/proto",
     "//similia/utils:inverted_multi_index",
   ],
+  visibility = ["//visibility:public"],
 )
 
 cc_binary(
