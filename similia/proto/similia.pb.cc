@@ -19,829 +19,540 @@
 
 namespace similia {
 namespace proto {
+class FloatMatrixDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<FloatMatrix> {
+} _FloatMatrix_default_instance_;
+class FeaturesDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<Features> {
+} _Features_default_instance_;
+class CompressingClustersIdsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CompressingClustersIds> {
+} _CompressingClustersIds_default_instance_;
+class IndexingClustersIdsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<IndexingClustersIds> {
+} _IndexingClustersIds_default_instance_;
+class CompressedElementDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CompressedElement> {
+} _CompressedElement_default_instance_;
+class SerializedCompressedElementDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<SerializedCompressedElement> {
+} _SerializedCompressedElement_default_instance_;
+class CompressedElementsCombinedDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CompressedElementsCombined> {
+} _CompressedElementsCombined_default_instance_;
+class SerializedCompressedElementsCombinedDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<SerializedCompressedElementsCombined> {
+} _SerializedCompressedElementsCombined_default_instance_;
+class CompressedElementsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CompressedElements> {
+} _CompressedElements_default_instance_;
+class SerializedCompressedElementsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<SerializedCompressedElements> {
+} _SerializedCompressedElements_default_instance_;
+class CompressedElementsMapDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CompressedElementsMap> {
+} _CompressedElementsMap_default_instance_;
+class SimiliaSearchRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<SimiliaSearchRequest> {
+} _SimiliaSearchRequest_default_instance_;
+class SimiliaSearchResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<SimiliaSearchResponse> {
+} _SimiliaSearchResponse_default_instance_;
+class MultiIndexAddRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexAddRequest> {
+} _MultiIndexAddRequest_default_instance_;
+class MultiIndexAddResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexAddResponse> {
+} _MultiIndexAddResponse_default_instance_;
+class MultiIndexGetRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexGetRequest> {
+} _MultiIndexGetRequest_default_instance_;
+class MultiIndexGetResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexGetResponse> {
+} _MultiIndexGetResponse_default_instance_;
+class MultiIndexMultiGetRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiGetRequest> {
+} _MultiIndexMultiGetRequest_default_instance_;
+class MultiIndexMultiGetResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiGetResponse> {
+} _MultiIndexMultiGetResponse_default_instance_;
+class MultiIndexMultiCountRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiCountRequest> {
+} _MultiIndexMultiCountRequest_default_instance_;
+class MultiIndexMultiCountResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiCountResponse> {
+} _MultiIndexMultiCountResponse_default_instance_;
+class MultiIndexMultiAddRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiAddRequest> {
+} _MultiIndexMultiAddRequest_default_instance_;
+class MultiIndexMultiAddResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiAddResponse> {
+} _MultiIndexMultiAddResponse_default_instance_;
+class MultiIndexDeleteRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexDeleteRequest> {
+} _MultiIndexDeleteRequest_default_instance_;
+class MultiIndexDeleteResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexDeleteResponse> {
+} _MultiIndexDeleteResponse_default_instance_;
+class QuantizationRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<QuantizationRequest> {
+} _QuantizationRequest_default_instance_;
+class QuantizationResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<QuantizationResponse> {
+} _QuantizationResponse_default_instance_;
+
+namespace protobuf_similia_2fproto_2fsimilia_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* FloatMatrix_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  FloatMatrix_reflection_ = NULL;
-const ::google::protobuf::Descriptor* Features_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  Features_reflection_ = NULL;
-const ::google::protobuf::Descriptor* CompressingClustersIds_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  CompressingClustersIds_reflection_ = NULL;
-const ::google::protobuf::Descriptor* IndexingClustersIds_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  IndexingClustersIds_reflection_ = NULL;
-const ::google::protobuf::Descriptor* CompressedElement_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  CompressedElement_reflection_ = NULL;
-const ::google::protobuf::Descriptor* SerializedCompressedElement_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  SerializedCompressedElement_reflection_ = NULL;
-const ::google::protobuf::Descriptor* CompressedElementsCombined_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  CompressedElementsCombined_reflection_ = NULL;
-const ::google::protobuf::Descriptor* SerializedCompressedElementsCombined_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  SerializedCompressedElementsCombined_reflection_ = NULL;
-const ::google::protobuf::Descriptor* CompressedElements_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  CompressedElements_reflection_ = NULL;
-const ::google::protobuf::Descriptor* SerializedCompressedElements_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  SerializedCompressedElements_reflection_ = NULL;
-const ::google::protobuf::Descriptor* CompressedElementsMap_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  CompressedElementsMap_reflection_ = NULL;
-const ::google::protobuf::Descriptor* CompressedElementsMap_CompressedElementEntry_descriptor_ = NULL;
-const ::google::protobuf::Descriptor* SimiliaSearchRequest_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  SimiliaSearchRequest_reflection_ = NULL;
-const ::google::protobuf::Descriptor* SimiliaSearchResponse_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  SimiliaSearchResponse_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexAddRequest_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexAddRequest_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexAddResponse_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexAddResponse_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexGetRequest_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexGetRequest_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexGetResponse_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexGetResponse_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexMultiGetRequest_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexMultiGetRequest_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexMultiGetResponse_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexMultiGetResponse_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexMultiCountRequest_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexMultiCountRequest_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexMultiCountResponse_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexMultiCountResponse_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexMultiAddRequest_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexMultiAddRequest_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexMultiAddResponse_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexMultiAddResponse_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexDeleteRequest_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexDeleteRequest_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MultiIndexDeleteResponse_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MultiIndexDeleteResponse_reflection_ = NULL;
-const ::google::protobuf::Descriptor* QuantizationRequest_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  QuantizationRequest_reflection_ = NULL;
-const ::google::protobuf::Descriptor* QuantizationResponse_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  QuantizationResponse_reflection_ = NULL;
+::google::protobuf::Metadata file_level_metadata[28];
 
 }  // namespace
 
+const ::google::protobuf::uint32 TableStruct::offsets[] = {
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FloatMatrix, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FloatMatrix, num_rows_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FloatMatrix, num_cols_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FloatMatrix, element_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Features, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Features, element_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressingClustersIds, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressingClustersIds, id_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IndexingClustersIds, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IndexingClustersIds, id_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElement, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElement, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElement, compressing_clusters_id_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElement, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElement, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElement, compressing_clusters_id_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElementsCombined, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElementsCombined, compressed_element_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElementsCombined, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElementsCombined, compressed_element_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElements, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElements, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElements, compressing_clusters_id_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElements, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElements, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElements, compressing_clusters_id_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElementsMap, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElementsMap, compressed_element_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchRequest, image_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchRequest, num_nearest_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchRequest, features_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchResponse, image_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchResponse, processing_time_ms_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchResponse, squared_distance_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddRequest, image_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddRequest, indexing_ids_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddRequest, compressing_ids_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddResponse, processing_time_ms_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexGetRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexGetRequest, indexing_ids_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexGetResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexGetResponse, processing_time_ms_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexGetResponse, compressed_elements_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetRequest, indexing_ids_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetRequest, count_limit_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetResponse, processing_time_ms_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetResponse, compressed_elements_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiCountRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiCountRequest, indexing_ids_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiCountResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiCountResponse, processing_time_ms_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiCountResponse, count_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiAddRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiAddRequest, multi_index_add_request_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiAddResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiAddResponse, processing_time_ms_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteRequest, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteRequest, indexing_ids_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteResponse, processing_time_ms_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, features_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, image_id_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationResponse, processing_time_ms_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationResponse, compressing_ids_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationResponse, indexing_ids_),
+};
 
-void protobuf_AssignDesc_similia_2fproto_2fsimilia_2eproto() GOOGLE_ATTRIBUTE_COLD;
-void protobuf_AssignDesc_similia_2fproto_2fsimilia_2eproto() {
-  protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "similia/proto/similia.proto");
-  GOOGLE_CHECK(file != NULL);
-  FloatMatrix_descriptor_ = file->message_type(0);
-  static const int FloatMatrix_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FloatMatrix, num_rows_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FloatMatrix, num_cols_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FloatMatrix, element_),
-  };
-  FloatMatrix_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      FloatMatrix_descriptor_,
-      FloatMatrix::internal_default_instance(),
-      FloatMatrix_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(FloatMatrix),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FloatMatrix, _internal_metadata_));
-  Features_descriptor_ = file->message_type(1);
-  static const int Features_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Features, element_),
-  };
-  Features_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      Features_descriptor_,
-      Features::internal_default_instance(),
-      Features_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(Features),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Features, _internal_metadata_));
-  CompressingClustersIds_descriptor_ = file->message_type(2);
-  static const int CompressingClustersIds_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressingClustersIds, id_),
-  };
-  CompressingClustersIds_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      CompressingClustersIds_descriptor_,
-      CompressingClustersIds::internal_default_instance(),
-      CompressingClustersIds_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(CompressingClustersIds),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressingClustersIds, _internal_metadata_));
-  IndexingClustersIds_descriptor_ = file->message_type(3);
-  static const int IndexingClustersIds_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IndexingClustersIds, id_),
-  };
-  IndexingClustersIds_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      IndexingClustersIds_descriptor_,
-      IndexingClustersIds::internal_default_instance(),
-      IndexingClustersIds_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(IndexingClustersIds),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IndexingClustersIds, _internal_metadata_));
-  CompressedElement_descriptor_ = file->message_type(4);
-  static const int CompressedElement_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElement, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElement, compressing_clusters_id_),
-  };
-  CompressedElement_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      CompressedElement_descriptor_,
-      CompressedElement::internal_default_instance(),
-      CompressedElement_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(CompressedElement),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElement, _internal_metadata_));
-  SerializedCompressedElement_descriptor_ = file->message_type(5);
-  static const int SerializedCompressedElement_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElement, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElement, compressing_clusters_id_),
-  };
-  SerializedCompressedElement_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      SerializedCompressedElement_descriptor_,
-      SerializedCompressedElement::internal_default_instance(),
-      SerializedCompressedElement_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(SerializedCompressedElement),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElement, _internal_metadata_));
-  CompressedElementsCombined_descriptor_ = file->message_type(6);
-  static const int CompressedElementsCombined_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElementsCombined, compressed_element_),
-  };
-  CompressedElementsCombined_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      CompressedElementsCombined_descriptor_,
-      CompressedElementsCombined::internal_default_instance(),
-      CompressedElementsCombined_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(CompressedElementsCombined),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElementsCombined, _internal_metadata_));
-  SerializedCompressedElementsCombined_descriptor_ = file->message_type(7);
-  static const int SerializedCompressedElementsCombined_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElementsCombined, compressed_element_),
-  };
-  SerializedCompressedElementsCombined_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      SerializedCompressedElementsCombined_descriptor_,
-      SerializedCompressedElementsCombined::internal_default_instance(),
-      SerializedCompressedElementsCombined_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(SerializedCompressedElementsCombined),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElementsCombined, _internal_metadata_));
-  CompressedElements_descriptor_ = file->message_type(8);
-  static const int CompressedElements_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElements, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElements, compressing_clusters_id_),
-  };
-  CompressedElements_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      CompressedElements_descriptor_,
-      CompressedElements::internal_default_instance(),
-      CompressedElements_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(CompressedElements),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElements, _internal_metadata_));
-  SerializedCompressedElements_descriptor_ = file->message_type(9);
-  static const int SerializedCompressedElements_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElements, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElements, compressing_clusters_id_),
-  };
-  SerializedCompressedElements_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      SerializedCompressedElements_descriptor_,
-      SerializedCompressedElements::internal_default_instance(),
-      SerializedCompressedElements_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(SerializedCompressedElements),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SerializedCompressedElements, _internal_metadata_));
-  CompressedElementsMap_descriptor_ = file->message_type(10);
-  static const int CompressedElementsMap_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElementsMap, compressed_element_),
-  };
-  CompressedElementsMap_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      CompressedElementsMap_descriptor_,
-      CompressedElementsMap::internal_default_instance(),
-      CompressedElementsMap_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(CompressedElementsMap),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedElementsMap, _internal_metadata_));
-  CompressedElementsMap_CompressedElementEntry_descriptor_ = CompressedElementsMap_descriptor_->nested_type(0);
-  SimiliaSearchRequest_descriptor_ = file->message_type(11);
-  static const int SimiliaSearchRequest_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchRequest, image_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchRequest, num_nearest_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchRequest, features_),
-  };
-  SimiliaSearchRequest_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      SimiliaSearchRequest_descriptor_,
-      SimiliaSearchRequest::internal_default_instance(),
-      SimiliaSearchRequest_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(SimiliaSearchRequest),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchRequest, _internal_metadata_));
-  SimiliaSearchResponse_descriptor_ = file->message_type(12);
-  static const int SimiliaSearchResponse_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchResponse, image_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchResponse, processing_time_ms_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchResponse, squared_distance_),
-  };
-  SimiliaSearchResponse_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      SimiliaSearchResponse_descriptor_,
-      SimiliaSearchResponse::internal_default_instance(),
-      SimiliaSearchResponse_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(SimiliaSearchResponse),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SimiliaSearchResponse, _internal_metadata_));
-  MultiIndexAddRequest_descriptor_ = file->message_type(13);
-  static const int MultiIndexAddRequest_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddRequest, image_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddRequest, indexing_ids_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddRequest, compressing_ids_),
-  };
-  MultiIndexAddRequest_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexAddRequest_descriptor_,
-      MultiIndexAddRequest::internal_default_instance(),
-      MultiIndexAddRequest_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexAddRequest),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddRequest, _internal_metadata_));
-  MultiIndexAddResponse_descriptor_ = file->message_type(14);
-  static const int MultiIndexAddResponse_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddResponse, processing_time_ms_),
-  };
-  MultiIndexAddResponse_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexAddResponse_descriptor_,
-      MultiIndexAddResponse::internal_default_instance(),
-      MultiIndexAddResponse_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexAddResponse),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexAddResponse, _internal_metadata_));
-  MultiIndexGetRequest_descriptor_ = file->message_type(15);
-  static const int MultiIndexGetRequest_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexGetRequest, indexing_ids_),
-  };
-  MultiIndexGetRequest_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexGetRequest_descriptor_,
-      MultiIndexGetRequest::internal_default_instance(),
-      MultiIndexGetRequest_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexGetRequest),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexGetRequest, _internal_metadata_));
-  MultiIndexGetResponse_descriptor_ = file->message_type(16);
-  static const int MultiIndexGetResponse_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexGetResponse, processing_time_ms_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexGetResponse, compressed_elements_),
-  };
-  MultiIndexGetResponse_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexGetResponse_descriptor_,
-      MultiIndexGetResponse::internal_default_instance(),
-      MultiIndexGetResponse_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexGetResponse),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexGetResponse, _internal_metadata_));
-  MultiIndexMultiGetRequest_descriptor_ = file->message_type(17);
-  static const int MultiIndexMultiGetRequest_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetRequest, indexing_ids_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetRequest, count_limit_),
-  };
-  MultiIndexMultiGetRequest_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexMultiGetRequest_descriptor_,
-      MultiIndexMultiGetRequest::internal_default_instance(),
-      MultiIndexMultiGetRequest_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexMultiGetRequest),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetRequest, _internal_metadata_));
-  MultiIndexMultiGetResponse_descriptor_ = file->message_type(18);
-  static const int MultiIndexMultiGetResponse_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetResponse, processing_time_ms_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetResponse, compressed_elements_),
-  };
-  MultiIndexMultiGetResponse_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexMultiGetResponse_descriptor_,
-      MultiIndexMultiGetResponse::internal_default_instance(),
-      MultiIndexMultiGetResponse_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexMultiGetResponse),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiGetResponse, _internal_metadata_));
-  MultiIndexMultiCountRequest_descriptor_ = file->message_type(19);
-  static const int MultiIndexMultiCountRequest_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiCountRequest, indexing_ids_),
-  };
-  MultiIndexMultiCountRequest_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexMultiCountRequest_descriptor_,
-      MultiIndexMultiCountRequest::internal_default_instance(),
-      MultiIndexMultiCountRequest_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexMultiCountRequest),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiCountRequest, _internal_metadata_));
-  MultiIndexMultiCountResponse_descriptor_ = file->message_type(20);
-  static const int MultiIndexMultiCountResponse_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiCountResponse, processing_time_ms_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiCountResponse, count_),
-  };
-  MultiIndexMultiCountResponse_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexMultiCountResponse_descriptor_,
-      MultiIndexMultiCountResponse::internal_default_instance(),
-      MultiIndexMultiCountResponse_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexMultiCountResponse),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiCountResponse, _internal_metadata_));
-  MultiIndexMultiAddRequest_descriptor_ = file->message_type(21);
-  static const int MultiIndexMultiAddRequest_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiAddRequest, multi_index_add_request_),
-  };
-  MultiIndexMultiAddRequest_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexMultiAddRequest_descriptor_,
-      MultiIndexMultiAddRequest::internal_default_instance(),
-      MultiIndexMultiAddRequest_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexMultiAddRequest),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiAddRequest, _internal_metadata_));
-  MultiIndexMultiAddResponse_descriptor_ = file->message_type(22);
-  static const int MultiIndexMultiAddResponse_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiAddResponse, processing_time_ms_),
-  };
-  MultiIndexMultiAddResponse_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexMultiAddResponse_descriptor_,
-      MultiIndexMultiAddResponse::internal_default_instance(),
-      MultiIndexMultiAddResponse_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexMultiAddResponse),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiAddResponse, _internal_metadata_));
-  MultiIndexDeleteRequest_descriptor_ = file->message_type(23);
-  static const int MultiIndexDeleteRequest_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteRequest, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteRequest, indexing_ids_),
-  };
-  MultiIndexDeleteRequest_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexDeleteRequest_descriptor_,
-      MultiIndexDeleteRequest::internal_default_instance(),
-      MultiIndexDeleteRequest_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexDeleteRequest),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteRequest, _internal_metadata_));
-  MultiIndexDeleteResponse_descriptor_ = file->message_type(24);
-  static const int MultiIndexDeleteResponse_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteResponse, processing_time_ms_),
-  };
-  MultiIndexDeleteResponse_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MultiIndexDeleteResponse_descriptor_,
-      MultiIndexDeleteResponse::internal_default_instance(),
-      MultiIndexDeleteResponse_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MultiIndexDeleteResponse),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteResponse, _internal_metadata_));
-  QuantizationRequest_descriptor_ = file->message_type(25);
-  static const int QuantizationRequest_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, features_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, image_id_),
-  };
-  QuantizationRequest_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      QuantizationRequest_descriptor_,
-      QuantizationRequest::internal_default_instance(),
-      QuantizationRequest_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(QuantizationRequest),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, _internal_metadata_));
-  QuantizationResponse_descriptor_ = file->message_type(26);
-  static const int QuantizationResponse_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationResponse, processing_time_ms_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationResponse, compressing_ids_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationResponse, indexing_ids_),
-  };
-  QuantizationResponse_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      QuantizationResponse_descriptor_,
-      QuantizationResponse::internal_default_instance(),
-      QuantizationResponse_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(QuantizationResponse),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationResponse, _internal_metadata_));
-}
+static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+  { 0, -1, sizeof(FloatMatrix)},
+  { 7, -1, sizeof(Features)},
+  { 12, -1, sizeof(CompressingClustersIds)},
+  { 17, -1, sizeof(IndexingClustersIds)},
+  { 22, -1, sizeof(CompressedElement)},
+  { 28, -1, sizeof(SerializedCompressedElement)},
+  { 34, -1, sizeof(CompressedElementsCombined)},
+  { 39, -1, sizeof(SerializedCompressedElementsCombined)},
+  { 44, -1, sizeof(CompressedElements)},
+  { 50, -1, sizeof(SerializedCompressedElements)},
+  { 56, -1, sizeof(CompressedElementsMap)},
+  { 61, -1, sizeof(SimiliaSearchRequest)},
+  { 68, -1, sizeof(SimiliaSearchResponse)},
+  { 75, -1, sizeof(MultiIndexAddRequest)},
+  { 82, -1, sizeof(MultiIndexAddResponse)},
+  { 87, -1, sizeof(MultiIndexGetRequest)},
+  { 92, -1, sizeof(MultiIndexGetResponse)},
+  { 98, -1, sizeof(MultiIndexMultiGetRequest)},
+  { 104, -1, sizeof(MultiIndexMultiGetResponse)},
+  { 110, -1, sizeof(MultiIndexMultiCountRequest)},
+  { 115, -1, sizeof(MultiIndexMultiCountResponse)},
+  { 121, -1, sizeof(MultiIndexMultiAddRequest)},
+  { 126, -1, sizeof(MultiIndexMultiAddResponse)},
+  { 131, -1, sizeof(MultiIndexDeleteRequest)},
+  { 137, -1, sizeof(MultiIndexDeleteResponse)},
+  { 142, -1, sizeof(QuantizationRequest)},
+  { 148, -1, sizeof(QuantizationResponse)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_FloatMatrix_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_Features_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressingClustersIds_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_IndexingClustersIds_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedElement_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_SerializedCompressedElement_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedElementsCombined_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_SerializedCompressedElementsCombined_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedElements_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_SerializedCompressedElements_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedElementsMap_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_SimiliaSearchRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_SimiliaSearchResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexAddRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexAddResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexGetRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexGetResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexMultiGetRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexMultiGetResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexMultiCountRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexMultiCountResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexMultiAddRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexMultiAddResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexDeleteRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexDeleteResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_QuantizationRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_QuantizationResponse_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "similia/proto/similia.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, NULL, NULL);
+}
+
 void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_similia_2fproto_2fsimilia_2eproto);
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
 }
 
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 28);
+  const ::google::protobuf::Descriptor* CompressedElementsMap_CompressedElementEntry_descriptor = protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[10].descriptor;
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      FloatMatrix_descriptor_, FloatMatrix::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      Features_descriptor_, Features::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CompressingClustersIds_descriptor_, CompressingClustersIds::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      IndexingClustersIds_descriptor_, IndexingClustersIds::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CompressedElement_descriptor_, CompressedElement::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      SerializedCompressedElement_descriptor_, SerializedCompressedElement::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CompressedElementsCombined_descriptor_, CompressedElementsCombined::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      SerializedCompressedElementsCombined_descriptor_, SerializedCompressedElementsCombined::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CompressedElements_descriptor_, CompressedElements::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      SerializedCompressedElements_descriptor_, SerializedCompressedElements::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CompressedElementsMap_descriptor_, CompressedElementsMap::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        CompressedElementsMap_CompressedElementEntry_descriptor_,
+        CompressedElementsMap_CompressedElementEntry_descriptor,
         ::google::protobuf::internal::MapEntry<
             ::std::string,
             ::similia::proto::CompressingClustersIds,
             ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
             ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
             0>::CreateDefaultInstance(
-                CompressedElementsMap_CompressedElementEntry_descriptor_));
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      SimiliaSearchRequest_descriptor_, SimiliaSearchRequest::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      SimiliaSearchResponse_descriptor_, SimiliaSearchResponse::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexAddRequest_descriptor_, MultiIndexAddRequest::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexAddResponse_descriptor_, MultiIndexAddResponse::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexGetRequest_descriptor_, MultiIndexGetRequest::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexGetResponse_descriptor_, MultiIndexGetResponse::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexMultiGetRequest_descriptor_, MultiIndexMultiGetRequest::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexMultiGetResponse_descriptor_, MultiIndexMultiGetResponse::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexMultiCountRequest_descriptor_, MultiIndexMultiCountRequest::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexMultiCountResponse_descriptor_, MultiIndexMultiCountResponse::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexMultiAddRequest_descriptor_, MultiIndexMultiAddRequest::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexMultiAddResponse_descriptor_, MultiIndexMultiAddResponse::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexDeleteRequest_descriptor_, MultiIndexDeleteRequest::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MultiIndexDeleteResponse_descriptor_, MultiIndexDeleteResponse::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      QuantizationRequest_descriptor_, QuantizationRequest::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      QuantizationResponse_descriptor_, QuantizationResponse::internal_default_instance());
+                CompressedElementsMap_CompressedElementEntry_descriptor));
 }
 
 }  // namespace
 
-void protobuf_ShutdownFile_similia_2fproto_2fsimilia_2eproto() {
-  FloatMatrix_default_instance_.Shutdown();
-  delete FloatMatrix_reflection_;
-  Features_default_instance_.Shutdown();
-  delete Features_reflection_;
-  CompressingClustersIds_default_instance_.Shutdown();
-  delete CompressingClustersIds_reflection_;
-  IndexingClustersIds_default_instance_.Shutdown();
-  delete IndexingClustersIds_reflection_;
-  CompressedElement_default_instance_.Shutdown();
-  delete CompressedElement_reflection_;
-  SerializedCompressedElement_default_instance_.Shutdown();
-  delete SerializedCompressedElement_reflection_;
-  CompressedElementsCombined_default_instance_.Shutdown();
-  delete CompressedElementsCombined_reflection_;
-  SerializedCompressedElementsCombined_default_instance_.Shutdown();
-  delete SerializedCompressedElementsCombined_reflection_;
-  CompressedElements_default_instance_.Shutdown();
-  delete CompressedElements_reflection_;
-  SerializedCompressedElements_default_instance_.Shutdown();
-  delete SerializedCompressedElements_reflection_;
-  CompressedElementsMap_default_instance_.Shutdown();
-  delete CompressedElementsMap_reflection_;
-  SimiliaSearchRequest_default_instance_.Shutdown();
-  delete SimiliaSearchRequest_reflection_;
-  SimiliaSearchResponse_default_instance_.Shutdown();
-  delete SimiliaSearchResponse_reflection_;
-  MultiIndexAddRequest_default_instance_.Shutdown();
-  delete MultiIndexAddRequest_reflection_;
-  MultiIndexAddResponse_default_instance_.Shutdown();
-  delete MultiIndexAddResponse_reflection_;
-  MultiIndexGetRequest_default_instance_.Shutdown();
-  delete MultiIndexGetRequest_reflection_;
-  MultiIndexGetResponse_default_instance_.Shutdown();
-  delete MultiIndexGetResponse_reflection_;
-  MultiIndexMultiGetRequest_default_instance_.Shutdown();
-  delete MultiIndexMultiGetRequest_reflection_;
-  MultiIndexMultiGetResponse_default_instance_.Shutdown();
-  delete MultiIndexMultiGetResponse_reflection_;
-  MultiIndexMultiCountRequest_default_instance_.Shutdown();
-  delete MultiIndexMultiCountRequest_reflection_;
-  MultiIndexMultiCountResponse_default_instance_.Shutdown();
-  delete MultiIndexMultiCountResponse_reflection_;
-  MultiIndexMultiAddRequest_default_instance_.Shutdown();
-  delete MultiIndexMultiAddRequest_reflection_;
-  MultiIndexMultiAddResponse_default_instance_.Shutdown();
-  delete MultiIndexMultiAddResponse_reflection_;
-  MultiIndexDeleteRequest_default_instance_.Shutdown();
-  delete MultiIndexDeleteRequest_reflection_;
-  MultiIndexDeleteResponse_default_instance_.Shutdown();
-  delete MultiIndexDeleteResponse_reflection_;
-  QuantizationRequest_default_instance_.Shutdown();
-  delete QuantizationRequest_reflection_;
-  QuantizationResponse_default_instance_.Shutdown();
-  delete QuantizationResponse_reflection_;
+void TableStruct::Shutdown() {
+  _FloatMatrix_default_instance_.Shutdown();
+  delete file_level_metadata[0].reflection;
+  _Features_default_instance_.Shutdown();
+  delete file_level_metadata[1].reflection;
+  _CompressingClustersIds_default_instance_.Shutdown();
+  delete file_level_metadata[2].reflection;
+  _IndexingClustersIds_default_instance_.Shutdown();
+  delete file_level_metadata[3].reflection;
+  _CompressedElement_default_instance_.Shutdown();
+  delete file_level_metadata[4].reflection;
+  _SerializedCompressedElement_default_instance_.Shutdown();
+  delete file_level_metadata[5].reflection;
+  _CompressedElementsCombined_default_instance_.Shutdown();
+  delete file_level_metadata[6].reflection;
+  _SerializedCompressedElementsCombined_default_instance_.Shutdown();
+  delete file_level_metadata[7].reflection;
+  _CompressedElements_default_instance_.Shutdown();
+  delete file_level_metadata[8].reflection;
+  _SerializedCompressedElements_default_instance_.Shutdown();
+  delete file_level_metadata[9].reflection;
+  _CompressedElementsMap_default_instance_.Shutdown();
+  delete file_level_metadata[11].reflection;
+  _SimiliaSearchRequest_default_instance_.Shutdown();
+  delete file_level_metadata[12].reflection;
+  _SimiliaSearchResponse_default_instance_.Shutdown();
+  delete file_level_metadata[13].reflection;
+  _MultiIndexAddRequest_default_instance_.Shutdown();
+  delete file_level_metadata[14].reflection;
+  _MultiIndexAddResponse_default_instance_.Shutdown();
+  delete file_level_metadata[15].reflection;
+  _MultiIndexGetRequest_default_instance_.Shutdown();
+  delete file_level_metadata[16].reflection;
+  _MultiIndexGetResponse_default_instance_.Shutdown();
+  delete file_level_metadata[17].reflection;
+  _MultiIndexMultiGetRequest_default_instance_.Shutdown();
+  delete file_level_metadata[18].reflection;
+  _MultiIndexMultiGetResponse_default_instance_.Shutdown();
+  delete file_level_metadata[19].reflection;
+  _MultiIndexMultiCountRequest_default_instance_.Shutdown();
+  delete file_level_metadata[20].reflection;
+  _MultiIndexMultiCountResponse_default_instance_.Shutdown();
+  delete file_level_metadata[21].reflection;
+  _MultiIndexMultiAddRequest_default_instance_.Shutdown();
+  delete file_level_metadata[22].reflection;
+  _MultiIndexMultiAddResponse_default_instance_.Shutdown();
+  delete file_level_metadata[23].reflection;
+  _MultiIndexDeleteRequest_default_instance_.Shutdown();
+  delete file_level_metadata[24].reflection;
+  _MultiIndexDeleteResponse_default_instance_.Shutdown();
+  delete file_level_metadata[25].reflection;
+  _QuantizationRequest_default_instance_.Shutdown();
+  delete file_level_metadata[26].reflection;
+  _QuantizationResponse_default_instance_.Shutdown();
+  delete file_level_metadata[27].reflection;
 }
 
-void protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto_impl() {
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  FloatMatrix_default_instance_.DefaultConstruct();
-  Features_default_instance_.DefaultConstruct();
-  CompressingClustersIds_default_instance_.DefaultConstruct();
-  IndexingClustersIds_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  CompressedElement_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  SerializedCompressedElement_default_instance_.DefaultConstruct();
-  CompressedElementsCombined_default_instance_.DefaultConstruct();
-  SerializedCompressedElementsCombined_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  CompressedElements_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  SerializedCompressedElements_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  CompressedElementsMap_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  ::google::protobuf::internal::GetEmptyString();
-  SimiliaSearchRequest_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  SimiliaSearchResponse_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  MultiIndexAddRequest_default_instance_.DefaultConstruct();
-  MultiIndexAddResponse_default_instance_.DefaultConstruct();
-  MultiIndexGetRequest_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  MultiIndexGetResponse_default_instance_.DefaultConstruct();
-  MultiIndexMultiGetRequest_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  MultiIndexMultiGetResponse_default_instance_.DefaultConstruct();
-  MultiIndexMultiCountRequest_default_instance_.DefaultConstruct();
-  MultiIndexMultiCountResponse_default_instance_.DefaultConstruct();
-  MultiIndexMultiAddRequest_default_instance_.DefaultConstruct();
-  MultiIndexMultiAddResponse_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  MultiIndexDeleteRequest_default_instance_.DefaultConstruct();
-  MultiIndexDeleteResponse_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  QuantizationRequest_default_instance_.DefaultConstruct();
-  QuantizationResponse_default_instance_.DefaultConstruct();
-  FloatMatrix_default_instance_.get_mutable()->InitAsDefaultInstance();
-  Features_default_instance_.get_mutable()->InitAsDefaultInstance();
-  CompressingClustersIds_default_instance_.get_mutable()->InitAsDefaultInstance();
-  IndexingClustersIds_default_instance_.get_mutable()->InitAsDefaultInstance();
-  CompressedElement_default_instance_.get_mutable()->InitAsDefaultInstance();
-  SerializedCompressedElement_default_instance_.get_mutable()->InitAsDefaultInstance();
-  CompressedElementsCombined_default_instance_.get_mutable()->InitAsDefaultInstance();
-  SerializedCompressedElementsCombined_default_instance_.get_mutable()->InitAsDefaultInstance();
-  CompressedElements_default_instance_.get_mutable()->InitAsDefaultInstance();
-  SerializedCompressedElements_default_instance_.get_mutable()->InitAsDefaultInstance();
-  CompressedElementsMap_default_instance_.get_mutable()->InitAsDefaultInstance();
-  SimiliaSearchRequest_default_instance_.get_mutable()->InitAsDefaultInstance();
-  SimiliaSearchResponse_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexAddRequest_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexAddResponse_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexGetRequest_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexGetResponse_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexMultiGetRequest_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexMultiGetResponse_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexMultiCountRequest_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexMultiCountResponse_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexMultiAddRequest_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexMultiAddResponse_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexDeleteRequest_default_instance_.get_mutable()->InitAsDefaultInstance();
-  MultiIndexDeleteResponse_default_instance_.get_mutable()->InitAsDefaultInstance();
-  QuantizationRequest_default_instance_.get_mutable()->InitAsDefaultInstance();
-  QuantizationResponse_default_instance_.get_mutable()->InitAsDefaultInstance();
+  ::google::protobuf::internal::InitProtobufDefaults();
+  _FloatMatrix_default_instance_.DefaultConstruct();
+  _Features_default_instance_.DefaultConstruct();
+  _CompressingClustersIds_default_instance_.DefaultConstruct();
+  _IndexingClustersIds_default_instance_.DefaultConstruct();
+  _CompressedElement_default_instance_.DefaultConstruct();
+  _SerializedCompressedElement_default_instance_.DefaultConstruct();
+  _CompressedElementsCombined_default_instance_.DefaultConstruct();
+  _SerializedCompressedElementsCombined_default_instance_.DefaultConstruct();
+  _CompressedElements_default_instance_.DefaultConstruct();
+  _SerializedCompressedElements_default_instance_.DefaultConstruct();
+  _CompressedElementsMap_default_instance_.DefaultConstruct();
+  _SimiliaSearchRequest_default_instance_.DefaultConstruct();
+  _SimiliaSearchResponse_default_instance_.DefaultConstruct();
+  _MultiIndexAddRequest_default_instance_.DefaultConstruct();
+  _MultiIndexAddResponse_default_instance_.DefaultConstruct();
+  _MultiIndexGetRequest_default_instance_.DefaultConstruct();
+  _MultiIndexGetResponse_default_instance_.DefaultConstruct();
+  _MultiIndexMultiGetRequest_default_instance_.DefaultConstruct();
+  _MultiIndexMultiGetResponse_default_instance_.DefaultConstruct();
+  _MultiIndexMultiCountRequest_default_instance_.DefaultConstruct();
+  _MultiIndexMultiCountResponse_default_instance_.DefaultConstruct();
+  _MultiIndexMultiAddRequest_default_instance_.DefaultConstruct();
+  _MultiIndexMultiAddResponse_default_instance_.DefaultConstruct();
+  _MultiIndexDeleteRequest_default_instance_.DefaultConstruct();
+  _MultiIndexDeleteResponse_default_instance_.DefaultConstruct();
+  _QuantizationRequest_default_instance_.DefaultConstruct();
+  _QuantizationResponse_default_instance_.DefaultConstruct();
+  _CompressedElement_default_instance_.get_mutable()->compressing_clusters_id_ = const_cast< ::similia::proto::CompressingClustersIds*>(
+      ::similia::proto::CompressingClustersIds::internal_default_instance());
+  _SimiliaSearchRequest_default_instance_.get_mutable()->features_ = const_cast< ::similia::proto::Features*>(
+      ::similia::proto::Features::internal_default_instance());
+  _MultiIndexAddRequest_default_instance_.get_mutable()->indexing_ids_ = const_cast< ::similia::proto::IndexingClustersIds*>(
+      ::similia::proto::IndexingClustersIds::internal_default_instance());
+  _MultiIndexAddRequest_default_instance_.get_mutable()->compressing_ids_ = const_cast< ::similia::proto::CompressingClustersIds*>(
+      ::similia::proto::CompressingClustersIds::internal_default_instance());
+  _MultiIndexGetRequest_default_instance_.get_mutable()->indexing_ids_ = const_cast< ::similia::proto::IndexingClustersIds*>(
+      ::similia::proto::IndexingClustersIds::internal_default_instance());
+  _MultiIndexDeleteRequest_default_instance_.get_mutable()->indexing_ids_ = const_cast< ::similia::proto::IndexingClustersIds*>(
+      ::similia::proto::IndexingClustersIds::internal_default_instance());
+  _QuantizationRequest_default_instance_.get_mutable()->features_ = const_cast< ::similia::proto::Features*>(
+      ::similia::proto::Features::internal_default_instance());
+  _QuantizationResponse_default_instance_.get_mutable()->compressing_ids_ = const_cast< ::similia::proto::CompressingClustersIds*>(
+      ::similia::proto::CompressingClustersIds::internal_default_instance());
+  _QuantizationResponse_default_instance_.get_mutable()->indexing_ids_ = const_cast< ::similia::proto::IndexingClustersIds*>(
+      ::similia::proto::IndexingClustersIds::internal_default_instance());
 }
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto_once_);
-void protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto_once_,
-                 &protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto_impl);
+void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
-void protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto_impl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] = {
+      "\n\033similia/proto/similia.proto\022\rsimilia.p"
+      "roto\"B\n\013FloatMatrix\022\020\n\010num_rows\030\001 \001(\005\022\020\n"
+      "\010num_cols\030\002 \001(\005\022\017\n\007element\030\003 \003(\002\"\033\n\010Feat"
+      "ures\022\017\n\007element\030\001 \003(\002\"$\n\026CompressingClus"
+      "tersIds\022\n\n\002id\030\001 \003(\005\"!\n\023IndexingClustersI"
+      "ds\022\n\n\002id\030\001 \003(\005\"g\n\021CompressedElement\022\n\n\002i"
+      "d\030\001 \001(\t\022F\n\027compressing_clusters_id\030\002 \001(\013"
+      "2%.similia.proto.CompressingClustersIds\""
+      "J\n\033SerializedCompressedElement\022\n\n\002id\030\001 \001"
+      "(\t\022\037\n\027compressing_clusters_id\030\002 \001(\014\"Z\n\032C"
+      "ompressedElementsCombined\022<\n\022compressed_"
+      "element\030\001 \003(\0132 .similia.proto.Compressed"
+      "Element\"n\n$SerializedCompressedElementsC"
+      "ombined\022F\n\022compressed_element\030\001 \003(\0132*.si"
+      "milia.proto.SerializedCompressedElement\""
+      "h\n\022CompressedElements\022\n\n\002id\030\001 \003(\t\022F\n\027com"
+      "pressing_clusters_id\030\002 \003(\0132%.similia.pro"
+      "to.CompressingClustersIds\"K\n\034SerializedC"
+      "ompressedElements\022\n\n\002id\030\001 \003(\t\022\037\n\027compres"
+      "sing_clusters_id\030\002 \003(\014\"\321\001\n\025CompressedEle"
+      "mentsMap\022W\n\022compressed_element\030\001 \003(\0132;.s"
+      "imilia.proto.CompressedElementsMap.Compr"
+      "essedElementEntry\032_\n\026CompressedElementEn"
+      "try\022\013\n\003key\030\001 \001(\t\0224\n\005value\030\002 \001(\0132%.simili"
+      "a.proto.CompressingClustersIds:\0028\001\"h\n\024Si"
+      "miliaSearchRequest\022\020\n\010image_id\030\001 \001(\t\022\023\n\013"
+      "num_nearest\030\002 \001(\005\022)\n\010features\030\003 \001(\0132\027.si"
+      "milia.proto.Features\"_\n\025SimiliaSearchRes"
+      "ponse\022\020\n\010image_id\030\001 \003(\t\022\032\n\022processing_ti"
+      "me_ms\030\002 \001(\003\022\030\n\020squared_distance\030\003 \003(\001\"\242\001"
+      "\n\024MultiIndexAddRequest\022\020\n\010image_id\030\001 \001(\t"
+      "\0228\n\014indexing_ids\030\002 \001(\0132\".similia.proto.I"
+      "ndexingClustersIds\022>\n\017compressing_ids\030\003 "
+      "\001(\0132%.similia.proto.CompressingClustersI"
+      "ds\"3\n\025MultiIndexAddResponse\022\032\n\022processin"
+      "g_time_ms\030\002 \001(\003\"P\n\024MultiIndexGetRequest\022"
+      "8\n\014indexing_ids\030\001 \001(\0132\".similia.proto.In"
+      "dexingClustersIds\"P\n\025MultiIndexGetRespon"
+      "se\022\032\n\022processing_time_ms\030\002 \001(\003\022\033\n\023compre"
+      "ssed_elements\030\003 \001(\014\"j\n\031MultiIndexMultiGe"
+      "tRequest\0228\n\014indexing_ids\030\001 \003(\0132\".similia"
+      ".proto.IndexingClustersIds\022\023\n\013count_limi"
+      "t\030\002 \001(\005\"U\n\032MultiIndexMultiGetResponse\022\032\n"
+      "\022processing_time_ms\030\002 \001(\003\022\033\n\023compressed_"
+      "elements\030\003 \003(\014\"W\n\033MultiIndexMultiCountRe"
+      "quest\0228\n\014indexing_ids\030\001 \003(\0132\".similia.pr"
+      "oto.IndexingClustersIds\"I\n\034MultiIndexMul"
+      "tiCountResponse\022\032\n\022processing_time_ms\030\002 "
+      "\001(\003\022\r\n\005count\030\003 \003(\005\"a\n\031MultiIndexMultiAdd"
+      "Request\022D\n\027multi_index_add_request\030\001 \003(\013"
+      "2#.similia.proto.MultiIndexAddRequest\"8\n"
+      "\032MultiIndexMultiAddResponse\022\032\n\022processin"
+      "g_time_ms\030\002 \001(\003\"_\n\027MultiIndexDeleteReque"
+      "st\022\n\n\002id\030\001 \001(\t\0228\n\014indexing_ids\030\002 \001(\0132\".s"
+      "imilia.proto.IndexingClustersIds\"6\n\030Mult"
+      "iIndexDeleteResponse\022\032\n\022processing_time_"
+      "ms\030\002 \001(\003\"R\n\023QuantizationRequest\022)\n\010featu"
+      "res\030\001 \001(\0132\027.similia.proto.Features\022\020\n\010im"
+      "age_id\030\002 \001(\t\"\254\001\n\024QuantizationResponse\022\032\n"
+      "\022processing_time_ms\030\002 \001(\003\022>\n\017compressing"
+      "_ids\030\003 \001(\0132%.similia.proto.CompressingCl"
+      "ustersIds\0228\n\014indexing_ids\030\004 \001(\0132\".simili"
+      "a.proto.IndexingClustersIds2g\n\007Similia\022\\"
+      "\n\rSimiliaSearch\022#.similia.proto.SimiliaS"
+      "earchRequest\032$.similia.proto.SimiliaSear"
+      "chResponse\"\0002\310\004\n\022InvertedMultiIndex\022R\n\003A"
+      "dd\022#.similia.proto.MultiIndexAddRequest\032"
+      "$.similia.proto.MultiIndexAddResponse\"\000\022"
+      "R\n\003Get\022#.similia.proto.MultiIndexGetRequ"
+      "est\032$.similia.proto.MultiIndexGetRespons"
+      "e\"\000\022[\n\006Delete\022&.similia.proto.MultiIndex"
+      "DeleteRequest\032\'.similia.proto.MultiIndex"
+      "DeleteResponse\"\000\022a\n\010MultiGet\022(.similia.p"
+      "roto.MultiIndexMultiGetRequest\032).similia"
+      ".proto.MultiIndexMultiGetResponse\"\000\022g\n\nM"
+      "ultiCount\022*.similia.proto.MultiIndexMult"
+      "iCountRequest\032+.similia.proto.MultiIndex"
+      "MultiCountResponse\"\000\022a\n\010MultiAdd\022(.simil"
+      "ia.proto.MultiIndexMultiAddRequest\032).sim"
+      "ilia.proto.MultiIndexMultiAddResponse\"\0002"
+      "n\n\025MultiProductQuantizer\022U\n\010Quantize\022\".s"
+      "imilia.proto.QuantizationRequest\032#.simil"
+      "ia.proto.QuantizationResponse\"\000B&\n\026io.le"
+      "fty.similia.protoB\014SimiliaProtob\006proto3"
+  };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\033similia/proto/similia.proto\022\rsimilia.p"
-    "roto\"B\n\013FloatMatrix\022\020\n\010num_rows\030\001 \001(\005\022\020\n"
-    "\010num_cols\030\002 \001(\005\022\017\n\007element\030\003 \003(\002\"\033\n\010Feat"
-    "ures\022\017\n\007element\030\001 \003(\002\"$\n\026CompressingClus"
-    "tersIds\022\n\n\002id\030\001 \003(\005\"!\n\023IndexingClustersI"
-    "ds\022\n\n\002id\030\001 \003(\005\"g\n\021CompressedElement\022\n\n\002i"
-    "d\030\001 \001(\t\022F\n\027compressing_clusters_id\030\002 \001(\013"
-    "2%.similia.proto.CompressingClustersIds\""
-    "J\n\033SerializedCompressedElement\022\n\n\002id\030\001 \001"
-    "(\t\022\037\n\027compressing_clusters_id\030\002 \001(\014\"Z\n\032C"
-    "ompressedElementsCombined\022<\n\022compressed_"
-    "element\030\001 \003(\0132 .similia.proto.Compressed"
-    "Element\"n\n$SerializedCompressedElementsC"
-    "ombined\022F\n\022compressed_element\030\001 \003(\0132*.si"
-    "milia.proto.SerializedCompressedElement\""
-    "h\n\022CompressedElements\022\n\n\002id\030\001 \003(\t\022F\n\027com"
-    "pressing_clusters_id\030\002 \003(\0132%.similia.pro"
-    "to.CompressingClustersIds\"K\n\034SerializedC"
-    "ompressedElements\022\n\n\002id\030\001 \003(\t\022\037\n\027compres"
-    "sing_clusters_id\030\002 \003(\014\"\321\001\n\025CompressedEle"
-    "mentsMap\022W\n\022compressed_element\030\001 \003(\0132;.s"
-    "imilia.proto.CompressedElementsMap.Compr"
-    "essedElementEntry\032_\n\026CompressedElementEn"
-    "try\022\013\n\003key\030\001 \001(\t\0224\n\005value\030\002 \001(\0132%.simili"
-    "a.proto.CompressingClustersIds:\0028\001\"h\n\024Si"
-    "miliaSearchRequest\022\020\n\010image_id\030\001 \001(\t\022\023\n\013"
-    "num_nearest\030\002 \001(\005\022)\n\010features\030\003 \001(\0132\027.si"
-    "milia.proto.Features\"_\n\025SimiliaSearchRes"
-    "ponse\022\020\n\010image_id\030\001 \003(\t\022\032\n\022processing_ti"
-    "me_ms\030\002 \001(\003\022\030\n\020squared_distance\030\003 \003(\001\"\242\001"
-    "\n\024MultiIndexAddRequest\022\020\n\010image_id\030\001 \001(\t"
-    "\0228\n\014indexing_ids\030\002 \001(\0132\".similia.proto.I"
-    "ndexingClustersIds\022>\n\017compressing_ids\030\003 "
-    "\001(\0132%.similia.proto.CompressingClustersI"
-    "ds\"3\n\025MultiIndexAddResponse\022\032\n\022processin"
-    "g_time_ms\030\002 \001(\003\"P\n\024MultiIndexGetRequest\022"
-    "8\n\014indexing_ids\030\001 \001(\0132\".similia.proto.In"
-    "dexingClustersIds\"P\n\025MultiIndexGetRespon"
-    "se\022\032\n\022processing_time_ms\030\002 \001(\003\022\033\n\023compre"
-    "ssed_elements\030\003 \001(\014\"j\n\031MultiIndexMultiGe"
-    "tRequest\0228\n\014indexing_ids\030\001 \003(\0132\".similia"
-    ".proto.IndexingClustersIds\022\023\n\013count_limi"
-    "t\030\002 \001(\005\"U\n\032MultiIndexMultiGetResponse\022\032\n"
-    "\022processing_time_ms\030\002 \001(\003\022\033\n\023compressed_"
-    "elements\030\003 \003(\014\"W\n\033MultiIndexMultiCountRe"
-    "quest\0228\n\014indexing_ids\030\001 \003(\0132\".similia.pr"
-    "oto.IndexingClustersIds\"I\n\034MultiIndexMul"
-    "tiCountResponse\022\032\n\022processing_time_ms\030\002 "
-    "\001(\003\022\r\n\005count\030\003 \003(\005\"a\n\031MultiIndexMultiAdd"
-    "Request\022D\n\027multi_index_add_request\030\001 \003(\013"
-    "2#.similia.proto.MultiIndexAddRequest\"8\n"
-    "\032MultiIndexMultiAddResponse\022\032\n\022processin"
-    "g_time_ms\030\002 \001(\003\"_\n\027MultiIndexDeleteReque"
-    "st\022\n\n\002id\030\001 \001(\t\0228\n\014indexing_ids\030\002 \001(\0132\".s"
-    "imilia.proto.IndexingClustersIds\"6\n\030Mult"
-    "iIndexDeleteResponse\022\032\n\022processing_time_"
-    "ms\030\002 \001(\003\"R\n\023QuantizationRequest\022)\n\010featu"
-    "res\030\001 \001(\0132\027.similia.proto.Features\022\020\n\010im"
-    "age_id\030\002 \001(\t\"\254\001\n\024QuantizationResponse\022\032\n"
-    "\022processing_time_ms\030\002 \001(\003\022>\n\017compressing"
-    "_ids\030\003 \001(\0132%.similia.proto.CompressingCl"
-    "ustersIds\0228\n\014indexing_ids\030\004 \001(\0132\".simili"
-    "a.proto.IndexingClustersIds2g\n\007Similia\022\\"
-    "\n\rSimiliaSearch\022#.similia.proto.SimiliaS"
-    "earchRequest\032$.similia.proto.SimiliaSear"
-    "chResponse\"\0002\310\004\n\022InvertedMultiIndex\022R\n\003A"
-    "dd\022#.similia.proto.MultiIndexAddRequest\032"
-    "$.similia.proto.MultiIndexAddResponse\"\000\022"
-    "R\n\003Get\022#.similia.proto.MultiIndexGetRequ"
-    "est\032$.similia.proto.MultiIndexGetRespons"
-    "e\"\000\022[\n\006Delete\022&.similia.proto.MultiIndex"
-    "DeleteRequest\032\'.similia.proto.MultiIndex"
-    "DeleteResponse\"\000\022a\n\010MultiGet\022(.similia.p"
-    "roto.MultiIndexMultiGetRequest\032).similia"
-    ".proto.MultiIndexMultiGetResponse\"\000\022g\n\nM"
-    "ultiCount\022*.similia.proto.MultiIndexMult"
-    "iCountRequest\032+.similia.proto.MultiIndex"
-    "MultiCountResponse\"\000\022a\n\010MultiAdd\022(.simil"
-    "ia.proto.MultiIndexMultiAddRequest\032).sim"
-    "ilia.proto.MultiIndexMultiAddResponse\"\0002"
-    "n\n\025MultiProductQuantizer\022U\n\010Quantize\022\".s"
-    "imilia.proto.QuantizationRequest\032#.simil"
-    "ia.proto.QuantizationResponse\"\000B&\n\026io.le"
-    "fty.similia.protoB\014SimiliaProtob\006proto3", 3359);
+      descriptor, 3359);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "similia/proto/similia.proto", &protobuf_RegisterTypes);
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_similia_2fproto_2fsimilia_2eproto);
+  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto_once_);
-void protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto_once_,
-                 &protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto_impl);
+void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
 // Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_similia_2fproto_2fsimilia_2eproto {
-  StaticDescriptorInitializer_similia_2fproto_2fsimilia_2eproto() {
-    protobuf_AddDesc_similia_2fproto_2fsimilia_2eproto();
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_similia_2fproto_2fsimilia_2eproto_;
+} static_descriptor_initializer;
 
-namespace {
-
-static void MergeFromFail(int line) GOOGLE_ATTRIBUTE_COLD GOOGLE_ATTRIBUTE_NORETURN;
-static void MergeFromFail(int line) {
-  ::google::protobuf::internal::MergeFromFail(__FILE__, line);
-}
-
-}  // namespace
+}  // namespace protobuf_similia_2fproto_2fsimilia_2eproto
 
 
 // ===================================================================
@@ -854,19 +565,21 @@ const int FloatMatrix::kElementFieldNumber;
 
 FloatMatrix::FloatMatrix()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.FloatMatrix)
 }
-
-void FloatMatrix::InitAsDefaultInstance() {
-}
-
 FloatMatrix::FloatMatrix(const FloatMatrix& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      element_(from.element_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&num_rows_, &from.num_rows_,
+    reinterpret_cast<char*>(&num_cols_) -
+    reinterpret_cast<char*>(&num_rows_) + sizeof(num_cols_));
   // @@protoc_insertion_point(copy_constructor:similia.proto.FloatMatrix)
 }
 
@@ -890,16 +603,14 @@ void FloatMatrix::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* FloatMatrix::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return FloatMatrix_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[0].descriptor;
 }
 
 const FloatMatrix& FloatMatrix::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<FloatMatrix> FloatMatrix_default_instance_;
 
 FloatMatrix* FloatMatrix::New(::google::protobuf::Arena* arena) const {
   FloatMatrix* n = new FloatMatrix;
@@ -911,28 +622,9 @@ FloatMatrix* FloatMatrix::New(::google::protobuf::Arena* arena) const {
 
 void FloatMatrix::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.FloatMatrix)
-#if defined(__clang__)
-#define ZR_HELPER_(f) \
-  _Pragma("clang diagnostic push") \
-  _Pragma("clang diagnostic ignored \"-Winvalid-offsetof\"") \
-  __builtin_offsetof(FloatMatrix, f) \
-  _Pragma("clang diagnostic pop")
-#else
-#define ZR_HELPER_(f) reinterpret_cast<char*>(\
-  &reinterpret_cast<FloatMatrix*>(16)->f)
-#endif
-
-#define ZR_(first, last) do {\
-  ::memset(&(first), 0,\
-           ZR_HELPER_(last) - ZR_HELPER_(first) + sizeof(last));\
-} while (0)
-
-  ZR_(num_rows_, num_cols_);
-
-#undef ZR_HELPER_
-#undef ZR_
-
   element_.Clear();
+  ::memset(&num_rows_, 0, reinterpret_cast<char*>(&num_cols_) -
+    reinterpret_cast<char*>(&num_rows_) + sizeof(num_cols_));
 }
 
 bool FloatMatrix::MergePartialFromCodedStream(
@@ -941,13 +633,13 @@ bool FloatMatrix::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.FloatMatrix)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int32 num_rows = 1;
+      // int32 num_rows = 1;
       case 1: {
-        if (tag == 8) {
+        if (tag == 8u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -955,14 +647,12 @@ bool FloatMatrix::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_num_cols;
         break;
       }
 
-      // optional int32 num_cols = 2;
+      // int32 num_cols = 2;
       case 2: {
-        if (tag == 16) {
-         parse_num_cols:
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -970,25 +660,22 @@ bool FloatMatrix::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_element;
         break;
       }
 
       // repeated float element = 3;
       case 3: {
-        if (tag == 26) {
-         parse_element:
+        if (tag == 26u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, this->mutable_element())));
-        } else if (tag == 29) {
+        } else if (tag == 29u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 26, input, this->mutable_element())));
+                 1, 26u, input, this->mutable_element())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -1016,12 +703,12 @@ failure:
 void FloatMatrix::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.FloatMatrix)
-  // optional int32 num_rows = 1;
+  // int32 num_rows = 1;
   if (this->num_rows() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->num_rows(), output);
   }
 
-  // optional int32 num_cols = 2;
+  // int32 num_cols = 2;
   if (this->num_cols() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->num_cols(), output);
   }
@@ -1030,10 +717,8 @@ void FloatMatrix::SerializeWithCachedSizes(
   if (this->element_size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteTag(3, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
     output->WriteVarint32(_element_cached_byte_size_);
-  }
-  for (int i = 0; i < this->element_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloatNoTag(
-      this->element(i), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloatArray(
+      this->element().data(), this->element_size(), output);
   }
 
   // @@protoc_insertion_point(serialize_end:similia.proto.FloatMatrix)
@@ -1041,14 +726,14 @@ void FloatMatrix::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* FloatMatrix::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.FloatMatrix)
-  // optional int32 num_rows = 1;
+  // int32 num_rows = 1;
   if (this->num_rows() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->num_rows(), target);
   }
 
-  // optional int32 num_cols = 2;
+  // int32 num_cols = 2;
   if (this->num_cols() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->num_cols(), target);
   }
@@ -1075,25 +760,10 @@ size_t FloatMatrix::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.FloatMatrix)
   size_t total_size = 0;
 
-  // optional int32 num_rows = 1;
-  if (this->num_rows() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->num_rows());
-  }
-
-  // optional int32 num_cols = 2;
-  if (this->num_cols() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->num_cols());
-  }
-
   // repeated float element = 3;
   {
-    size_t data_size = 0;
     unsigned int count = this->element_size();
-    data_size = 4UL * count;
+    size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
@@ -1105,6 +775,20 @@ size_t FloatMatrix::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  // int32 num_rows = 1;
+  if (this->num_rows() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->num_rows());
+  }
+
+  // int32 num_cols = 2;
+  if (this->num_cols() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->num_cols());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -1114,7 +798,7 @@ size_t FloatMatrix::ByteSizeLong() const {
 
 void FloatMatrix::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.FloatMatrix)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const FloatMatrix* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const FloatMatrix>(
           &from);
@@ -1123,22 +807,15 @@ void FloatMatrix::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.FloatMatrix)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void FloatMatrix::MergeFrom(const FloatMatrix& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.FloatMatrix)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void FloatMatrix::UnsafeMergeFrom(const FloatMatrix& from) {
-  GOOGLE_DCHECK(&from != this);
-  element_.UnsafeMergeFrom(from.element_);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  element_.MergeFrom(from.element_);
   if (from.num_rows() != 0) {
     set_num_rows(from.num_rows());
   }
@@ -1158,11 +835,10 @@ void FloatMatrix::CopyFrom(const FloatMatrix& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.FloatMatrix)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool FloatMatrix::IsInitialized() const {
-
   return true;
 }
 
@@ -1171,25 +847,21 @@ void FloatMatrix::Swap(FloatMatrix* other) {
   InternalSwap(other);
 }
 void FloatMatrix::InternalSwap(FloatMatrix* other) {
+  element_.UnsafeArenaSwap(&other->element_);
   std::swap(num_rows_, other->num_rows_);
   std::swap(num_cols_, other->num_cols_);
-  element_.UnsafeArenaSwap(&other->element_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata FloatMatrix::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = FloatMatrix_descriptor_;
-  metadata.reflection = FloatMatrix_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[0];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // FloatMatrix
 
-// optional int32 num_rows = 1;
+// int32 num_rows = 1;
 void FloatMatrix::clear_num_rows() {
   num_rows_ = 0;
 }
@@ -1203,7 +875,7 @@ void FloatMatrix::set_num_rows(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:similia.proto.FloatMatrix.num_rows)
 }
 
-// optional int32 num_cols = 2;
+// int32 num_cols = 2;
 void FloatMatrix::clear_num_cols() {
   num_cols_ = 0;
 }
@@ -1247,9 +919,6 @@ FloatMatrix::mutable_element() {
   return &element_;
 }
 
-inline const FloatMatrix* FloatMatrix::internal_default_instance() {
-  return &FloatMatrix_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1260,19 +929,18 @@ const int Features::kElementFieldNumber;
 
 Features::Features()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.Features)
 }
-
-void Features::InitAsDefaultInstance() {
-}
-
 Features::Features(const Features& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      element_(from.element_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:similia.proto.Features)
 }
 
@@ -1294,16 +962,14 @@ void Features::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* Features::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return Features_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[1].descriptor;
 }
 
 const Features& Features::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<Features> Features_default_instance_;
 
 Features* Features::New(::google::protobuf::Arena* arena) const {
   Features* n = new Features;
@@ -1324,24 +990,23 @@ bool Features::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.Features)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated float element = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, this->mutable_element())));
-        } else if (tag == 13) {
+        } else if (tag == 13u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 10, input, this->mutable_element())));
+                 1, 10u, input, this->mutable_element())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -1373,10 +1038,8 @@ void Features::SerializeWithCachedSizes(
   if (this->element_size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteTag(1, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
     output->WriteVarint32(_element_cached_byte_size_);
-  }
-  for (int i = 0; i < this->element_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloatNoTag(
-      this->element(i), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloatArray(
+      this->element().data(), this->element_size(), output);
   }
 
   // @@protoc_insertion_point(serialize_end:similia.proto.Features)
@@ -1384,7 +1047,7 @@ void Features::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* Features::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.Features)
   // repeated float element = 1;
   if (this->element_size() > 0) {
@@ -1410,9 +1073,8 @@ size_t Features::ByteSizeLong() const {
 
   // repeated float element = 1;
   {
-    size_t data_size = 0;
     unsigned int count = this->element_size();
-    data_size = 4UL * count;
+    size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
@@ -1433,7 +1095,7 @@ size_t Features::ByteSizeLong() const {
 
 void Features::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.Features)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const Features* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const Features>(
           &from);
@@ -1442,22 +1104,15 @@ void Features::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.Features)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void Features::MergeFrom(const Features& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.Features)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void Features::UnsafeMergeFrom(const Features& from) {
-  GOOGLE_DCHECK(&from != this);
-  element_.UnsafeMergeFrom(from.element_);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  element_.MergeFrom(from.element_);
 }
 
 void Features::CopyFrom(const ::google::protobuf::Message& from) {
@@ -1471,11 +1126,10 @@ void Features::CopyFrom(const Features& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.Features)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool Features::IsInitialized() const {
-
   return true;
 }
 
@@ -1485,16 +1139,12 @@ void Features::Swap(Features* other) {
 }
 void Features::InternalSwap(Features* other) {
   element_.UnsafeArenaSwap(&other->element_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Features::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = Features_descriptor_;
-  metadata.reflection = Features_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[1];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1530,9 +1180,6 @@ Features::mutable_element() {
   return &element_;
 }
 
-inline const Features* Features::internal_default_instance() {
-  return &Features_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1543,19 +1190,18 @@ const int CompressingClustersIds::kIdFieldNumber;
 
 CompressingClustersIds::CompressingClustersIds()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.CompressingClustersIds)
 }
-
-void CompressingClustersIds::InitAsDefaultInstance() {
-}
-
 CompressingClustersIds::CompressingClustersIds(const CompressingClustersIds& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      id_(from.id_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:similia.proto.CompressingClustersIds)
 }
 
@@ -1577,16 +1223,14 @@ void CompressingClustersIds::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* CompressingClustersIds::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CompressingClustersIds_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[2].descriptor;
 }
 
 const CompressingClustersIds& CompressingClustersIds::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<CompressingClustersIds> CompressingClustersIds_default_instance_;
 
 CompressingClustersIds* CompressingClustersIds::New(::google::protobuf::Arena* arena) const {
   CompressingClustersIds* n = new CompressingClustersIds;
@@ -1607,24 +1251,23 @@ bool CompressingClustersIds::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.CompressingClustersIds)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated int32 id = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, this->mutable_id())));
-        } else if (tag == 8) {
+        } else if (tag == 8u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 1, 10, input, this->mutable_id())));
+                 1, 10u, input, this->mutable_id())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -1667,7 +1310,7 @@ void CompressingClustersIds::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CompressingClustersIds::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.CompressingClustersIds)
   // repeated int32 id = 1;
   if (this->id_size() > 0) {
@@ -1693,12 +1336,8 @@ size_t CompressingClustersIds::ByteSizeLong() const {
 
   // repeated int32 id = 1;
   {
-    size_t data_size = 0;
-    unsigned int count = this->id_size();
-    for (unsigned int i = 0; i < count; i++) {
-      data_size += ::google::protobuf::internal::WireFormatLite::
-        Int32Size(this->id(i));
-    }
+    size_t data_size = ::google::protobuf::internal::WireFormatLite::
+      Int32Size(this->id_);
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
@@ -1719,7 +1358,7 @@ size_t CompressingClustersIds::ByteSizeLong() const {
 
 void CompressingClustersIds::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.CompressingClustersIds)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const CompressingClustersIds* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const CompressingClustersIds>(
           &from);
@@ -1728,22 +1367,15 @@ void CompressingClustersIds::MergeFrom(const ::google::protobuf::Message& from) 
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.CompressingClustersIds)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void CompressingClustersIds::MergeFrom(const CompressingClustersIds& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.CompressingClustersIds)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void CompressingClustersIds::UnsafeMergeFrom(const CompressingClustersIds& from) {
-  GOOGLE_DCHECK(&from != this);
-  id_.UnsafeMergeFrom(from.id_);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  id_.MergeFrom(from.id_);
 }
 
 void CompressingClustersIds::CopyFrom(const ::google::protobuf::Message& from) {
@@ -1757,11 +1389,10 @@ void CompressingClustersIds::CopyFrom(const CompressingClustersIds& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.CompressingClustersIds)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool CompressingClustersIds::IsInitialized() const {
-
   return true;
 }
 
@@ -1771,16 +1402,12 @@ void CompressingClustersIds::Swap(CompressingClustersIds* other) {
 }
 void CompressingClustersIds::InternalSwap(CompressingClustersIds* other) {
   id_.UnsafeArenaSwap(&other->id_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CompressingClustersIds::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = CompressingClustersIds_descriptor_;
-  metadata.reflection = CompressingClustersIds_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[2];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1816,9 +1443,6 @@ CompressingClustersIds::mutable_id() {
   return &id_;
 }
 
-inline const CompressingClustersIds* CompressingClustersIds::internal_default_instance() {
-  return &CompressingClustersIds_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1829,19 +1453,18 @@ const int IndexingClustersIds::kIdFieldNumber;
 
 IndexingClustersIds::IndexingClustersIds()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.IndexingClustersIds)
 }
-
-void IndexingClustersIds::InitAsDefaultInstance() {
-}
-
 IndexingClustersIds::IndexingClustersIds(const IndexingClustersIds& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      id_(from.id_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:similia.proto.IndexingClustersIds)
 }
 
@@ -1863,16 +1486,14 @@ void IndexingClustersIds::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* IndexingClustersIds::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return IndexingClustersIds_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[3].descriptor;
 }
 
 const IndexingClustersIds& IndexingClustersIds::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<IndexingClustersIds> IndexingClustersIds_default_instance_;
 
 IndexingClustersIds* IndexingClustersIds::New(::google::protobuf::Arena* arena) const {
   IndexingClustersIds* n = new IndexingClustersIds;
@@ -1893,24 +1514,23 @@ bool IndexingClustersIds::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.IndexingClustersIds)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated int32 id = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, this->mutable_id())));
-        } else if (tag == 8) {
+        } else if (tag == 8u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 1, 10, input, this->mutable_id())));
+                 1, 10u, input, this->mutable_id())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -1953,7 +1573,7 @@ void IndexingClustersIds::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* IndexingClustersIds::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.IndexingClustersIds)
   // repeated int32 id = 1;
   if (this->id_size() > 0) {
@@ -1979,12 +1599,8 @@ size_t IndexingClustersIds::ByteSizeLong() const {
 
   // repeated int32 id = 1;
   {
-    size_t data_size = 0;
-    unsigned int count = this->id_size();
-    for (unsigned int i = 0; i < count; i++) {
-      data_size += ::google::protobuf::internal::WireFormatLite::
-        Int32Size(this->id(i));
-    }
+    size_t data_size = ::google::protobuf::internal::WireFormatLite::
+      Int32Size(this->id_);
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
@@ -2005,7 +1621,7 @@ size_t IndexingClustersIds::ByteSizeLong() const {
 
 void IndexingClustersIds::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.IndexingClustersIds)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const IndexingClustersIds* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const IndexingClustersIds>(
           &from);
@@ -2014,22 +1630,15 @@ void IndexingClustersIds::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.IndexingClustersIds)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void IndexingClustersIds::MergeFrom(const IndexingClustersIds& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.IndexingClustersIds)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void IndexingClustersIds::UnsafeMergeFrom(const IndexingClustersIds& from) {
-  GOOGLE_DCHECK(&from != this);
-  id_.UnsafeMergeFrom(from.id_);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  id_.MergeFrom(from.id_);
 }
 
 void IndexingClustersIds::CopyFrom(const ::google::protobuf::Message& from) {
@@ -2043,11 +1652,10 @@ void IndexingClustersIds::CopyFrom(const IndexingClustersIds& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.IndexingClustersIds)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool IndexingClustersIds::IsInitialized() const {
-
   return true;
 }
 
@@ -2057,16 +1665,12 @@ void IndexingClustersIds::Swap(IndexingClustersIds* other) {
 }
 void IndexingClustersIds::InternalSwap(IndexingClustersIds* other) {
   id_.UnsafeArenaSwap(&other->id_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata IndexingClustersIds::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = IndexingClustersIds_descriptor_;
-  metadata.reflection = IndexingClustersIds_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[3];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2102,9 +1706,6 @@ IndexingClustersIds::mutable_id() {
   return &id_;
 }
 
-inline const IndexingClustersIds* IndexingClustersIds::internal_default_instance() {
-  return &IndexingClustersIds_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2116,21 +1717,26 @@ const int CompressedElement::kCompressingClustersIdFieldNumber;
 
 CompressedElement::CompressedElement()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.CompressedElement)
 }
-
-void CompressedElement::InitAsDefaultInstance() {
-  compressing_clusters_id_ = const_cast< ::similia::proto::CompressingClustersIds*>(
-      ::similia::proto::CompressingClustersIds::internal_default_instance());
-}
-
 CompressedElement::CompressedElement(const CompressedElement& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.id().size() > 0) {
+    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+  }
+  if (from.has_compressing_clusters_id()) {
+    compressing_clusters_id_ = new ::similia::proto::CompressingClustersIds(*from.compressing_clusters_id_);
+  } else {
+    compressing_clusters_id_ = NULL;
+  }
   // @@protoc_insertion_point(copy_constructor:similia.proto.CompressedElement)
 }
 
@@ -2147,7 +1753,7 @@ CompressedElement::~CompressedElement() {
 
 void CompressedElement::SharedDtor() {
   id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != &CompressedElement_default_instance_.get()) {
+  if (this != internal_default_instance()) {
     delete compressing_clusters_id_;
   }
 }
@@ -2158,16 +1764,14 @@ void CompressedElement::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* CompressedElement::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CompressedElement_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[4].descriptor;
 }
 
 const CompressedElement& CompressedElement::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<CompressedElement> CompressedElement_default_instance_;
 
 CompressedElement* CompressedElement::New(::google::protobuf::Arena* arena) const {
   CompressedElement* n = new CompressedElement;
@@ -2180,7 +1784,9 @@ CompressedElement* CompressedElement::New(::google::protobuf::Arena* arena) cons
 void CompressedElement::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.CompressedElement)
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && compressing_clusters_id_ != NULL) delete compressing_clusters_id_;
+  if (GetArenaNoVirtual() == NULL && compressing_clusters_id_ != NULL) {
+    delete compressing_clusters_id_;
+  }
   compressing_clusters_id_ = NULL;
 }
 
@@ -2190,13 +1796,13 @@ bool CompressedElement::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.CompressedElement)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string id = 1;
+      // string id = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2206,20 +1812,17 @@ bool CompressedElement::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_compressing_clusters_id;
         break;
       }
 
-      // optional .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
+      // .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
       case 2: {
-        if (tag == 18) {
-         parse_compressing_clusters_id:
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_compressing_clusters_id()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -2247,7 +1850,7 @@ failure:
 void CompressedElement::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.CompressedElement)
-  // optional string id = 1;
+  // string id = 1;
   if (this->id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), this->id().length(),
@@ -2257,7 +1860,7 @@ void CompressedElement::SerializeWithCachedSizes(
       1, this->id(), output);
   }
 
-  // optional .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
+  // .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
   if (this->has_compressing_clusters_id()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->compressing_clusters_id_, output);
@@ -2268,9 +1871,9 @@ void CompressedElement::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CompressedElement::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.CompressedElement)
-  // optional string id = 1;
+  // string id = 1;
   if (this->id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), this->id().length(),
@@ -2281,7 +1884,7 @@ void CompressedElement::SerializeWithCachedSizes(
         1, this->id(), target);
   }
 
-  // optional .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
+  // .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
   if (this->has_compressing_clusters_id()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
@@ -2296,14 +1899,14 @@ size_t CompressedElement::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.CompressedElement)
   size_t total_size = 0;
 
-  // optional string id = 1;
+  // string id = 1;
   if (this->id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->id());
   }
 
-  // optional .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
+  // .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
   if (this->has_compressing_clusters_id()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -2319,7 +1922,7 @@ size_t CompressedElement::ByteSizeLong() const {
 
 void CompressedElement::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.CompressedElement)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const CompressedElement* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const CompressedElement>(
           &from);
@@ -2328,21 +1931,14 @@ void CompressedElement::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.CompressedElement)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void CompressedElement::MergeFrom(const CompressedElement& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.CompressedElement)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void CompressedElement::UnsafeMergeFrom(const CompressedElement& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.id().size() > 0) {
 
     id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
@@ -2363,11 +1959,10 @@ void CompressedElement::CopyFrom(const CompressedElement& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.CompressedElement)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool CompressedElement::IsInitialized() const {
-
   return true;
 }
 
@@ -2378,34 +1973,38 @@ void CompressedElement::Swap(CompressedElement* other) {
 void CompressedElement::InternalSwap(CompressedElement* other) {
   id_.Swap(&other->id_);
   std::swap(compressing_clusters_id_, other->compressing_clusters_id_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CompressedElement::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = CompressedElement_descriptor_;
-  metadata.reflection = CompressedElement_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[4];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CompressedElement
 
-// optional string id = 1;
+// string id = 1;
 void CompressedElement::clear_id() {
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& CompressedElement::id() const {
   // @@protoc_insertion_point(field_get:similia.proto.CompressedElement.id)
-  return id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return id_.GetNoArena();
 }
 void CompressedElement::set_id(const ::std::string& value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:similia.proto.CompressedElement.id)
 }
+#if LANG_CXX11
+void CompressedElement::set_id(::std::string&& value) {
+  
+  id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:similia.proto.CompressedElement.id)
+}
+#endif
 void CompressedElement::set_id(const char* value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
@@ -2437,7 +2036,7 @@ void CompressedElement::set_allocated_id(::std::string* id) {
   // @@protoc_insertion_point(field_set_allocated:similia.proto.CompressedElement.id)
 }
 
-// optional .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
+// .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
 bool CompressedElement::has_compressing_clusters_id() const {
   return this != internal_default_instance() && compressing_clusters_id_ != NULL;
 }
@@ -2476,9 +2075,6 @@ void CompressedElement::set_allocated_compressing_clusters_id(::similia::proto::
   // @@protoc_insertion_point(field_set_allocated:similia.proto.CompressedElement.compressing_clusters_id)
 }
 
-inline const CompressedElement* CompressedElement::internal_default_instance() {
-  return &CompressedElement_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2490,19 +2086,25 @@ const int SerializedCompressedElement::kCompressingClustersIdFieldNumber;
 
 SerializedCompressedElement::SerializedCompressedElement()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.SerializedCompressedElement)
 }
-
-void SerializedCompressedElement::InitAsDefaultInstance() {
-}
-
 SerializedCompressedElement::SerializedCompressedElement(const SerializedCompressedElement& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.id().size() > 0) {
+    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+  }
+  compressing_clusters_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.compressing_clusters_id().size() > 0) {
+    compressing_clusters_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.compressing_clusters_id_);
+  }
   // @@protoc_insertion_point(copy_constructor:similia.proto.SerializedCompressedElement)
 }
 
@@ -2528,16 +2130,14 @@ void SerializedCompressedElement::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* SerializedCompressedElement::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return SerializedCompressedElement_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[5].descriptor;
 }
 
 const SerializedCompressedElement& SerializedCompressedElement::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<SerializedCompressedElement> SerializedCompressedElement_default_instance_;
 
 SerializedCompressedElement* SerializedCompressedElement::New(::google::protobuf::Arena* arena) const {
   SerializedCompressedElement* n = new SerializedCompressedElement;
@@ -2559,13 +2159,13 @@ bool SerializedCompressedElement::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.SerializedCompressedElement)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string id = 1;
+      // string id = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2575,20 +2175,17 @@ bool SerializedCompressedElement::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_compressing_clusters_id;
         break;
       }
 
-      // optional bytes compressing_clusters_id = 2;
+      // bytes compressing_clusters_id = 2;
       case 2: {
-        if (tag == 18) {
-         parse_compressing_clusters_id:
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_compressing_clusters_id()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -2616,7 +2213,7 @@ failure:
 void SerializedCompressedElement::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.SerializedCompressedElement)
-  // optional string id = 1;
+  // string id = 1;
   if (this->id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), this->id().length(),
@@ -2626,7 +2223,7 @@ void SerializedCompressedElement::SerializeWithCachedSizes(
       1, this->id(), output);
   }
 
-  // optional bytes compressing_clusters_id = 2;
+  // bytes compressing_clusters_id = 2;
   if (this->compressing_clusters_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
       2, this->compressing_clusters_id(), output);
@@ -2637,9 +2234,9 @@ void SerializedCompressedElement::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* SerializedCompressedElement::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.SerializedCompressedElement)
-  // optional string id = 1;
+  // string id = 1;
   if (this->id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), this->id().length(),
@@ -2650,7 +2247,7 @@ void SerializedCompressedElement::SerializeWithCachedSizes(
         1, this->id(), target);
   }
 
-  // optional bytes compressing_clusters_id = 2;
+  // bytes compressing_clusters_id = 2;
   if (this->compressing_clusters_id().size() > 0) {
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
@@ -2665,14 +2262,14 @@ size_t SerializedCompressedElement::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.SerializedCompressedElement)
   size_t total_size = 0;
 
-  // optional string id = 1;
+  // string id = 1;
   if (this->id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->id());
   }
 
-  // optional bytes compressing_clusters_id = 2;
+  // bytes compressing_clusters_id = 2;
   if (this->compressing_clusters_id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::BytesSize(
@@ -2688,7 +2285,7 @@ size_t SerializedCompressedElement::ByteSizeLong() const {
 
 void SerializedCompressedElement::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.SerializedCompressedElement)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const SerializedCompressedElement* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const SerializedCompressedElement>(
           &from);
@@ -2697,21 +2294,14 @@ void SerializedCompressedElement::MergeFrom(const ::google::protobuf::Message& f
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.SerializedCompressedElement)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void SerializedCompressedElement::MergeFrom(const SerializedCompressedElement& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.SerializedCompressedElement)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void SerializedCompressedElement::UnsafeMergeFrom(const SerializedCompressedElement& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.id().size() > 0) {
 
     id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
@@ -2733,11 +2323,10 @@ void SerializedCompressedElement::CopyFrom(const SerializedCompressedElement& fr
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.SerializedCompressedElement)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool SerializedCompressedElement::IsInitialized() const {
-
   return true;
 }
 
@@ -2748,34 +2337,38 @@ void SerializedCompressedElement::Swap(SerializedCompressedElement* other) {
 void SerializedCompressedElement::InternalSwap(SerializedCompressedElement* other) {
   id_.Swap(&other->id_);
   compressing_clusters_id_.Swap(&other->compressing_clusters_id_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata SerializedCompressedElement::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = SerializedCompressedElement_descriptor_;
-  metadata.reflection = SerializedCompressedElement_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[5];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // SerializedCompressedElement
 
-// optional string id = 1;
+// string id = 1;
 void SerializedCompressedElement::clear_id() {
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& SerializedCompressedElement::id() const {
   // @@protoc_insertion_point(field_get:similia.proto.SerializedCompressedElement.id)
-  return id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return id_.GetNoArena();
 }
 void SerializedCompressedElement::set_id(const ::std::string& value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:similia.proto.SerializedCompressedElement.id)
 }
+#if LANG_CXX11
+void SerializedCompressedElement::set_id(::std::string&& value) {
+  
+  id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:similia.proto.SerializedCompressedElement.id)
+}
+#endif
 void SerializedCompressedElement::set_id(const char* value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
@@ -2807,19 +2400,27 @@ void SerializedCompressedElement::set_allocated_id(::std::string* id) {
   // @@protoc_insertion_point(field_set_allocated:similia.proto.SerializedCompressedElement.id)
 }
 
-// optional bytes compressing_clusters_id = 2;
+// bytes compressing_clusters_id = 2;
 void SerializedCompressedElement::clear_compressing_clusters_id() {
   compressing_clusters_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& SerializedCompressedElement::compressing_clusters_id() const {
   // @@protoc_insertion_point(field_get:similia.proto.SerializedCompressedElement.compressing_clusters_id)
-  return compressing_clusters_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return compressing_clusters_id_.GetNoArena();
 }
 void SerializedCompressedElement::set_compressing_clusters_id(const ::std::string& value) {
   
   compressing_clusters_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:similia.proto.SerializedCompressedElement.compressing_clusters_id)
 }
+#if LANG_CXX11
+void SerializedCompressedElement::set_compressing_clusters_id(::std::string&& value) {
+  
+  compressing_clusters_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:similia.proto.SerializedCompressedElement.compressing_clusters_id)
+}
+#endif
 void SerializedCompressedElement::set_compressing_clusters_id(const char* value) {
   
   compressing_clusters_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
@@ -2851,9 +2452,6 @@ void SerializedCompressedElement::set_allocated_compressing_clusters_id(::std::s
   // @@protoc_insertion_point(field_set_allocated:similia.proto.SerializedCompressedElement.compressing_clusters_id)
 }
 
-inline const SerializedCompressedElement* SerializedCompressedElement::internal_default_instance() {
-  return &SerializedCompressedElement_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2864,19 +2462,18 @@ const int CompressedElementsCombined::kCompressedElementFieldNumber;
 
 CompressedElementsCombined::CompressedElementsCombined()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.CompressedElementsCombined)
 }
-
-void CompressedElementsCombined::InitAsDefaultInstance() {
-}
-
 CompressedElementsCombined::CompressedElementsCombined(const CompressedElementsCombined& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      compressed_element_(from.compressed_element_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:similia.proto.CompressedElementsCombined)
 }
 
@@ -2898,16 +2495,14 @@ void CompressedElementsCombined::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* CompressedElementsCombined::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CompressedElementsCombined_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[6].descriptor;
 }
 
 const CompressedElementsCombined& CompressedElementsCombined::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<CompressedElementsCombined> CompressedElementsCombined_default_instance_;
 
 CompressedElementsCombined* CompressedElementsCombined::New(::google::protobuf::Arena* arena) const {
   CompressedElementsCombined* n = new CompressedElementsCombined;
@@ -2928,23 +2523,20 @@ bool CompressedElementsCombined::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.CompressedElementsCombined)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .similia.proto.CompressedElement compressed_element = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(input->IncrementRecursionDepth());
-         parse_loop_compressed_element:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
                 input, add_compressed_element()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(10)) goto parse_loop_compressed_element;
         input->UnsafeDecrementRecursionDepth();
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -2983,7 +2575,7 @@ void CompressedElementsCombined::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CompressedElementsCombined::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.CompressedElementsCombined)
   // repeated .similia.proto.CompressedElement compressed_element = 1;
   for (unsigned int i = 0, n = this->compressed_element_size(); i < n; i++) {
@@ -3020,7 +2612,7 @@ size_t CompressedElementsCombined::ByteSizeLong() const {
 
 void CompressedElementsCombined::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.CompressedElementsCombined)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const CompressedElementsCombined* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const CompressedElementsCombined>(
           &from);
@@ -3029,21 +2621,14 @@ void CompressedElementsCombined::MergeFrom(const ::google::protobuf::Message& fr
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.CompressedElementsCombined)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void CompressedElementsCombined::MergeFrom(const CompressedElementsCombined& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.CompressedElementsCombined)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void CompressedElementsCombined::UnsafeMergeFrom(const CompressedElementsCombined& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   compressed_element_.MergeFrom(from.compressed_element_);
 }
 
@@ -3058,11 +2643,10 @@ void CompressedElementsCombined::CopyFrom(const CompressedElementsCombined& from
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.CompressedElementsCombined)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool CompressedElementsCombined::IsInitialized() const {
-
   return true;
 }
 
@@ -3072,16 +2656,12 @@ void CompressedElementsCombined::Swap(CompressedElementsCombined* other) {
 }
 void CompressedElementsCombined::InternalSwap(CompressedElementsCombined* other) {
   compressed_element_.UnsafeArenaSwap(&other->compressed_element_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CompressedElementsCombined::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = CompressedElementsCombined_descriptor_;
-  metadata.reflection = CompressedElementsCombined_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[6];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3117,9 +2697,6 @@ CompressedElementsCombined::compressed_element() const {
   return compressed_element_;
 }
 
-inline const CompressedElementsCombined* CompressedElementsCombined::internal_default_instance() {
-  return &CompressedElementsCombined_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3130,19 +2707,18 @@ const int SerializedCompressedElementsCombined::kCompressedElementFieldNumber;
 
 SerializedCompressedElementsCombined::SerializedCompressedElementsCombined()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.SerializedCompressedElementsCombined)
 }
-
-void SerializedCompressedElementsCombined::InitAsDefaultInstance() {
-}
-
 SerializedCompressedElementsCombined::SerializedCompressedElementsCombined(const SerializedCompressedElementsCombined& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      compressed_element_(from.compressed_element_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:similia.proto.SerializedCompressedElementsCombined)
 }
 
@@ -3164,16 +2740,14 @@ void SerializedCompressedElementsCombined::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* SerializedCompressedElementsCombined::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return SerializedCompressedElementsCombined_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[7].descriptor;
 }
 
 const SerializedCompressedElementsCombined& SerializedCompressedElementsCombined::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<SerializedCompressedElementsCombined> SerializedCompressedElementsCombined_default_instance_;
 
 SerializedCompressedElementsCombined* SerializedCompressedElementsCombined::New(::google::protobuf::Arena* arena) const {
   SerializedCompressedElementsCombined* n = new SerializedCompressedElementsCombined;
@@ -3194,23 +2768,20 @@ bool SerializedCompressedElementsCombined::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.SerializedCompressedElementsCombined)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .similia.proto.SerializedCompressedElement compressed_element = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(input->IncrementRecursionDepth());
-         parse_loop_compressed_element:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
                 input, add_compressed_element()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(10)) goto parse_loop_compressed_element;
         input->UnsafeDecrementRecursionDepth();
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -3249,7 +2820,7 @@ void SerializedCompressedElementsCombined::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* SerializedCompressedElementsCombined::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.SerializedCompressedElementsCombined)
   // repeated .similia.proto.SerializedCompressedElement compressed_element = 1;
   for (unsigned int i = 0, n = this->compressed_element_size(); i < n; i++) {
@@ -3286,7 +2857,7 @@ size_t SerializedCompressedElementsCombined::ByteSizeLong() const {
 
 void SerializedCompressedElementsCombined::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.SerializedCompressedElementsCombined)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const SerializedCompressedElementsCombined* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const SerializedCompressedElementsCombined>(
           &from);
@@ -3295,21 +2866,14 @@ void SerializedCompressedElementsCombined::MergeFrom(const ::google::protobuf::M
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.SerializedCompressedElementsCombined)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void SerializedCompressedElementsCombined::MergeFrom(const SerializedCompressedElementsCombined& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.SerializedCompressedElementsCombined)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void SerializedCompressedElementsCombined::UnsafeMergeFrom(const SerializedCompressedElementsCombined& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   compressed_element_.MergeFrom(from.compressed_element_);
 }
 
@@ -3324,11 +2888,10 @@ void SerializedCompressedElementsCombined::CopyFrom(const SerializedCompressedEl
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.SerializedCompressedElementsCombined)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool SerializedCompressedElementsCombined::IsInitialized() const {
-
   return true;
 }
 
@@ -3338,16 +2901,12 @@ void SerializedCompressedElementsCombined::Swap(SerializedCompressedElementsComb
 }
 void SerializedCompressedElementsCombined::InternalSwap(SerializedCompressedElementsCombined* other) {
   compressed_element_.UnsafeArenaSwap(&other->compressed_element_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata SerializedCompressedElementsCombined::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = SerializedCompressedElementsCombined_descriptor_;
-  metadata.reflection = SerializedCompressedElementsCombined_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[7];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3383,9 +2942,6 @@ SerializedCompressedElementsCombined::compressed_element() const {
   return compressed_element_;
 }
 
-inline const SerializedCompressedElementsCombined* SerializedCompressedElementsCombined::internal_default_instance() {
-  return &SerializedCompressedElementsCombined_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3397,19 +2953,19 @@ const int CompressedElements::kCompressingClustersIdFieldNumber;
 
 CompressedElements::CompressedElements()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.CompressedElements)
 }
-
-void CompressedElements::InitAsDefaultInstance() {
-}
-
 CompressedElements::CompressedElements(const CompressedElements& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      id_(from.id_),
+      compressing_clusters_id_(from.compressing_clusters_id_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:similia.proto.CompressedElements)
 }
 
@@ -3431,16 +2987,14 @@ void CompressedElements::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* CompressedElements::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CompressedElements_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[8].descriptor;
 }
 
 const CompressedElements& CompressedElements::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<CompressedElements> CompressedElements_default_instance_;
 
 CompressedElements* CompressedElements::New(::google::protobuf::Arena* arena) const {
   CompressedElements* n = new CompressedElements;
@@ -3462,14 +3016,13 @@ bool CompressedElements::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.CompressedElements)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated string id = 1;
       case 1: {
-        if (tag == 10) {
-         parse_id:
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -3480,25 +3033,19 @@ bool CompressedElements::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(10)) goto parse_id;
-        if (input->ExpectTag(18)) goto parse_compressing_clusters_id;
         break;
       }
 
       // repeated .similia.proto.CompressingClustersIds compressing_clusters_id = 2;
       case 2: {
-        if (tag == 18) {
-         parse_compressing_clusters_id:
+        if (tag == 18u) {
           DO_(input->IncrementRecursionDepth());
-         parse_loop_compressing_clusters_id:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
                 input, add_compressing_clusters_id()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_loop_compressing_clusters_id;
         input->UnsafeDecrementRecursionDepth();
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -3547,7 +3094,7 @@ void CompressedElements::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CompressedElements::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.CompressedElements)
   // repeated string id = 1;
   for (int i = 0; i < this->id_size(); i++) {
@@ -3602,7 +3149,7 @@ size_t CompressedElements::ByteSizeLong() const {
 
 void CompressedElements::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.CompressedElements)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const CompressedElements* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const CompressedElements>(
           &from);
@@ -3611,22 +3158,15 @@ void CompressedElements::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.CompressedElements)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void CompressedElements::MergeFrom(const CompressedElements& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.CompressedElements)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void CompressedElements::UnsafeMergeFrom(const CompressedElements& from) {
-  GOOGLE_DCHECK(&from != this);
-  id_.UnsafeMergeFrom(from.id_);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  id_.MergeFrom(from.id_);
   compressing_clusters_id_.MergeFrom(from.compressing_clusters_id_);
 }
 
@@ -3641,11 +3181,10 @@ void CompressedElements::CopyFrom(const CompressedElements& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.CompressedElements)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool CompressedElements::IsInitialized() const {
-
   return true;
 }
 
@@ -3656,16 +3195,12 @@ void CompressedElements::Swap(CompressedElements* other) {
 void CompressedElements::InternalSwap(CompressedElements* other) {
   id_.UnsafeArenaSwap(&other->id_);
   compressing_clusters_id_.UnsafeArenaSwap(&other->compressing_clusters_id_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CompressedElements::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = CompressedElements_descriptor_;
-  metadata.reflection = CompressedElements_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[8];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3756,9 +3291,6 @@ CompressedElements::compressing_clusters_id() const {
   return compressing_clusters_id_;
 }
 
-inline const CompressedElements* CompressedElements::internal_default_instance() {
-  return &CompressedElements_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3770,19 +3302,19 @@ const int SerializedCompressedElements::kCompressingClustersIdFieldNumber;
 
 SerializedCompressedElements::SerializedCompressedElements()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.SerializedCompressedElements)
 }
-
-void SerializedCompressedElements::InitAsDefaultInstance() {
-}
-
 SerializedCompressedElements::SerializedCompressedElements(const SerializedCompressedElements& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      id_(from.id_),
+      compressing_clusters_id_(from.compressing_clusters_id_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:similia.proto.SerializedCompressedElements)
 }
 
@@ -3804,16 +3336,14 @@ void SerializedCompressedElements::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* SerializedCompressedElements::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return SerializedCompressedElements_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[9].descriptor;
 }
 
 const SerializedCompressedElements& SerializedCompressedElements::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<SerializedCompressedElements> SerializedCompressedElements_default_instance_;
 
 SerializedCompressedElements* SerializedCompressedElements::New(::google::protobuf::Arena* arena) const {
   SerializedCompressedElements* n = new SerializedCompressedElements;
@@ -3835,14 +3365,13 @@ bool SerializedCompressedElements::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.SerializedCompressedElements)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated string id = 1;
       case 1: {
-        if (tag == 10) {
-         parse_id:
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -3853,22 +3382,17 @@ bool SerializedCompressedElements::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(10)) goto parse_id;
-        if (input->ExpectTag(18)) goto parse_compressing_clusters_id;
         break;
       }
 
       // repeated bytes compressing_clusters_id = 2;
       case 2: {
-        if (tag == 18) {
-         parse_compressing_clusters_id:
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->add_compressing_clusters_id()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_compressing_clusters_id;
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -3917,7 +3441,7 @@ void SerializedCompressedElements::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* SerializedCompressedElements::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.SerializedCompressedElements)
   // repeated string id = 1;
   for (int i = 0; i < this->id_size(); i++) {
@@ -3968,7 +3492,7 @@ size_t SerializedCompressedElements::ByteSizeLong() const {
 
 void SerializedCompressedElements::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.SerializedCompressedElements)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const SerializedCompressedElements* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const SerializedCompressedElements>(
           &from);
@@ -3977,23 +3501,16 @@ void SerializedCompressedElements::MergeFrom(const ::google::protobuf::Message& 
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.SerializedCompressedElements)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void SerializedCompressedElements::MergeFrom(const SerializedCompressedElements& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.SerializedCompressedElements)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void SerializedCompressedElements::UnsafeMergeFrom(const SerializedCompressedElements& from) {
-  GOOGLE_DCHECK(&from != this);
-  id_.UnsafeMergeFrom(from.id_);
-  compressing_clusters_id_.UnsafeMergeFrom(from.compressing_clusters_id_);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  id_.MergeFrom(from.id_);
+  compressing_clusters_id_.MergeFrom(from.compressing_clusters_id_);
 }
 
 void SerializedCompressedElements::CopyFrom(const ::google::protobuf::Message& from) {
@@ -4007,11 +3524,10 @@ void SerializedCompressedElements::CopyFrom(const SerializedCompressedElements& 
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.SerializedCompressedElements)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool SerializedCompressedElements::IsInitialized() const {
-
   return true;
 }
 
@@ -4022,16 +3538,12 @@ void SerializedCompressedElements::Swap(SerializedCompressedElements* other) {
 void SerializedCompressedElements::InternalSwap(SerializedCompressedElements* other) {
   id_.UnsafeArenaSwap(&other->id_);
   compressing_clusters_id_.UnsafeArenaSwap(&other->compressing_clusters_id_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata SerializedCompressedElements::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = SerializedCompressedElements_descriptor_;
-  metadata.reflection = SerializedCompressedElements_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[9];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4147,9 +3659,11 @@ SerializedCompressedElements::mutable_compressing_clusters_id() {
   return &compressing_clusters_id_;
 }
 
-inline const SerializedCompressedElements* SerializedCompressedElements::internal_default_instance() {
-  return &SerializedCompressedElements_default_instance_.get();
-}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -4160,27 +3674,32 @@ const int CompressedElementsMap::kCompressedElementFieldNumber;
 
 CompressedElementsMap::CompressedElementsMap()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.CompressedElementsMap)
 }
-
-void CompressedElementsMap::InitAsDefaultInstance() {
-}
-
 CompressedElementsMap::CompressedElementsMap(const CompressedElementsMap& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  const ::google::protobuf::Descriptor*& CompressedElementsMap_CompressedElementEntry_descriptor = protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[10].descriptor;
+  compressed_element_.SetAssignDescriptorCallback(
+      protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce);
+  compressed_element_.SetEntryDescriptor(
+      &CompressedElementsMap_CompressedElementEntry_descriptor);
+  compressed_element_.MergeFrom(from.compressed_element_);
   // @@protoc_insertion_point(copy_constructor:similia.proto.CompressedElementsMap)
 }
 
 void CompressedElementsMap::SharedCtor() {
+  const ::google::protobuf::Descriptor*& CompressedElementsMap_CompressedElementEntry_descriptor = protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[10].descriptor;
   compressed_element_.SetAssignDescriptorCallback(
-      protobuf_AssignDescriptorsOnce);
+      protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce);
   compressed_element_.SetEntryDescriptor(
-      &::similia::proto::CompressedElementsMap_CompressedElementEntry_descriptor_);
+      &CompressedElementsMap_CompressedElementEntry_descriptor);
   _cached_size_ = 0;
 }
 
@@ -4198,16 +3717,14 @@ void CompressedElementsMap::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* CompressedElementsMap::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CompressedElementsMap_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[11].descriptor;
 }
 
 const CompressedElementsMap& CompressedElementsMap::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<CompressedElementsMap> CompressedElementsMap_default_instance_;
 
 CompressedElementsMap* CompressedElementsMap::New(::google::protobuf::Arena* arena) const {
   CompressedElementsMap* n = new CompressedElementsMap;
@@ -4228,15 +3745,14 @@ bool CompressedElementsMap::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.CompressedElementsMap)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // map<string, .similia.proto.CompressingClustersIds> compressed_element = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(input->IncrementRecursionDepth());
-         parse_loop_compressed_element:
           CompressedElementsMap_CompressedElementEntry::Parser< ::google::protobuf::internal::MapField<
               ::std::string, ::similia::proto::CompressingClustersIds,
               ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
@@ -4252,9 +3768,7 @@ bool CompressedElementsMap::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(10)) goto parse_loop_compressed_element;
         input->UnsafeDecrementRecursionDepth();
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -4297,7 +3811,7 @@ void CompressedElementsMap::SerializeWithCachedSizes(
       }
     };
 
-    if (output->IsSerializationDeterminstic() &&
+    if (output->IsSerializationDeterministic() &&
         this->compressed_element().size() > 1) {
       ::google::protobuf::scoped_array<SortItem> items(
           new SortItem[this->compressed_element().size()]);
@@ -4336,7 +3850,7 @@ void CompressedElementsMap::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CompressedElementsMap::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.CompressedElementsMap)
   // map<string, .similia.proto.CompressingClustersIds> compressed_element = 1;
   if (!this->compressed_element().empty()) {
@@ -4422,7 +3936,7 @@ size_t CompressedElementsMap::ByteSizeLong() const {
 
 void CompressedElementsMap::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.CompressedElementsMap)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const CompressedElementsMap* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const CompressedElementsMap>(
           &from);
@@ -4431,21 +3945,14 @@ void CompressedElementsMap::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.CompressedElementsMap)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void CompressedElementsMap::MergeFrom(const CompressedElementsMap& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.CompressedElementsMap)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void CompressedElementsMap::UnsafeMergeFrom(const CompressedElementsMap& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   compressed_element_.MergeFrom(from.compressed_element_);
 }
 
@@ -4460,11 +3967,10 @@ void CompressedElementsMap::CopyFrom(const CompressedElementsMap& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.CompressedElementsMap)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool CompressedElementsMap::IsInitialized() const {
-
   return true;
 }
 
@@ -4474,16 +3980,12 @@ void CompressedElementsMap::Swap(CompressedElementsMap* other) {
 }
 void CompressedElementsMap::InternalSwap(CompressedElementsMap* other) {
   compressed_element_.Swap(&other->compressed_element_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CompressedElementsMap::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = CompressedElementsMap_descriptor_;
-  metadata.reflection = CompressedElementsMap_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[11];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4507,9 +4009,6 @@ CompressedElementsMap::mutable_compressed_element() {
   return compressed_element_.MutableMap();
 }
 
-inline const CompressedElementsMap* CompressedElementsMap::internal_default_instance() {
-  return &CompressedElementsMap_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -4522,28 +4021,34 @@ const int SimiliaSearchRequest::kFeaturesFieldNumber;
 
 SimiliaSearchRequest::SimiliaSearchRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.SimiliaSearchRequest)
 }
-
-void SimiliaSearchRequest::InitAsDefaultInstance() {
-  features_ = const_cast< ::similia::proto::Features*>(
-      ::similia::proto::Features::internal_default_instance());
-}
-
 SimiliaSearchRequest::SimiliaSearchRequest(const SimiliaSearchRequest& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  image_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.image_id().size() > 0) {
+    image_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_id_);
+  }
+  if (from.has_features()) {
+    features_ = new ::similia::proto::Features(*from.features_);
+  } else {
+    features_ = NULL;
+  }
+  num_nearest_ = from.num_nearest_;
   // @@protoc_insertion_point(copy_constructor:similia.proto.SimiliaSearchRequest)
 }
 
 void SimiliaSearchRequest::SharedCtor() {
   image_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  features_ = NULL;
-  num_nearest_ = 0;
+  ::memset(&features_, 0, reinterpret_cast<char*>(&num_nearest_) -
+    reinterpret_cast<char*>(&features_) + sizeof(num_nearest_));
   _cached_size_ = 0;
 }
 
@@ -4554,7 +4059,7 @@ SimiliaSearchRequest::~SimiliaSearchRequest() {
 
 void SimiliaSearchRequest::SharedDtor() {
   image_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != &SimiliaSearchRequest_default_instance_.get()) {
+  if (this != internal_default_instance()) {
     delete features_;
   }
 }
@@ -4565,16 +4070,14 @@ void SimiliaSearchRequest::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* SimiliaSearchRequest::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return SimiliaSearchRequest_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[12].descriptor;
 }
 
 const SimiliaSearchRequest& SimiliaSearchRequest::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<SimiliaSearchRequest> SimiliaSearchRequest_default_instance_;
 
 SimiliaSearchRequest* SimiliaSearchRequest::New(::google::protobuf::Arena* arena) const {
   SimiliaSearchRequest* n = new SimiliaSearchRequest;
@@ -4587,9 +4090,11 @@ SimiliaSearchRequest* SimiliaSearchRequest::New(::google::protobuf::Arena* arena
 void SimiliaSearchRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.SimiliaSearchRequest)
   image_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  num_nearest_ = 0;
-  if (GetArenaNoVirtual() == NULL && features_ != NULL) delete features_;
+  if (GetArenaNoVirtual() == NULL && features_ != NULL) {
+    delete features_;
+  }
   features_ = NULL;
+  num_nearest_ = 0;
 }
 
 bool SimiliaSearchRequest::MergePartialFromCodedStream(
@@ -4598,13 +4103,13 @@ bool SimiliaSearchRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.SimiliaSearchRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string image_id = 1;
+      // string image_id = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_image_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -4614,14 +4119,12 @@ bool SimiliaSearchRequest::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_num_nearest;
         break;
       }
 
-      // optional int32 num_nearest = 2;
+      // int32 num_nearest = 2;
       case 2: {
-        if (tag == 16) {
-         parse_num_nearest:
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -4629,20 +4132,17 @@ bool SimiliaSearchRequest::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_features;
         break;
       }
 
-      // optional .similia.proto.Features features = 3;
+      // .similia.proto.Features features = 3;
       case 3: {
-        if (tag == 26) {
-         parse_features:
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_features()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -4670,7 +4170,7 @@ failure:
 void SimiliaSearchRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.SimiliaSearchRequest)
-  // optional string image_id = 1;
+  // string image_id = 1;
   if (this->image_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->image_id().data(), this->image_id().length(),
@@ -4680,12 +4180,12 @@ void SimiliaSearchRequest::SerializeWithCachedSizes(
       1, this->image_id(), output);
   }
 
-  // optional int32 num_nearest = 2;
+  // int32 num_nearest = 2;
   if (this->num_nearest() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->num_nearest(), output);
   }
 
-  // optional .similia.proto.Features features = 3;
+  // .similia.proto.Features features = 3;
   if (this->has_features()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, *this->features_, output);
@@ -4696,9 +4196,9 @@ void SimiliaSearchRequest::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* SimiliaSearchRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.SimiliaSearchRequest)
-  // optional string image_id = 1;
+  // string image_id = 1;
   if (this->image_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->image_id().data(), this->image_id().length(),
@@ -4709,12 +4209,12 @@ void SimiliaSearchRequest::SerializeWithCachedSizes(
         1, this->image_id(), target);
   }
 
-  // optional int32 num_nearest = 2;
+  // int32 num_nearest = 2;
   if (this->num_nearest() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->num_nearest(), target);
   }
 
-  // optional .similia.proto.Features features = 3;
+  // .similia.proto.Features features = 3;
   if (this->has_features()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
@@ -4729,25 +4229,25 @@ size_t SimiliaSearchRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.SimiliaSearchRequest)
   size_t total_size = 0;
 
-  // optional string image_id = 1;
+  // string image_id = 1;
   if (this->image_id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->image_id());
   }
 
-  // optional int32 num_nearest = 2;
-  if (this->num_nearest() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->num_nearest());
-  }
-
-  // optional .similia.proto.Features features = 3;
+  // .similia.proto.Features features = 3;
   if (this->has_features()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->features_);
+  }
+
+  // int32 num_nearest = 2;
+  if (this->num_nearest() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->num_nearest());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -4759,7 +4259,7 @@ size_t SimiliaSearchRequest::ByteSizeLong() const {
 
 void SimiliaSearchRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.SimiliaSearchRequest)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const SimiliaSearchRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const SimiliaSearchRequest>(
           &from);
@@ -4768,30 +4268,23 @@ void SimiliaSearchRequest::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.SimiliaSearchRequest)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void SimiliaSearchRequest::MergeFrom(const SimiliaSearchRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.SimiliaSearchRequest)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void SimiliaSearchRequest::UnsafeMergeFrom(const SimiliaSearchRequest& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.image_id().size() > 0) {
 
     image_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_id_);
   }
-  if (from.num_nearest() != 0) {
-    set_num_nearest(from.num_nearest());
-  }
   if (from.has_features()) {
     mutable_features()->::similia::proto::Features::MergeFrom(from.features());
+  }
+  if (from.num_nearest() != 0) {
+    set_num_nearest(from.num_nearest());
   }
 }
 
@@ -4806,11 +4299,10 @@ void SimiliaSearchRequest::CopyFrom(const SimiliaSearchRequest& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.SimiliaSearchRequest)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool SimiliaSearchRequest::IsInitialized() const {
-
   return true;
 }
 
@@ -4820,36 +4312,40 @@ void SimiliaSearchRequest::Swap(SimiliaSearchRequest* other) {
 }
 void SimiliaSearchRequest::InternalSwap(SimiliaSearchRequest* other) {
   image_id_.Swap(&other->image_id_);
-  std::swap(num_nearest_, other->num_nearest_);
   std::swap(features_, other->features_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(num_nearest_, other->num_nearest_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata SimiliaSearchRequest::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = SimiliaSearchRequest_descriptor_;
-  metadata.reflection = SimiliaSearchRequest_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[12];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // SimiliaSearchRequest
 
-// optional string image_id = 1;
+// string image_id = 1;
 void SimiliaSearchRequest::clear_image_id() {
   image_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& SimiliaSearchRequest::image_id() const {
   // @@protoc_insertion_point(field_get:similia.proto.SimiliaSearchRequest.image_id)
-  return image_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return image_id_.GetNoArena();
 }
 void SimiliaSearchRequest::set_image_id(const ::std::string& value) {
   
   image_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:similia.proto.SimiliaSearchRequest.image_id)
 }
+#if LANG_CXX11
+void SimiliaSearchRequest::set_image_id(::std::string&& value) {
+  
+  image_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:similia.proto.SimiliaSearchRequest.image_id)
+}
+#endif
 void SimiliaSearchRequest::set_image_id(const char* value) {
   
   image_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
@@ -4881,7 +4377,7 @@ void SimiliaSearchRequest::set_allocated_image_id(::std::string* image_id) {
   // @@protoc_insertion_point(field_set_allocated:similia.proto.SimiliaSearchRequest.image_id)
 }
 
-// optional int32 num_nearest = 2;
+// int32 num_nearest = 2;
 void SimiliaSearchRequest::clear_num_nearest() {
   num_nearest_ = 0;
 }
@@ -4895,7 +4391,7 @@ void SimiliaSearchRequest::set_num_nearest(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:similia.proto.SimiliaSearchRequest.num_nearest)
 }
 
-// optional .similia.proto.Features features = 3;
+// .similia.proto.Features features = 3;
 bool SimiliaSearchRequest::has_features() const {
   return this != internal_default_instance() && features_ != NULL;
 }
@@ -4934,9 +4430,6 @@ void SimiliaSearchRequest::set_allocated_features(::similia::proto::Features* fe
   // @@protoc_insertion_point(field_set_allocated:similia.proto.SimiliaSearchRequest.features)
 }
 
-inline const SimiliaSearchRequest* SimiliaSearchRequest::internal_default_instance() {
-  return &SimiliaSearchRequest_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -4949,19 +4442,20 @@ const int SimiliaSearchResponse::kSquaredDistanceFieldNumber;
 
 SimiliaSearchResponse::SimiliaSearchResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.SimiliaSearchResponse)
 }
-
-void SimiliaSearchResponse::InitAsDefaultInstance() {
-}
-
 SimiliaSearchResponse::SimiliaSearchResponse(const SimiliaSearchResponse& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      image_id_(from.image_id_),
+      squared_distance_(from.squared_distance_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  processing_time_ms_ = from.processing_time_ms_;
   // @@protoc_insertion_point(copy_constructor:similia.proto.SimiliaSearchResponse)
 }
 
@@ -4984,16 +4478,14 @@ void SimiliaSearchResponse::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* SimiliaSearchResponse::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return SimiliaSearchResponse_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[13].descriptor;
 }
 
 const SimiliaSearchResponse& SimiliaSearchResponse::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<SimiliaSearchResponse> SimiliaSearchResponse_default_instance_;
 
 SimiliaSearchResponse* SimiliaSearchResponse::New(::google::protobuf::Arena* arena) const {
   SimiliaSearchResponse* n = new SimiliaSearchResponse;
@@ -5005,9 +4497,9 @@ SimiliaSearchResponse* SimiliaSearchResponse::New(::google::protobuf::Arena* are
 
 void SimiliaSearchResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.SimiliaSearchResponse)
-  processing_time_ms_ = GOOGLE_LONGLONG(0);
   image_id_.Clear();
   squared_distance_.Clear();
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
 
 bool SimiliaSearchResponse::MergePartialFromCodedStream(
@@ -5016,14 +4508,13 @@ bool SimiliaSearchResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.SimiliaSearchResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated string image_id = 1;
       case 1: {
-        if (tag == 10) {
-         parse_image_id:
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_image_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -5034,15 +4525,12 @@ bool SimiliaSearchResponse::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(10)) goto parse_image_id;
-        if (input->ExpectTag(16)) goto parse_processing_time_ms;
         break;
       }
 
-      // optional int64 processing_time_ms = 2;
+      // int64 processing_time_ms = 2;
       case 2: {
-        if (tag == 16) {
-         parse_processing_time_ms:
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -5050,25 +4538,22 @@ bool SimiliaSearchResponse::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_squared_distance;
         break;
       }
 
       // repeated double squared_distance = 3;
       case 3: {
-        if (tag == 26) {
-         parse_squared_distance:
+        if (tag == 26u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_squared_distance())));
-        } else if (tag == 25) {
+        } else if (tag == 25u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 26, input, this->mutable_squared_distance())));
+                 1, 26u, input, this->mutable_squared_distance())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -5106,7 +4591,7 @@ void SimiliaSearchResponse::SerializeWithCachedSizes(
       1, this->image_id(i), output);
   }
 
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->processing_time_ms(), output);
   }
@@ -5115,10 +4600,8 @@ void SimiliaSearchResponse::SerializeWithCachedSizes(
   if (this->squared_distance_size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteTag(3, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
     output->WriteVarint32(_squared_distance_cached_byte_size_);
-  }
-  for (int i = 0; i < this->squared_distance_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteDoubleNoTag(
-      this->squared_distance(i), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDoubleArray(
+      this->squared_distance().data(), this->squared_distance_size(), output);
   }
 
   // @@protoc_insertion_point(serialize_end:similia.proto.SimiliaSearchResponse)
@@ -5126,7 +4609,7 @@ void SimiliaSearchResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* SimiliaSearchResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.SimiliaSearchResponse)
   // repeated string image_id = 1;
   for (int i = 0; i < this->image_id_size(); i++) {
@@ -5138,7 +4621,7 @@ void SimiliaSearchResponse::SerializeWithCachedSizes(
       WriteStringToArray(1, this->image_id(i), target);
   }
 
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->processing_time_ms(), target);
   }
@@ -5165,13 +4648,6 @@ size_t SimiliaSearchResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.SimiliaSearchResponse)
   size_t total_size = 0;
 
-  // optional int64 processing_time_ms = 2;
-  if (this->processing_time_ms() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->processing_time_ms());
-  }
-
   // repeated string image_id = 1;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->image_id_size());
@@ -5182,9 +4658,8 @@ size_t SimiliaSearchResponse::ByteSizeLong() const {
 
   // repeated double squared_distance = 3;
   {
-    size_t data_size = 0;
     unsigned int count = this->squared_distance_size();
-    data_size = 8UL * count;
+    size_t data_size = 8UL * count;
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
@@ -5196,6 +4671,13 @@ size_t SimiliaSearchResponse::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  // int64 processing_time_ms = 2;
+  if (this->processing_time_ms() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->processing_time_ms());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -5205,7 +4687,7 @@ size_t SimiliaSearchResponse::ByteSizeLong() const {
 
 void SimiliaSearchResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.SimiliaSearchResponse)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const SimiliaSearchResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const SimiliaSearchResponse>(
           &from);
@@ -5214,23 +4696,16 @@ void SimiliaSearchResponse::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.SimiliaSearchResponse)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void SimiliaSearchResponse::MergeFrom(const SimiliaSearchResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.SimiliaSearchResponse)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void SimiliaSearchResponse::UnsafeMergeFrom(const SimiliaSearchResponse& from) {
-  GOOGLE_DCHECK(&from != this);
-  image_id_.UnsafeMergeFrom(from.image_id_);
-  squared_distance_.UnsafeMergeFrom(from.squared_distance_);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  image_id_.MergeFrom(from.image_id_);
+  squared_distance_.MergeFrom(from.squared_distance_);
   if (from.processing_time_ms() != 0) {
     set_processing_time_ms(from.processing_time_ms());
   }
@@ -5247,11 +4722,10 @@ void SimiliaSearchResponse::CopyFrom(const SimiliaSearchResponse& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.SimiliaSearchResponse)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool SimiliaSearchResponse::IsInitialized() const {
-
   return true;
 }
 
@@ -5261,18 +4735,14 @@ void SimiliaSearchResponse::Swap(SimiliaSearchResponse* other) {
 }
 void SimiliaSearchResponse::InternalSwap(SimiliaSearchResponse* other) {
   image_id_.UnsafeArenaSwap(&other->image_id_);
-  std::swap(processing_time_ms_, other->processing_time_ms_);
   squared_distance_.UnsafeArenaSwap(&other->squared_distance_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(processing_time_ms_, other->processing_time_ms_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata SimiliaSearchResponse::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = SimiliaSearchResponse_descriptor_;
-  metadata.reflection = SimiliaSearchResponse_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[13];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5333,7 +4803,7 @@ SimiliaSearchResponse::mutable_image_id() {
   return &image_id_;
 }
 
-// optional int64 processing_time_ms = 2;
+// int64 processing_time_ms = 2;
 void SimiliaSearchResponse::clear_processing_time_ms() {
   processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
@@ -5377,9 +4847,6 @@ SimiliaSearchResponse::mutable_squared_distance() {
   return &squared_distance_;
 }
 
-inline const SimiliaSearchResponse* SimiliaSearchResponse::internal_default_instance() {
-  return &SimiliaSearchResponse_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -5392,30 +4859,38 @@ const int MultiIndexAddRequest::kCompressingIdsFieldNumber;
 
 MultiIndexAddRequest::MultiIndexAddRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexAddRequest)
 }
-
-void MultiIndexAddRequest::InitAsDefaultInstance() {
-  indexing_ids_ = const_cast< ::similia::proto::IndexingClustersIds*>(
-      ::similia::proto::IndexingClustersIds::internal_default_instance());
-  compressing_ids_ = const_cast< ::similia::proto::CompressingClustersIds*>(
-      ::similia::proto::CompressingClustersIds::internal_default_instance());
-}
-
 MultiIndexAddRequest::MultiIndexAddRequest(const MultiIndexAddRequest& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  image_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.image_id().size() > 0) {
+    image_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_id_);
+  }
+  if (from.has_indexing_ids()) {
+    indexing_ids_ = new ::similia::proto::IndexingClustersIds(*from.indexing_ids_);
+  } else {
+    indexing_ids_ = NULL;
+  }
+  if (from.has_compressing_ids()) {
+    compressing_ids_ = new ::similia::proto::CompressingClustersIds(*from.compressing_ids_);
+  } else {
+    compressing_ids_ = NULL;
+  }
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexAddRequest)
 }
 
 void MultiIndexAddRequest::SharedCtor() {
   image_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  indexing_ids_ = NULL;
-  compressing_ids_ = NULL;
+  ::memset(&indexing_ids_, 0, reinterpret_cast<char*>(&compressing_ids_) -
+    reinterpret_cast<char*>(&indexing_ids_) + sizeof(compressing_ids_));
   _cached_size_ = 0;
 }
 
@@ -5426,8 +4901,10 @@ MultiIndexAddRequest::~MultiIndexAddRequest() {
 
 void MultiIndexAddRequest::SharedDtor() {
   image_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != &MultiIndexAddRequest_default_instance_.get()) {
+  if (this != internal_default_instance()) {
     delete indexing_ids_;
+  }
+  if (this != internal_default_instance()) {
     delete compressing_ids_;
   }
 }
@@ -5438,16 +4915,14 @@ void MultiIndexAddRequest::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexAddRequest::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexAddRequest_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[14].descriptor;
 }
 
 const MultiIndexAddRequest& MultiIndexAddRequest::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexAddRequest> MultiIndexAddRequest_default_instance_;
 
 MultiIndexAddRequest* MultiIndexAddRequest::New(::google::protobuf::Arena* arena) const {
   MultiIndexAddRequest* n = new MultiIndexAddRequest;
@@ -5460,9 +4935,13 @@ MultiIndexAddRequest* MultiIndexAddRequest::New(::google::protobuf::Arena* arena
 void MultiIndexAddRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.MultiIndexAddRequest)
   image_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) delete indexing_ids_;
+  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) {
+    delete indexing_ids_;
+  }
   indexing_ids_ = NULL;
-  if (GetArenaNoVirtual() == NULL && compressing_ids_ != NULL) delete compressing_ids_;
+  if (GetArenaNoVirtual() == NULL && compressing_ids_ != NULL) {
+    delete compressing_ids_;
+  }
   compressing_ids_ = NULL;
 }
 
@@ -5472,13 +4951,13 @@ bool MultiIndexAddRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexAddRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string image_id = 1;
+      // string image_id = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_image_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -5488,33 +4967,28 @@ bool MultiIndexAddRequest::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_indexing_ids;
         break;
       }
 
-      // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+      // .similia.proto.IndexingClustersIds indexing_ids = 2;
       case 2: {
-        if (tag == 18) {
-         parse_indexing_ids:
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_indexing_ids()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_compressing_ids;
         break;
       }
 
-      // optional .similia.proto.CompressingClustersIds compressing_ids = 3;
+      // .similia.proto.CompressingClustersIds compressing_ids = 3;
       case 3: {
-        if (tag == 26) {
-         parse_compressing_ids:
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_compressing_ids()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -5542,7 +5016,7 @@ failure:
 void MultiIndexAddRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexAddRequest)
-  // optional string image_id = 1;
+  // string image_id = 1;
   if (this->image_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->image_id().data(), this->image_id().length(),
@@ -5552,13 +5026,13 @@ void MultiIndexAddRequest::SerializeWithCachedSizes(
       1, this->image_id(), output);
   }
 
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+  // .similia.proto.IndexingClustersIds indexing_ids = 2;
   if (this->has_indexing_ids()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->indexing_ids_, output);
   }
 
-  // optional .similia.proto.CompressingClustersIds compressing_ids = 3;
+  // .similia.proto.CompressingClustersIds compressing_ids = 3;
   if (this->has_compressing_ids()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, *this->compressing_ids_, output);
@@ -5569,9 +5043,9 @@ void MultiIndexAddRequest::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexAddRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexAddRequest)
-  // optional string image_id = 1;
+  // string image_id = 1;
   if (this->image_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->image_id().data(), this->image_id().length(),
@@ -5582,14 +5056,14 @@ void MultiIndexAddRequest::SerializeWithCachedSizes(
         1, this->image_id(), target);
   }
 
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+  // .similia.proto.IndexingClustersIds indexing_ids = 2;
   if (this->has_indexing_ids()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         2, *this->indexing_ids_, false, target);
   }
 
-  // optional .similia.proto.CompressingClustersIds compressing_ids = 3;
+  // .similia.proto.CompressingClustersIds compressing_ids = 3;
   if (this->has_compressing_ids()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
@@ -5604,21 +5078,21 @@ size_t MultiIndexAddRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexAddRequest)
   size_t total_size = 0;
 
-  // optional string image_id = 1;
+  // string image_id = 1;
   if (this->image_id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->image_id());
   }
 
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+  // .similia.proto.IndexingClustersIds indexing_ids = 2;
   if (this->has_indexing_ids()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->indexing_ids_);
   }
 
-  // optional .similia.proto.CompressingClustersIds compressing_ids = 3;
+  // .similia.proto.CompressingClustersIds compressing_ids = 3;
   if (this->has_compressing_ids()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -5634,7 +5108,7 @@ size_t MultiIndexAddRequest::ByteSizeLong() const {
 
 void MultiIndexAddRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexAddRequest)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexAddRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexAddRequest>(
           &from);
@@ -5643,21 +5117,14 @@ void MultiIndexAddRequest::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexAddRequest)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexAddRequest::MergeFrom(const MultiIndexAddRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexAddRequest)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexAddRequest::UnsafeMergeFrom(const MultiIndexAddRequest& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.image_id().size() > 0) {
 
     image_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_id_);
@@ -5681,11 +5148,10 @@ void MultiIndexAddRequest::CopyFrom(const MultiIndexAddRequest& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexAddRequest)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexAddRequest::IsInitialized() const {
-
   return true;
 }
 
@@ -5697,34 +5163,38 @@ void MultiIndexAddRequest::InternalSwap(MultiIndexAddRequest* other) {
   image_id_.Swap(&other->image_id_);
   std::swap(indexing_ids_, other->indexing_ids_);
   std::swap(compressing_ids_, other->compressing_ids_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexAddRequest::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexAddRequest_descriptor_;
-  metadata.reflection = MultiIndexAddRequest_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[14];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MultiIndexAddRequest
 
-// optional string image_id = 1;
+// string image_id = 1;
 void MultiIndexAddRequest::clear_image_id() {
   image_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& MultiIndexAddRequest::image_id() const {
   // @@protoc_insertion_point(field_get:similia.proto.MultiIndexAddRequest.image_id)
-  return image_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return image_id_.GetNoArena();
 }
 void MultiIndexAddRequest::set_image_id(const ::std::string& value) {
   
   image_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:similia.proto.MultiIndexAddRequest.image_id)
 }
+#if LANG_CXX11
+void MultiIndexAddRequest::set_image_id(::std::string&& value) {
+  
+  image_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:similia.proto.MultiIndexAddRequest.image_id)
+}
+#endif
 void MultiIndexAddRequest::set_image_id(const char* value) {
   
   image_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
@@ -5756,7 +5226,7 @@ void MultiIndexAddRequest::set_allocated_image_id(::std::string* image_id) {
   // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexAddRequest.image_id)
 }
 
-// optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+// .similia.proto.IndexingClustersIds indexing_ids = 2;
 bool MultiIndexAddRequest::has_indexing_ids() const {
   return this != internal_default_instance() && indexing_ids_ != NULL;
 }
@@ -5795,7 +5265,7 @@ void MultiIndexAddRequest::set_allocated_indexing_ids(::similia::proto::Indexing
   // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexAddRequest.indexing_ids)
 }
 
-// optional .similia.proto.CompressingClustersIds compressing_ids = 3;
+// .similia.proto.CompressingClustersIds compressing_ids = 3;
 bool MultiIndexAddRequest::has_compressing_ids() const {
   return this != internal_default_instance() && compressing_ids_ != NULL;
 }
@@ -5834,9 +5304,6 @@ void MultiIndexAddRequest::set_allocated_compressing_ids(::similia::proto::Compr
   // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexAddRequest.compressing_ids)
 }
 
-inline const MultiIndexAddRequest* MultiIndexAddRequest::internal_default_instance() {
-  return &MultiIndexAddRequest_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -5847,19 +5314,18 @@ const int MultiIndexAddResponse::kProcessingTimeMsFieldNumber;
 
 MultiIndexAddResponse::MultiIndexAddResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexAddResponse)
 }
-
-void MultiIndexAddResponse::InitAsDefaultInstance() {
-}
-
 MultiIndexAddResponse::MultiIndexAddResponse(const MultiIndexAddResponse& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  processing_time_ms_ = from.processing_time_ms_;
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexAddResponse)
 }
 
@@ -5882,16 +5348,14 @@ void MultiIndexAddResponse::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexAddResponse::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexAddResponse_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[15].descriptor;
 }
 
 const MultiIndexAddResponse& MultiIndexAddResponse::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexAddResponse> MultiIndexAddResponse_default_instance_;
 
 MultiIndexAddResponse* MultiIndexAddResponse::New(::google::protobuf::Arena* arena) const {
   MultiIndexAddResponse* n = new MultiIndexAddResponse;
@@ -5912,13 +5376,13 @@ bool MultiIndexAddResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexAddResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 processing_time_ms = 2;
+      // int64 processing_time_ms = 2;
       case 2: {
-        if (tag == 16) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -5926,7 +5390,6 @@ bool MultiIndexAddResponse::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -5954,7 +5417,7 @@ failure:
 void MultiIndexAddResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexAddResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->processing_time_ms(), output);
   }
@@ -5964,9 +5427,9 @@ void MultiIndexAddResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexAddResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexAddResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->processing_time_ms(), target);
   }
@@ -5979,7 +5442,7 @@ size_t MultiIndexAddResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexAddResponse)
   size_t total_size = 0;
 
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
@@ -5995,7 +5458,7 @@ size_t MultiIndexAddResponse::ByteSizeLong() const {
 
 void MultiIndexAddResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexAddResponse)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexAddResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexAddResponse>(
           &from);
@@ -6004,21 +5467,14 @@ void MultiIndexAddResponse::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexAddResponse)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexAddResponse::MergeFrom(const MultiIndexAddResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexAddResponse)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexAddResponse::UnsafeMergeFrom(const MultiIndexAddResponse& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.processing_time_ms() != 0) {
     set_processing_time_ms(from.processing_time_ms());
   }
@@ -6035,11 +5491,10 @@ void MultiIndexAddResponse::CopyFrom(const MultiIndexAddResponse& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexAddResponse)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexAddResponse::IsInitialized() const {
-
   return true;
 }
 
@@ -6049,22 +5504,18 @@ void MultiIndexAddResponse::Swap(MultiIndexAddResponse* other) {
 }
 void MultiIndexAddResponse::InternalSwap(MultiIndexAddResponse* other) {
   std::swap(processing_time_ms_, other->processing_time_ms_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexAddResponse::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexAddResponse_descriptor_;
-  metadata.reflection = MultiIndexAddResponse_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[15];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MultiIndexAddResponse
 
-// optional int64 processing_time_ms = 2;
+// int64 processing_time_ms = 2;
 void MultiIndexAddResponse::clear_processing_time_ms() {
   processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
@@ -6078,9 +5529,6 @@ void MultiIndexAddResponse::set_processing_time_ms(::google::protobuf::int64 val
   // @@protoc_insertion_point(field_set:similia.proto.MultiIndexAddResponse.processing_time_ms)
 }
 
-inline const MultiIndexAddResponse* MultiIndexAddResponse::internal_default_instance() {
-  return &MultiIndexAddResponse_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -6091,21 +5539,22 @@ const int MultiIndexGetRequest::kIndexingIdsFieldNumber;
 
 MultiIndexGetRequest::MultiIndexGetRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexGetRequest)
 }
-
-void MultiIndexGetRequest::InitAsDefaultInstance() {
-  indexing_ids_ = const_cast< ::similia::proto::IndexingClustersIds*>(
-      ::similia::proto::IndexingClustersIds::internal_default_instance());
-}
-
 MultiIndexGetRequest::MultiIndexGetRequest(const MultiIndexGetRequest& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_indexing_ids()) {
+    indexing_ids_ = new ::similia::proto::IndexingClustersIds(*from.indexing_ids_);
+  } else {
+    indexing_ids_ = NULL;
+  }
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexGetRequest)
 }
 
@@ -6120,7 +5569,7 @@ MultiIndexGetRequest::~MultiIndexGetRequest() {
 }
 
 void MultiIndexGetRequest::SharedDtor() {
-  if (this != &MultiIndexGetRequest_default_instance_.get()) {
+  if (this != internal_default_instance()) {
     delete indexing_ids_;
   }
 }
@@ -6131,16 +5580,14 @@ void MultiIndexGetRequest::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexGetRequest::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexGetRequest_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[16].descriptor;
 }
 
 const MultiIndexGetRequest& MultiIndexGetRequest::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexGetRequest> MultiIndexGetRequest_default_instance_;
 
 MultiIndexGetRequest* MultiIndexGetRequest::New(::google::protobuf::Arena* arena) const {
   MultiIndexGetRequest* n = new MultiIndexGetRequest;
@@ -6152,7 +5599,9 @@ MultiIndexGetRequest* MultiIndexGetRequest::New(::google::protobuf::Arena* arena
 
 void MultiIndexGetRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.MultiIndexGetRequest)
-  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) delete indexing_ids_;
+  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) {
+    delete indexing_ids_;
+  }
   indexing_ids_ = NULL;
 }
 
@@ -6162,19 +5611,18 @@ bool MultiIndexGetRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexGetRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .similia.proto.IndexingClustersIds indexing_ids = 1;
+      // .similia.proto.IndexingClustersIds indexing_ids = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_indexing_ids()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -6202,7 +5650,7 @@ failure:
 void MultiIndexGetRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexGetRequest)
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 1;
+  // .similia.proto.IndexingClustersIds indexing_ids = 1;
   if (this->has_indexing_ids()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->indexing_ids_, output);
@@ -6213,9 +5661,9 @@ void MultiIndexGetRequest::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexGetRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexGetRequest)
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 1;
+  // .similia.proto.IndexingClustersIds indexing_ids = 1;
   if (this->has_indexing_ids()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
@@ -6230,7 +5678,7 @@ size_t MultiIndexGetRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexGetRequest)
   size_t total_size = 0;
 
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 1;
+  // .similia.proto.IndexingClustersIds indexing_ids = 1;
   if (this->has_indexing_ids()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -6246,7 +5694,7 @@ size_t MultiIndexGetRequest::ByteSizeLong() const {
 
 void MultiIndexGetRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexGetRequest)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexGetRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexGetRequest>(
           &from);
@@ -6255,21 +5703,14 @@ void MultiIndexGetRequest::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexGetRequest)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexGetRequest::MergeFrom(const MultiIndexGetRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexGetRequest)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexGetRequest::UnsafeMergeFrom(const MultiIndexGetRequest& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_indexing_ids()) {
     mutable_indexing_ids()->::similia::proto::IndexingClustersIds::MergeFrom(from.indexing_ids());
   }
@@ -6286,11 +5727,10 @@ void MultiIndexGetRequest::CopyFrom(const MultiIndexGetRequest& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexGetRequest)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexGetRequest::IsInitialized() const {
-
   return true;
 }
 
@@ -6300,22 +5740,18 @@ void MultiIndexGetRequest::Swap(MultiIndexGetRequest* other) {
 }
 void MultiIndexGetRequest::InternalSwap(MultiIndexGetRequest* other) {
   std::swap(indexing_ids_, other->indexing_ids_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexGetRequest::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexGetRequest_descriptor_;
-  metadata.reflection = MultiIndexGetRequest_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[16];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MultiIndexGetRequest
 
-// optional .similia.proto.IndexingClustersIds indexing_ids = 1;
+// .similia.proto.IndexingClustersIds indexing_ids = 1;
 bool MultiIndexGetRequest::has_indexing_ids() const {
   return this != internal_default_instance() && indexing_ids_ != NULL;
 }
@@ -6354,9 +5790,6 @@ void MultiIndexGetRequest::set_allocated_indexing_ids(::similia::proto::Indexing
   // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexGetRequest.indexing_ids)
 }
 
-inline const MultiIndexGetRequest* MultiIndexGetRequest::internal_default_instance() {
-  return &MultiIndexGetRequest_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -6368,19 +5801,22 @@ const int MultiIndexGetResponse::kCompressedElementsFieldNumber;
 
 MultiIndexGetResponse::MultiIndexGetResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexGetResponse)
 }
-
-void MultiIndexGetResponse::InitAsDefaultInstance() {
-}
-
 MultiIndexGetResponse::MultiIndexGetResponse(const MultiIndexGetResponse& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  compressed_elements_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.compressed_elements().size() > 0) {
+    compressed_elements_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.compressed_elements_);
+  }
+  processing_time_ms_ = from.processing_time_ms_;
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexGetResponse)
 }
 
@@ -6405,16 +5841,14 @@ void MultiIndexGetResponse::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexGetResponse::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexGetResponse_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[17].descriptor;
 }
 
 const MultiIndexGetResponse& MultiIndexGetResponse::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexGetResponse> MultiIndexGetResponse_default_instance_;
 
 MultiIndexGetResponse* MultiIndexGetResponse::New(::google::protobuf::Arena* arena) const {
   MultiIndexGetResponse* n = new MultiIndexGetResponse;
@@ -6426,8 +5860,8 @@ MultiIndexGetResponse* MultiIndexGetResponse::New(::google::protobuf::Arena* are
 
 void MultiIndexGetResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.MultiIndexGetResponse)
-  processing_time_ms_ = GOOGLE_LONGLONG(0);
   compressed_elements_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
 
 bool MultiIndexGetResponse::MergePartialFromCodedStream(
@@ -6436,13 +5870,13 @@ bool MultiIndexGetResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexGetResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 processing_time_ms = 2;
+      // int64 processing_time_ms = 2;
       case 2: {
-        if (tag == 16) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -6450,20 +5884,17 @@ bool MultiIndexGetResponse::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_compressed_elements;
         break;
       }
 
-      // optional bytes compressed_elements = 3;
+      // bytes compressed_elements = 3;
       case 3: {
-        if (tag == 26) {
-         parse_compressed_elements:
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_compressed_elements()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -6491,12 +5922,12 @@ failure:
 void MultiIndexGetResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexGetResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->processing_time_ms(), output);
   }
 
-  // optional bytes compressed_elements = 3;
+  // bytes compressed_elements = 3;
   if (this->compressed_elements().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
       3, this->compressed_elements(), output);
@@ -6507,14 +5938,14 @@ void MultiIndexGetResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexGetResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexGetResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->processing_time_ms(), target);
   }
 
-  // optional bytes compressed_elements = 3;
+  // bytes compressed_elements = 3;
   if (this->compressed_elements().size() > 0) {
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
@@ -6529,18 +5960,18 @@ size_t MultiIndexGetResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexGetResponse)
   size_t total_size = 0;
 
-  // optional int64 processing_time_ms = 2;
-  if (this->processing_time_ms() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->processing_time_ms());
-  }
-
-  // optional bytes compressed_elements = 3;
+  // bytes compressed_elements = 3;
   if (this->compressed_elements().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::BytesSize(
         this->compressed_elements());
+  }
+
+  // int64 processing_time_ms = 2;
+  if (this->processing_time_ms() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->processing_time_ms());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -6552,7 +5983,7 @@ size_t MultiIndexGetResponse::ByteSizeLong() const {
 
 void MultiIndexGetResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexGetResponse)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexGetResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexGetResponse>(
           &from);
@@ -6561,27 +5992,20 @@ void MultiIndexGetResponse::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexGetResponse)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexGetResponse::MergeFrom(const MultiIndexGetResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexGetResponse)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexGetResponse::UnsafeMergeFrom(const MultiIndexGetResponse& from) {
-  GOOGLE_DCHECK(&from != this);
-  if (from.processing_time_ms() != 0) {
-    set_processing_time_ms(from.processing_time_ms());
-  }
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.compressed_elements().size() > 0) {
 
     compressed_elements_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.compressed_elements_);
+  }
+  if (from.processing_time_ms() != 0) {
+    set_processing_time_ms(from.processing_time_ms());
   }
 }
 
@@ -6596,11 +6020,10 @@ void MultiIndexGetResponse::CopyFrom(const MultiIndexGetResponse& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexGetResponse)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexGetResponse::IsInitialized() const {
-
   return true;
 }
 
@@ -6609,24 +6032,20 @@ void MultiIndexGetResponse::Swap(MultiIndexGetResponse* other) {
   InternalSwap(other);
 }
 void MultiIndexGetResponse::InternalSwap(MultiIndexGetResponse* other) {
-  std::swap(processing_time_ms_, other->processing_time_ms_);
   compressed_elements_.Swap(&other->compressed_elements_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(processing_time_ms_, other->processing_time_ms_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexGetResponse::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexGetResponse_descriptor_;
-  metadata.reflection = MultiIndexGetResponse_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[17];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MultiIndexGetResponse
 
-// optional int64 processing_time_ms = 2;
+// int64 processing_time_ms = 2;
 void MultiIndexGetResponse::clear_processing_time_ms() {
   processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
@@ -6640,19 +6059,27 @@ void MultiIndexGetResponse::set_processing_time_ms(::google::protobuf::int64 val
   // @@protoc_insertion_point(field_set:similia.proto.MultiIndexGetResponse.processing_time_ms)
 }
 
-// optional bytes compressed_elements = 3;
+// bytes compressed_elements = 3;
 void MultiIndexGetResponse::clear_compressed_elements() {
   compressed_elements_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& MultiIndexGetResponse::compressed_elements() const {
   // @@protoc_insertion_point(field_get:similia.proto.MultiIndexGetResponse.compressed_elements)
-  return compressed_elements_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return compressed_elements_.GetNoArena();
 }
 void MultiIndexGetResponse::set_compressed_elements(const ::std::string& value) {
   
   compressed_elements_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:similia.proto.MultiIndexGetResponse.compressed_elements)
 }
+#if LANG_CXX11
+void MultiIndexGetResponse::set_compressed_elements(::std::string&& value) {
+  
+  compressed_elements_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:similia.proto.MultiIndexGetResponse.compressed_elements)
+}
+#endif
 void MultiIndexGetResponse::set_compressed_elements(const char* value) {
   
   compressed_elements_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
@@ -6684,9 +6111,6 @@ void MultiIndexGetResponse::set_allocated_compressed_elements(::std::string* com
   // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexGetResponse.compressed_elements)
 }
 
-inline const MultiIndexGetResponse* MultiIndexGetResponse::internal_default_instance() {
-  return &MultiIndexGetResponse_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -6698,19 +6122,19 @@ const int MultiIndexMultiGetRequest::kCountLimitFieldNumber;
 
 MultiIndexMultiGetRequest::MultiIndexMultiGetRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexMultiGetRequest)
 }
-
-void MultiIndexMultiGetRequest::InitAsDefaultInstance() {
-}
-
 MultiIndexMultiGetRequest::MultiIndexMultiGetRequest(const MultiIndexMultiGetRequest& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      indexing_ids_(from.indexing_ids_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  count_limit_ = from.count_limit_;
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexMultiGetRequest)
 }
 
@@ -6733,16 +6157,14 @@ void MultiIndexMultiGetRequest::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexMultiGetRequest::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexMultiGetRequest_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[18].descriptor;
 }
 
 const MultiIndexMultiGetRequest& MultiIndexMultiGetRequest::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiGetRequest> MultiIndexMultiGetRequest_default_instance_;
 
 MultiIndexMultiGetRequest* MultiIndexMultiGetRequest::New(::google::protobuf::Arena* arena) const {
   MultiIndexMultiGetRequest* n = new MultiIndexMultiGetRequest;
@@ -6754,8 +6176,8 @@ MultiIndexMultiGetRequest* MultiIndexMultiGetRequest::New(::google::protobuf::Ar
 
 void MultiIndexMultiGetRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.MultiIndexMultiGetRequest)
-  count_limit_ = 0;
   indexing_ids_.Clear();
+  count_limit_ = 0;
 }
 
 bool MultiIndexMultiGetRequest::MergePartialFromCodedStream(
@@ -6764,30 +6186,26 @@ bool MultiIndexMultiGetRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexMultiGetRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .similia.proto.IndexingClustersIds indexing_ids = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(input->IncrementRecursionDepth());
-         parse_loop_indexing_ids:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
                 input, add_indexing_ids()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(10)) goto parse_loop_indexing_ids;
         input->UnsafeDecrementRecursionDepth();
-        if (input->ExpectTag(16)) goto parse_count_limit;
         break;
       }
 
-      // optional int32 count_limit = 2;
+      // int32 count_limit = 2;
       case 2: {
-        if (tag == 16) {
-         parse_count_limit:
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -6795,7 +6213,6 @@ bool MultiIndexMultiGetRequest::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -6829,7 +6246,7 @@ void MultiIndexMultiGetRequest::SerializeWithCachedSizes(
       1, this->indexing_ids(i), output);
   }
 
-  // optional int32 count_limit = 2;
+  // int32 count_limit = 2;
   if (this->count_limit() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->count_limit(), output);
   }
@@ -6839,7 +6256,7 @@ void MultiIndexMultiGetRequest::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexMultiGetRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexMultiGetRequest)
   // repeated .similia.proto.IndexingClustersIds indexing_ids = 1;
   for (unsigned int i = 0, n = this->indexing_ids_size(); i < n; i++) {
@@ -6848,7 +6265,7 @@ void MultiIndexMultiGetRequest::SerializeWithCachedSizes(
         1, this->indexing_ids(i), false, target);
   }
 
-  // optional int32 count_limit = 2;
+  // int32 count_limit = 2;
   if (this->count_limit() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->count_limit(), target);
   }
@@ -6861,13 +6278,6 @@ size_t MultiIndexMultiGetRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexMultiGetRequest)
   size_t total_size = 0;
 
-  // optional int32 count_limit = 2;
-  if (this->count_limit() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->count_limit());
-  }
-
   // repeated .similia.proto.IndexingClustersIds indexing_ids = 1;
   {
     unsigned int count = this->indexing_ids_size();
@@ -6879,6 +6289,13 @@ size_t MultiIndexMultiGetRequest::ByteSizeLong() const {
     }
   }
 
+  // int32 count_limit = 2;
+  if (this->count_limit() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->count_limit());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -6888,7 +6305,7 @@ size_t MultiIndexMultiGetRequest::ByteSizeLong() const {
 
 void MultiIndexMultiGetRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexMultiGetRequest)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexMultiGetRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexMultiGetRequest>(
           &from);
@@ -6897,21 +6314,14 @@ void MultiIndexMultiGetRequest::MergeFrom(const ::google::protobuf::Message& fro
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexMultiGetRequest)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexMultiGetRequest::MergeFrom(const MultiIndexMultiGetRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexMultiGetRequest)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexMultiGetRequest::UnsafeMergeFrom(const MultiIndexMultiGetRequest& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   indexing_ids_.MergeFrom(from.indexing_ids_);
   if (from.count_limit() != 0) {
     set_count_limit(from.count_limit());
@@ -6929,11 +6339,10 @@ void MultiIndexMultiGetRequest::CopyFrom(const MultiIndexMultiGetRequest& from) 
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexMultiGetRequest)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexMultiGetRequest::IsInitialized() const {
-
   return true;
 }
 
@@ -6944,16 +6353,12 @@ void MultiIndexMultiGetRequest::Swap(MultiIndexMultiGetRequest* other) {
 void MultiIndexMultiGetRequest::InternalSwap(MultiIndexMultiGetRequest* other) {
   indexing_ids_.UnsafeArenaSwap(&other->indexing_ids_);
   std::swap(count_limit_, other->count_limit_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexMultiGetRequest::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexMultiGetRequest_descriptor_;
-  metadata.reflection = MultiIndexMultiGetRequest_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[18];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -6989,7 +6394,7 @@ MultiIndexMultiGetRequest::indexing_ids() const {
   return indexing_ids_;
 }
 
-// optional int32 count_limit = 2;
+// int32 count_limit = 2;
 void MultiIndexMultiGetRequest::clear_count_limit() {
   count_limit_ = 0;
 }
@@ -7003,9 +6408,6 @@ void MultiIndexMultiGetRequest::set_count_limit(::google::protobuf::int32 value)
   // @@protoc_insertion_point(field_set:similia.proto.MultiIndexMultiGetRequest.count_limit)
 }
 
-inline const MultiIndexMultiGetRequest* MultiIndexMultiGetRequest::internal_default_instance() {
-  return &MultiIndexMultiGetRequest_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7017,19 +6419,19 @@ const int MultiIndexMultiGetResponse::kCompressedElementsFieldNumber;
 
 MultiIndexMultiGetResponse::MultiIndexMultiGetResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexMultiGetResponse)
 }
-
-void MultiIndexMultiGetResponse::InitAsDefaultInstance() {
-}
-
 MultiIndexMultiGetResponse::MultiIndexMultiGetResponse(const MultiIndexMultiGetResponse& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      compressed_elements_(from.compressed_elements_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  processing_time_ms_ = from.processing_time_ms_;
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexMultiGetResponse)
 }
 
@@ -7052,16 +6454,14 @@ void MultiIndexMultiGetResponse::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexMultiGetResponse::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexMultiGetResponse_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[19].descriptor;
 }
 
 const MultiIndexMultiGetResponse& MultiIndexMultiGetResponse::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiGetResponse> MultiIndexMultiGetResponse_default_instance_;
 
 MultiIndexMultiGetResponse* MultiIndexMultiGetResponse::New(::google::protobuf::Arena* arena) const {
   MultiIndexMultiGetResponse* n = new MultiIndexMultiGetResponse;
@@ -7073,8 +6473,8 @@ MultiIndexMultiGetResponse* MultiIndexMultiGetResponse::New(::google::protobuf::
 
 void MultiIndexMultiGetResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.MultiIndexMultiGetResponse)
-  processing_time_ms_ = GOOGLE_LONGLONG(0);
   compressed_elements_.Clear();
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
 
 bool MultiIndexMultiGetResponse::MergePartialFromCodedStream(
@@ -7083,13 +6483,13 @@ bool MultiIndexMultiGetResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexMultiGetResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 processing_time_ms = 2;
+      // int64 processing_time_ms = 2;
       case 2: {
-        if (tag == 16) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -7097,21 +6497,17 @@ bool MultiIndexMultiGetResponse::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_compressed_elements;
         break;
       }
 
       // repeated bytes compressed_elements = 3;
       case 3: {
-        if (tag == 26) {
-         parse_compressed_elements:
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->add_compressed_elements()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_compressed_elements;
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -7139,7 +6535,7 @@ failure:
 void MultiIndexMultiGetResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexMultiGetResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->processing_time_ms(), output);
   }
@@ -7155,9 +6551,9 @@ void MultiIndexMultiGetResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexMultiGetResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexMultiGetResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->processing_time_ms(), target);
   }
@@ -7176,19 +6572,19 @@ size_t MultiIndexMultiGetResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexMultiGetResponse)
   size_t total_size = 0;
 
-  // optional int64 processing_time_ms = 2;
-  if (this->processing_time_ms() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->processing_time_ms());
-  }
-
   // repeated bytes compressed_elements = 3;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->compressed_elements_size());
   for (int i = 0; i < this->compressed_elements_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
       this->compressed_elements(i));
+  }
+
+  // int64 processing_time_ms = 2;
+  if (this->processing_time_ms() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->processing_time_ms());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -7200,7 +6596,7 @@ size_t MultiIndexMultiGetResponse::ByteSizeLong() const {
 
 void MultiIndexMultiGetResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexMultiGetResponse)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexMultiGetResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexMultiGetResponse>(
           &from);
@@ -7209,22 +6605,15 @@ void MultiIndexMultiGetResponse::MergeFrom(const ::google::protobuf::Message& fr
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexMultiGetResponse)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexMultiGetResponse::MergeFrom(const MultiIndexMultiGetResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexMultiGetResponse)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexMultiGetResponse::UnsafeMergeFrom(const MultiIndexMultiGetResponse& from) {
-  GOOGLE_DCHECK(&from != this);
-  compressed_elements_.UnsafeMergeFrom(from.compressed_elements_);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  compressed_elements_.MergeFrom(from.compressed_elements_);
   if (from.processing_time_ms() != 0) {
     set_processing_time_ms(from.processing_time_ms());
   }
@@ -7241,11 +6630,10 @@ void MultiIndexMultiGetResponse::CopyFrom(const MultiIndexMultiGetResponse& from
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexMultiGetResponse)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexMultiGetResponse::IsInitialized() const {
-
   return true;
 }
 
@@ -7254,24 +6642,20 @@ void MultiIndexMultiGetResponse::Swap(MultiIndexMultiGetResponse* other) {
   InternalSwap(other);
 }
 void MultiIndexMultiGetResponse::InternalSwap(MultiIndexMultiGetResponse* other) {
-  std::swap(processing_time_ms_, other->processing_time_ms_);
   compressed_elements_.UnsafeArenaSwap(&other->compressed_elements_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(processing_time_ms_, other->processing_time_ms_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexMultiGetResponse::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexMultiGetResponse_descriptor_;
-  metadata.reflection = MultiIndexMultiGetResponse_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[19];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MultiIndexMultiGetResponse
 
-// optional int64 processing_time_ms = 2;
+// int64 processing_time_ms = 2;
 void MultiIndexMultiGetResponse::clear_processing_time_ms() {
   processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
@@ -7340,9 +6724,6 @@ MultiIndexMultiGetResponse::mutable_compressed_elements() {
   return &compressed_elements_;
 }
 
-inline const MultiIndexMultiGetResponse* MultiIndexMultiGetResponse::internal_default_instance() {
-  return &MultiIndexMultiGetResponse_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7353,19 +6734,18 @@ const int MultiIndexMultiCountRequest::kIndexingIdsFieldNumber;
 
 MultiIndexMultiCountRequest::MultiIndexMultiCountRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexMultiCountRequest)
 }
-
-void MultiIndexMultiCountRequest::InitAsDefaultInstance() {
-}
-
 MultiIndexMultiCountRequest::MultiIndexMultiCountRequest(const MultiIndexMultiCountRequest& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      indexing_ids_(from.indexing_ids_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexMultiCountRequest)
 }
 
@@ -7387,16 +6767,14 @@ void MultiIndexMultiCountRequest::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexMultiCountRequest::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexMultiCountRequest_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[20].descriptor;
 }
 
 const MultiIndexMultiCountRequest& MultiIndexMultiCountRequest::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiCountRequest> MultiIndexMultiCountRequest_default_instance_;
 
 MultiIndexMultiCountRequest* MultiIndexMultiCountRequest::New(::google::protobuf::Arena* arena) const {
   MultiIndexMultiCountRequest* n = new MultiIndexMultiCountRequest;
@@ -7417,23 +6795,20 @@ bool MultiIndexMultiCountRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexMultiCountRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .similia.proto.IndexingClustersIds indexing_ids = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(input->IncrementRecursionDepth());
-         parse_loop_indexing_ids:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
                 input, add_indexing_ids()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(10)) goto parse_loop_indexing_ids;
         input->UnsafeDecrementRecursionDepth();
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -7472,7 +6847,7 @@ void MultiIndexMultiCountRequest::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexMultiCountRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexMultiCountRequest)
   // repeated .similia.proto.IndexingClustersIds indexing_ids = 1;
   for (unsigned int i = 0, n = this->indexing_ids_size(); i < n; i++) {
@@ -7509,7 +6884,7 @@ size_t MultiIndexMultiCountRequest::ByteSizeLong() const {
 
 void MultiIndexMultiCountRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexMultiCountRequest)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexMultiCountRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexMultiCountRequest>(
           &from);
@@ -7518,21 +6893,14 @@ void MultiIndexMultiCountRequest::MergeFrom(const ::google::protobuf::Message& f
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexMultiCountRequest)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexMultiCountRequest::MergeFrom(const MultiIndexMultiCountRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexMultiCountRequest)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexMultiCountRequest::UnsafeMergeFrom(const MultiIndexMultiCountRequest& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   indexing_ids_.MergeFrom(from.indexing_ids_);
 }
 
@@ -7547,11 +6915,10 @@ void MultiIndexMultiCountRequest::CopyFrom(const MultiIndexMultiCountRequest& fr
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexMultiCountRequest)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexMultiCountRequest::IsInitialized() const {
-
   return true;
 }
 
@@ -7561,16 +6928,12 @@ void MultiIndexMultiCountRequest::Swap(MultiIndexMultiCountRequest* other) {
 }
 void MultiIndexMultiCountRequest::InternalSwap(MultiIndexMultiCountRequest* other) {
   indexing_ids_.UnsafeArenaSwap(&other->indexing_ids_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexMultiCountRequest::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexMultiCountRequest_descriptor_;
-  metadata.reflection = MultiIndexMultiCountRequest_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[20];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -7606,9 +6969,6 @@ MultiIndexMultiCountRequest::indexing_ids() const {
   return indexing_ids_;
 }
 
-inline const MultiIndexMultiCountRequest* MultiIndexMultiCountRequest::internal_default_instance() {
-  return &MultiIndexMultiCountRequest_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7620,19 +6980,19 @@ const int MultiIndexMultiCountResponse::kCountFieldNumber;
 
 MultiIndexMultiCountResponse::MultiIndexMultiCountResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexMultiCountResponse)
 }
-
-void MultiIndexMultiCountResponse::InitAsDefaultInstance() {
-}
-
 MultiIndexMultiCountResponse::MultiIndexMultiCountResponse(const MultiIndexMultiCountResponse& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      count_(from.count_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  processing_time_ms_ = from.processing_time_ms_;
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexMultiCountResponse)
 }
 
@@ -7655,16 +7015,14 @@ void MultiIndexMultiCountResponse::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexMultiCountResponse::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexMultiCountResponse_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[21].descriptor;
 }
 
 const MultiIndexMultiCountResponse& MultiIndexMultiCountResponse::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiCountResponse> MultiIndexMultiCountResponse_default_instance_;
 
 MultiIndexMultiCountResponse* MultiIndexMultiCountResponse::New(::google::protobuf::Arena* arena) const {
   MultiIndexMultiCountResponse* n = new MultiIndexMultiCountResponse;
@@ -7676,8 +7034,8 @@ MultiIndexMultiCountResponse* MultiIndexMultiCountResponse::New(::google::protob
 
 void MultiIndexMultiCountResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.MultiIndexMultiCountResponse)
-  processing_time_ms_ = GOOGLE_LONGLONG(0);
   count_.Clear();
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
 
 bool MultiIndexMultiCountResponse::MergePartialFromCodedStream(
@@ -7686,13 +7044,13 @@ bool MultiIndexMultiCountResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexMultiCountResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 processing_time_ms = 2;
+      // int64 processing_time_ms = 2;
       case 2: {
-        if (tag == 16) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -7700,25 +7058,22 @@ bool MultiIndexMultiCountResponse::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_count;
         break;
       }
 
       // repeated int32 count = 3;
       case 3: {
-        if (tag == 26) {
-         parse_count:
+        if (tag == 26u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, this->mutable_count())));
-        } else if (tag == 24) {
+        } else if (tag == 24u) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 1, 26, input, this->mutable_count())));
+                 1, 26u, input, this->mutable_count())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -7746,7 +7101,7 @@ failure:
 void MultiIndexMultiCountResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexMultiCountResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->processing_time_ms(), output);
   }
@@ -7766,9 +7121,9 @@ void MultiIndexMultiCountResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexMultiCountResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexMultiCountResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->processing_time_ms(), target);
   }
@@ -7795,21 +7150,10 @@ size_t MultiIndexMultiCountResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexMultiCountResponse)
   size_t total_size = 0;
 
-  // optional int64 processing_time_ms = 2;
-  if (this->processing_time_ms() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->processing_time_ms());
-  }
-
   // repeated int32 count = 3;
   {
-    size_t data_size = 0;
-    unsigned int count = this->count_size();
-    for (unsigned int i = 0; i < count; i++) {
-      data_size += ::google::protobuf::internal::WireFormatLite::
-        Int32Size(this->count(i));
-    }
+    size_t data_size = ::google::protobuf::internal::WireFormatLite::
+      Int32Size(this->count_);
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
@@ -7821,6 +7165,13 @@ size_t MultiIndexMultiCountResponse::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  // int64 processing_time_ms = 2;
+  if (this->processing_time_ms() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->processing_time_ms());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -7830,7 +7181,7 @@ size_t MultiIndexMultiCountResponse::ByteSizeLong() const {
 
 void MultiIndexMultiCountResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexMultiCountResponse)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexMultiCountResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexMultiCountResponse>(
           &from);
@@ -7839,22 +7190,15 @@ void MultiIndexMultiCountResponse::MergeFrom(const ::google::protobuf::Message& 
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexMultiCountResponse)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexMultiCountResponse::MergeFrom(const MultiIndexMultiCountResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexMultiCountResponse)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexMultiCountResponse::UnsafeMergeFrom(const MultiIndexMultiCountResponse& from) {
-  GOOGLE_DCHECK(&from != this);
-  count_.UnsafeMergeFrom(from.count_);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  count_.MergeFrom(from.count_);
   if (from.processing_time_ms() != 0) {
     set_processing_time_ms(from.processing_time_ms());
   }
@@ -7871,11 +7215,10 @@ void MultiIndexMultiCountResponse::CopyFrom(const MultiIndexMultiCountResponse& 
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexMultiCountResponse)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexMultiCountResponse::IsInitialized() const {
-
   return true;
 }
 
@@ -7884,24 +7227,20 @@ void MultiIndexMultiCountResponse::Swap(MultiIndexMultiCountResponse* other) {
   InternalSwap(other);
 }
 void MultiIndexMultiCountResponse::InternalSwap(MultiIndexMultiCountResponse* other) {
-  std::swap(processing_time_ms_, other->processing_time_ms_);
   count_.UnsafeArenaSwap(&other->count_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(processing_time_ms_, other->processing_time_ms_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexMultiCountResponse::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexMultiCountResponse_descriptor_;
-  metadata.reflection = MultiIndexMultiCountResponse_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[21];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MultiIndexMultiCountResponse
 
-// optional int64 processing_time_ms = 2;
+// int64 processing_time_ms = 2;
 void MultiIndexMultiCountResponse::clear_processing_time_ms() {
   processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
@@ -7945,9 +7284,6 @@ MultiIndexMultiCountResponse::mutable_count() {
   return &count_;
 }
 
-inline const MultiIndexMultiCountResponse* MultiIndexMultiCountResponse::internal_default_instance() {
-  return &MultiIndexMultiCountResponse_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7958,19 +7294,18 @@ const int MultiIndexMultiAddRequest::kMultiIndexAddRequestFieldNumber;
 
 MultiIndexMultiAddRequest::MultiIndexMultiAddRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexMultiAddRequest)
 }
-
-void MultiIndexMultiAddRequest::InitAsDefaultInstance() {
-}
-
 MultiIndexMultiAddRequest::MultiIndexMultiAddRequest(const MultiIndexMultiAddRequest& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      multi_index_add_request_(from.multi_index_add_request_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexMultiAddRequest)
 }
 
@@ -7992,16 +7327,14 @@ void MultiIndexMultiAddRequest::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexMultiAddRequest::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexMultiAddRequest_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[22].descriptor;
 }
 
 const MultiIndexMultiAddRequest& MultiIndexMultiAddRequest::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiAddRequest> MultiIndexMultiAddRequest_default_instance_;
 
 MultiIndexMultiAddRequest* MultiIndexMultiAddRequest::New(::google::protobuf::Arena* arena) const {
   MultiIndexMultiAddRequest* n = new MultiIndexMultiAddRequest;
@@ -8022,23 +7355,20 @@ bool MultiIndexMultiAddRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexMultiAddRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .similia.proto.MultiIndexAddRequest multi_index_add_request = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(input->IncrementRecursionDepth());
-         parse_loop_multi_index_add_request:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
                 input, add_multi_index_add_request()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(10)) goto parse_loop_multi_index_add_request;
         input->UnsafeDecrementRecursionDepth();
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -8077,7 +7407,7 @@ void MultiIndexMultiAddRequest::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexMultiAddRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexMultiAddRequest)
   // repeated .similia.proto.MultiIndexAddRequest multi_index_add_request = 1;
   for (unsigned int i = 0, n = this->multi_index_add_request_size(); i < n; i++) {
@@ -8114,7 +7444,7 @@ size_t MultiIndexMultiAddRequest::ByteSizeLong() const {
 
 void MultiIndexMultiAddRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexMultiAddRequest)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexMultiAddRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexMultiAddRequest>(
           &from);
@@ -8123,21 +7453,14 @@ void MultiIndexMultiAddRequest::MergeFrom(const ::google::protobuf::Message& fro
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexMultiAddRequest)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexMultiAddRequest::MergeFrom(const MultiIndexMultiAddRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexMultiAddRequest)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexMultiAddRequest::UnsafeMergeFrom(const MultiIndexMultiAddRequest& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   multi_index_add_request_.MergeFrom(from.multi_index_add_request_);
 }
 
@@ -8152,11 +7475,10 @@ void MultiIndexMultiAddRequest::CopyFrom(const MultiIndexMultiAddRequest& from) 
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexMultiAddRequest)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexMultiAddRequest::IsInitialized() const {
-
   return true;
 }
 
@@ -8166,16 +7488,12 @@ void MultiIndexMultiAddRequest::Swap(MultiIndexMultiAddRequest* other) {
 }
 void MultiIndexMultiAddRequest::InternalSwap(MultiIndexMultiAddRequest* other) {
   multi_index_add_request_.UnsafeArenaSwap(&other->multi_index_add_request_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexMultiAddRequest::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexMultiAddRequest_descriptor_;
-  metadata.reflection = MultiIndexMultiAddRequest_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[22];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -8211,9 +7529,6 @@ MultiIndexMultiAddRequest::multi_index_add_request() const {
   return multi_index_add_request_;
 }
 
-inline const MultiIndexMultiAddRequest* MultiIndexMultiAddRequest::internal_default_instance() {
-  return &MultiIndexMultiAddRequest_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -8224,19 +7539,18 @@ const int MultiIndexMultiAddResponse::kProcessingTimeMsFieldNumber;
 
 MultiIndexMultiAddResponse::MultiIndexMultiAddResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexMultiAddResponse)
 }
-
-void MultiIndexMultiAddResponse::InitAsDefaultInstance() {
-}
-
 MultiIndexMultiAddResponse::MultiIndexMultiAddResponse(const MultiIndexMultiAddResponse& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  processing_time_ms_ = from.processing_time_ms_;
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexMultiAddResponse)
 }
 
@@ -8259,16 +7573,14 @@ void MultiIndexMultiAddResponse::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexMultiAddResponse::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexMultiAddResponse_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[23].descriptor;
 }
 
 const MultiIndexMultiAddResponse& MultiIndexMultiAddResponse::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiAddResponse> MultiIndexMultiAddResponse_default_instance_;
 
 MultiIndexMultiAddResponse* MultiIndexMultiAddResponse::New(::google::protobuf::Arena* arena) const {
   MultiIndexMultiAddResponse* n = new MultiIndexMultiAddResponse;
@@ -8289,13 +7601,13 @@ bool MultiIndexMultiAddResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexMultiAddResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 processing_time_ms = 2;
+      // int64 processing_time_ms = 2;
       case 2: {
-        if (tag == 16) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -8303,7 +7615,6 @@ bool MultiIndexMultiAddResponse::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -8331,7 +7642,7 @@ failure:
 void MultiIndexMultiAddResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexMultiAddResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->processing_time_ms(), output);
   }
@@ -8341,9 +7652,9 @@ void MultiIndexMultiAddResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexMultiAddResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexMultiAddResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->processing_time_ms(), target);
   }
@@ -8356,7 +7667,7 @@ size_t MultiIndexMultiAddResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexMultiAddResponse)
   size_t total_size = 0;
 
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
@@ -8372,7 +7683,7 @@ size_t MultiIndexMultiAddResponse::ByteSizeLong() const {
 
 void MultiIndexMultiAddResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexMultiAddResponse)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexMultiAddResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexMultiAddResponse>(
           &from);
@@ -8381,21 +7692,14 @@ void MultiIndexMultiAddResponse::MergeFrom(const ::google::protobuf::Message& fr
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexMultiAddResponse)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexMultiAddResponse::MergeFrom(const MultiIndexMultiAddResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexMultiAddResponse)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexMultiAddResponse::UnsafeMergeFrom(const MultiIndexMultiAddResponse& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.processing_time_ms() != 0) {
     set_processing_time_ms(from.processing_time_ms());
   }
@@ -8412,11 +7716,10 @@ void MultiIndexMultiAddResponse::CopyFrom(const MultiIndexMultiAddResponse& from
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexMultiAddResponse)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexMultiAddResponse::IsInitialized() const {
-
   return true;
 }
 
@@ -8426,22 +7729,18 @@ void MultiIndexMultiAddResponse::Swap(MultiIndexMultiAddResponse* other) {
 }
 void MultiIndexMultiAddResponse::InternalSwap(MultiIndexMultiAddResponse* other) {
   std::swap(processing_time_ms_, other->processing_time_ms_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexMultiAddResponse::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexMultiAddResponse_descriptor_;
-  metadata.reflection = MultiIndexMultiAddResponse_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[23];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MultiIndexMultiAddResponse
 
-// optional int64 processing_time_ms = 2;
+// int64 processing_time_ms = 2;
 void MultiIndexMultiAddResponse::clear_processing_time_ms() {
   processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
@@ -8455,9 +7754,6 @@ void MultiIndexMultiAddResponse::set_processing_time_ms(::google::protobuf::int6
   // @@protoc_insertion_point(field_set:similia.proto.MultiIndexMultiAddResponse.processing_time_ms)
 }
 
-inline const MultiIndexMultiAddResponse* MultiIndexMultiAddResponse::internal_default_instance() {
-  return &MultiIndexMultiAddResponse_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -8469,21 +7765,26 @@ const int MultiIndexDeleteRequest::kIndexingIdsFieldNumber;
 
 MultiIndexDeleteRequest::MultiIndexDeleteRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexDeleteRequest)
 }
-
-void MultiIndexDeleteRequest::InitAsDefaultInstance() {
-  indexing_ids_ = const_cast< ::similia::proto::IndexingClustersIds*>(
-      ::similia::proto::IndexingClustersIds::internal_default_instance());
-}
-
 MultiIndexDeleteRequest::MultiIndexDeleteRequest(const MultiIndexDeleteRequest& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.id().size() > 0) {
+    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+  }
+  if (from.has_indexing_ids()) {
+    indexing_ids_ = new ::similia::proto::IndexingClustersIds(*from.indexing_ids_);
+  } else {
+    indexing_ids_ = NULL;
+  }
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexDeleteRequest)
 }
 
@@ -8500,7 +7801,7 @@ MultiIndexDeleteRequest::~MultiIndexDeleteRequest() {
 
 void MultiIndexDeleteRequest::SharedDtor() {
   id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != &MultiIndexDeleteRequest_default_instance_.get()) {
+  if (this != internal_default_instance()) {
     delete indexing_ids_;
   }
 }
@@ -8511,16 +7812,14 @@ void MultiIndexDeleteRequest::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexDeleteRequest::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexDeleteRequest_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[24].descriptor;
 }
 
 const MultiIndexDeleteRequest& MultiIndexDeleteRequest::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexDeleteRequest> MultiIndexDeleteRequest_default_instance_;
 
 MultiIndexDeleteRequest* MultiIndexDeleteRequest::New(::google::protobuf::Arena* arena) const {
   MultiIndexDeleteRequest* n = new MultiIndexDeleteRequest;
@@ -8533,7 +7832,9 @@ MultiIndexDeleteRequest* MultiIndexDeleteRequest::New(::google::protobuf::Arena*
 void MultiIndexDeleteRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.MultiIndexDeleteRequest)
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) delete indexing_ids_;
+  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) {
+    delete indexing_ids_;
+  }
   indexing_ids_ = NULL;
 }
 
@@ -8543,13 +7844,13 @@ bool MultiIndexDeleteRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexDeleteRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string id = 1;
+      // string id = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -8559,20 +7860,17 @@ bool MultiIndexDeleteRequest::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_indexing_ids;
         break;
       }
 
-      // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+      // .similia.proto.IndexingClustersIds indexing_ids = 2;
       case 2: {
-        if (tag == 18) {
-         parse_indexing_ids:
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_indexing_ids()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -8600,7 +7898,7 @@ failure:
 void MultiIndexDeleteRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexDeleteRequest)
-  // optional string id = 1;
+  // string id = 1;
   if (this->id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), this->id().length(),
@@ -8610,7 +7908,7 @@ void MultiIndexDeleteRequest::SerializeWithCachedSizes(
       1, this->id(), output);
   }
 
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+  // .similia.proto.IndexingClustersIds indexing_ids = 2;
   if (this->has_indexing_ids()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->indexing_ids_, output);
@@ -8621,9 +7919,9 @@ void MultiIndexDeleteRequest::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexDeleteRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexDeleteRequest)
-  // optional string id = 1;
+  // string id = 1;
   if (this->id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), this->id().length(),
@@ -8634,7 +7932,7 @@ void MultiIndexDeleteRequest::SerializeWithCachedSizes(
         1, this->id(), target);
   }
 
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+  // .similia.proto.IndexingClustersIds indexing_ids = 2;
   if (this->has_indexing_ids()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
@@ -8649,14 +7947,14 @@ size_t MultiIndexDeleteRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexDeleteRequest)
   size_t total_size = 0;
 
-  // optional string id = 1;
+  // string id = 1;
   if (this->id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->id());
   }
 
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+  // .similia.proto.IndexingClustersIds indexing_ids = 2;
   if (this->has_indexing_ids()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -8672,7 +7970,7 @@ size_t MultiIndexDeleteRequest::ByteSizeLong() const {
 
 void MultiIndexDeleteRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexDeleteRequest)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexDeleteRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexDeleteRequest>(
           &from);
@@ -8681,21 +7979,14 @@ void MultiIndexDeleteRequest::MergeFrom(const ::google::protobuf::Message& from)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexDeleteRequest)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexDeleteRequest::MergeFrom(const MultiIndexDeleteRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexDeleteRequest)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexDeleteRequest::UnsafeMergeFrom(const MultiIndexDeleteRequest& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.id().size() > 0) {
 
     id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
@@ -8716,11 +8007,10 @@ void MultiIndexDeleteRequest::CopyFrom(const MultiIndexDeleteRequest& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexDeleteRequest)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexDeleteRequest::IsInitialized() const {
-
   return true;
 }
 
@@ -8731,34 +8021,38 @@ void MultiIndexDeleteRequest::Swap(MultiIndexDeleteRequest* other) {
 void MultiIndexDeleteRequest::InternalSwap(MultiIndexDeleteRequest* other) {
   id_.Swap(&other->id_);
   std::swap(indexing_ids_, other->indexing_ids_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexDeleteRequest::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexDeleteRequest_descriptor_;
-  metadata.reflection = MultiIndexDeleteRequest_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[24];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MultiIndexDeleteRequest
 
-// optional string id = 1;
+// string id = 1;
 void MultiIndexDeleteRequest::clear_id() {
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& MultiIndexDeleteRequest::id() const {
   // @@protoc_insertion_point(field_get:similia.proto.MultiIndexDeleteRequest.id)
-  return id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return id_.GetNoArena();
 }
 void MultiIndexDeleteRequest::set_id(const ::std::string& value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:similia.proto.MultiIndexDeleteRequest.id)
 }
+#if LANG_CXX11
+void MultiIndexDeleteRequest::set_id(::std::string&& value) {
+  
+  id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:similia.proto.MultiIndexDeleteRequest.id)
+}
+#endif
 void MultiIndexDeleteRequest::set_id(const char* value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
@@ -8790,7 +8084,7 @@ void MultiIndexDeleteRequest::set_allocated_id(::std::string* id) {
   // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexDeleteRequest.id)
 }
 
-// optional .similia.proto.IndexingClustersIds indexing_ids = 2;
+// .similia.proto.IndexingClustersIds indexing_ids = 2;
 bool MultiIndexDeleteRequest::has_indexing_ids() const {
   return this != internal_default_instance() && indexing_ids_ != NULL;
 }
@@ -8829,9 +8123,6 @@ void MultiIndexDeleteRequest::set_allocated_indexing_ids(::similia::proto::Index
   // @@protoc_insertion_point(field_set_allocated:similia.proto.MultiIndexDeleteRequest.indexing_ids)
 }
 
-inline const MultiIndexDeleteRequest* MultiIndexDeleteRequest::internal_default_instance() {
-  return &MultiIndexDeleteRequest_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -8842,19 +8133,18 @@ const int MultiIndexDeleteResponse::kProcessingTimeMsFieldNumber;
 
 MultiIndexDeleteResponse::MultiIndexDeleteResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.MultiIndexDeleteResponse)
 }
-
-void MultiIndexDeleteResponse::InitAsDefaultInstance() {
-}
-
 MultiIndexDeleteResponse::MultiIndexDeleteResponse(const MultiIndexDeleteResponse& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  processing_time_ms_ = from.processing_time_ms_;
   // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexDeleteResponse)
 }
 
@@ -8877,16 +8167,14 @@ void MultiIndexDeleteResponse::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MultiIndexDeleteResponse::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MultiIndexDeleteResponse_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[25].descriptor;
 }
 
 const MultiIndexDeleteResponse& MultiIndexDeleteResponse::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<MultiIndexDeleteResponse> MultiIndexDeleteResponse_default_instance_;
 
 MultiIndexDeleteResponse* MultiIndexDeleteResponse::New(::google::protobuf::Arena* arena) const {
   MultiIndexDeleteResponse* n = new MultiIndexDeleteResponse;
@@ -8907,13 +8195,13 @@ bool MultiIndexDeleteResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexDeleteResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 processing_time_ms = 2;
+      // int64 processing_time_ms = 2;
       case 2: {
-        if (tag == 16) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -8921,7 +8209,6 @@ bool MultiIndexDeleteResponse::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -8949,7 +8236,7 @@ failure:
 void MultiIndexDeleteResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexDeleteResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->processing_time_ms(), output);
   }
@@ -8959,9 +8246,9 @@ void MultiIndexDeleteResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MultiIndexDeleteResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexDeleteResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->processing_time_ms(), target);
   }
@@ -8974,7 +8261,7 @@ size_t MultiIndexDeleteResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexDeleteResponse)
   size_t total_size = 0;
 
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
@@ -8990,7 +8277,7 @@ size_t MultiIndexDeleteResponse::ByteSizeLong() const {
 
 void MultiIndexDeleteResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexDeleteResponse)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const MultiIndexDeleteResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexDeleteResponse>(
           &from);
@@ -8999,21 +8286,14 @@ void MultiIndexDeleteResponse::MergeFrom(const ::google::protobuf::Message& from
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexDeleteResponse)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void MultiIndexDeleteResponse::MergeFrom(const MultiIndexDeleteResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexDeleteResponse)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void MultiIndexDeleteResponse::UnsafeMergeFrom(const MultiIndexDeleteResponse& from) {
-  GOOGLE_DCHECK(&from != this);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.processing_time_ms() != 0) {
     set_processing_time_ms(from.processing_time_ms());
   }
@@ -9030,11 +8310,10 @@ void MultiIndexDeleteResponse::CopyFrom(const MultiIndexDeleteResponse& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexDeleteResponse)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool MultiIndexDeleteResponse::IsInitialized() const {
-
   return true;
 }
 
@@ -9044,22 +8323,18 @@ void MultiIndexDeleteResponse::Swap(MultiIndexDeleteResponse* other) {
 }
 void MultiIndexDeleteResponse::InternalSwap(MultiIndexDeleteResponse* other) {
   std::swap(processing_time_ms_, other->processing_time_ms_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MultiIndexDeleteResponse::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MultiIndexDeleteResponse_descriptor_;
-  metadata.reflection = MultiIndexDeleteResponse_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[25];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MultiIndexDeleteResponse
 
-// optional int64 processing_time_ms = 2;
+// int64 processing_time_ms = 2;
 void MultiIndexDeleteResponse::clear_processing_time_ms() {
   processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
@@ -9073,9 +8348,6 @@ void MultiIndexDeleteResponse::set_processing_time_ms(::google::protobuf::int64 
   // @@protoc_insertion_point(field_set:similia.proto.MultiIndexDeleteResponse.processing_time_ms)
 }
 
-inline const MultiIndexDeleteResponse* MultiIndexDeleteResponse::internal_default_instance() {
-  return &MultiIndexDeleteResponse_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -9087,21 +8359,26 @@ const int QuantizationRequest::kImageIdFieldNumber;
 
 QuantizationRequest::QuantizationRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.QuantizationRequest)
 }
-
-void QuantizationRequest::InitAsDefaultInstance() {
-  features_ = const_cast< ::similia::proto::Features*>(
-      ::similia::proto::Features::internal_default_instance());
-}
-
 QuantizationRequest::QuantizationRequest(const QuantizationRequest& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  image_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.image_id().size() > 0) {
+    image_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_id_);
+  }
+  if (from.has_features()) {
+    features_ = new ::similia::proto::Features(*from.features_);
+  } else {
+    features_ = NULL;
+  }
   // @@protoc_insertion_point(copy_constructor:similia.proto.QuantizationRequest)
 }
 
@@ -9118,7 +8395,7 @@ QuantizationRequest::~QuantizationRequest() {
 
 void QuantizationRequest::SharedDtor() {
   image_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != &QuantizationRequest_default_instance_.get()) {
+  if (this != internal_default_instance()) {
     delete features_;
   }
 }
@@ -9129,16 +8406,14 @@ void QuantizationRequest::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* QuantizationRequest::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return QuantizationRequest_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[26].descriptor;
 }
 
 const QuantizationRequest& QuantizationRequest::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<QuantizationRequest> QuantizationRequest_default_instance_;
 
 QuantizationRequest* QuantizationRequest::New(::google::protobuf::Arena* arena) const {
   QuantizationRequest* n = new QuantizationRequest;
@@ -9150,9 +8425,11 @@ QuantizationRequest* QuantizationRequest::New(::google::protobuf::Arena* arena) 
 
 void QuantizationRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.QuantizationRequest)
-  if (GetArenaNoVirtual() == NULL && features_ != NULL) delete features_;
-  features_ = NULL;
   image_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == NULL && features_ != NULL) {
+    delete features_;
+  }
+  features_ = NULL;
 }
 
 bool QuantizationRequest::MergePartialFromCodedStream(
@@ -9161,26 +8438,24 @@ bool QuantizationRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.QuantizationRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .similia.proto.Features features = 1;
+      // .similia.proto.Features features = 1;
       case 1: {
-        if (tag == 10) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_features()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_image_id;
         break;
       }
 
-      // optional string image_id = 2;
+      // string image_id = 2;
       case 2: {
-        if (tag == 18) {
-         parse_image_id:
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_image_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -9190,7 +8465,6 @@ bool QuantizationRequest::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -9218,13 +8492,13 @@ failure:
 void QuantizationRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.QuantizationRequest)
-  // optional .similia.proto.Features features = 1;
+  // .similia.proto.Features features = 1;
   if (this->has_features()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->features_, output);
   }
 
-  // optional string image_id = 2;
+  // string image_id = 2;
   if (this->image_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->image_id().data(), this->image_id().length(),
@@ -9239,16 +8513,16 @@ void QuantizationRequest::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* QuantizationRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.QuantizationRequest)
-  // optional .similia.proto.Features features = 1;
+  // .similia.proto.Features features = 1;
   if (this->has_features()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         1, *this->features_, false, target);
   }
 
-  // optional string image_id = 2;
+  // string image_id = 2;
   if (this->image_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->image_id().data(), this->image_id().length(),
@@ -9267,18 +8541,18 @@ size_t QuantizationRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.QuantizationRequest)
   size_t total_size = 0;
 
-  // optional .similia.proto.Features features = 1;
-  if (this->has_features()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->features_);
-  }
-
-  // optional string image_id = 2;
+  // string image_id = 2;
   if (this->image_id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->image_id());
+  }
+
+  // .similia.proto.Features features = 1;
+  if (this->has_features()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->features_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -9290,7 +8564,7 @@ size_t QuantizationRequest::ByteSizeLong() const {
 
 void QuantizationRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.QuantizationRequest)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const QuantizationRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const QuantizationRequest>(
           &from);
@@ -9299,27 +8573,20 @@ void QuantizationRequest::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.QuantizationRequest)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void QuantizationRequest::MergeFrom(const QuantizationRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.QuantizationRequest)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void QuantizationRequest::UnsafeMergeFrom(const QuantizationRequest& from) {
-  GOOGLE_DCHECK(&from != this);
-  if (from.has_features()) {
-    mutable_features()->::similia::proto::Features::MergeFrom(from.features());
-  }
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.image_id().size() > 0) {
 
     image_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_id_);
+  }
+  if (from.has_features()) {
+    mutable_features()->::similia::proto::Features::MergeFrom(from.features());
   }
 }
 
@@ -9334,11 +8601,10 @@ void QuantizationRequest::CopyFrom(const QuantizationRequest& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.QuantizationRequest)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool QuantizationRequest::IsInitialized() const {
-
   return true;
 }
 
@@ -9347,24 +8613,20 @@ void QuantizationRequest::Swap(QuantizationRequest* other) {
   InternalSwap(other);
 }
 void QuantizationRequest::InternalSwap(QuantizationRequest* other) {
-  std::swap(features_, other->features_);
   image_id_.Swap(&other->image_id_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(features_, other->features_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata QuantizationRequest::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = QuantizationRequest_descriptor_;
-  metadata.reflection = QuantizationRequest_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[26];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // QuantizationRequest
 
-// optional .similia.proto.Features features = 1;
+// .similia.proto.Features features = 1;
 bool QuantizationRequest::has_features() const {
   return this != internal_default_instance() && features_ != NULL;
 }
@@ -9403,19 +8665,27 @@ void QuantizationRequest::set_allocated_features(::similia::proto::Features* fea
   // @@protoc_insertion_point(field_set_allocated:similia.proto.QuantizationRequest.features)
 }
 
-// optional string image_id = 2;
+// string image_id = 2;
 void QuantizationRequest::clear_image_id() {
   image_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& QuantizationRequest::image_id() const {
   // @@protoc_insertion_point(field_get:similia.proto.QuantizationRequest.image_id)
-  return image_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return image_id_.GetNoArena();
 }
 void QuantizationRequest::set_image_id(const ::std::string& value) {
   
   image_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:similia.proto.QuantizationRequest.image_id)
 }
+#if LANG_CXX11
+void QuantizationRequest::set_image_id(::std::string&& value) {
+  
+  image_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:similia.proto.QuantizationRequest.image_id)
+}
+#endif
 void QuantizationRequest::set_image_id(const char* value) {
   
   image_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
@@ -9447,9 +8717,6 @@ void QuantizationRequest::set_allocated_image_id(::std::string* image_id) {
   // @@protoc_insertion_point(field_set_allocated:similia.proto.QuantizationRequest.image_id)
 }
 
-inline const QuantizationRequest* QuantizationRequest::internal_default_instance() {
-  return &QuantizationRequest_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -9462,30 +8729,34 @@ const int QuantizationResponse::kIndexingIdsFieldNumber;
 
 QuantizationResponse::QuantizationResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:similia.proto.QuantizationResponse)
 }
-
-void QuantizationResponse::InitAsDefaultInstance() {
-  compressing_ids_ = const_cast< ::similia::proto::CompressingClustersIds*>(
-      ::similia::proto::CompressingClustersIds::internal_default_instance());
-  indexing_ids_ = const_cast< ::similia::proto::IndexingClustersIds*>(
-      ::similia::proto::IndexingClustersIds::internal_default_instance());
-}
-
 QuantizationResponse::QuantizationResponse(const QuantizationResponse& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_compressing_ids()) {
+    compressing_ids_ = new ::similia::proto::CompressingClustersIds(*from.compressing_ids_);
+  } else {
+    compressing_ids_ = NULL;
+  }
+  if (from.has_indexing_ids()) {
+    indexing_ids_ = new ::similia::proto::IndexingClustersIds(*from.indexing_ids_);
+  } else {
+    indexing_ids_ = NULL;
+  }
+  processing_time_ms_ = from.processing_time_ms_;
   // @@protoc_insertion_point(copy_constructor:similia.proto.QuantizationResponse)
 }
 
 void QuantizationResponse::SharedCtor() {
-  compressing_ids_ = NULL;
-  indexing_ids_ = NULL;
-  processing_time_ms_ = GOOGLE_LONGLONG(0);
+  ::memset(&compressing_ids_, 0, reinterpret_cast<char*>(&processing_time_ms_) -
+    reinterpret_cast<char*>(&compressing_ids_) + sizeof(processing_time_ms_));
   _cached_size_ = 0;
 }
 
@@ -9495,8 +8766,10 @@ QuantizationResponse::~QuantizationResponse() {
 }
 
 void QuantizationResponse::SharedDtor() {
-  if (this != &QuantizationResponse_default_instance_.get()) {
+  if (this != internal_default_instance()) {
     delete compressing_ids_;
+  }
+  if (this != internal_default_instance()) {
     delete indexing_ids_;
   }
 }
@@ -9507,16 +8780,14 @@ void QuantizationResponse::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* QuantizationResponse::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return QuantizationResponse_descriptor_;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[27].descriptor;
 }
 
 const QuantizationResponse& QuantizationResponse::default_instance() {
-  protobuf_InitDefaults_similia_2fproto_2fsimilia_2eproto();
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<QuantizationResponse> QuantizationResponse_default_instance_;
 
 QuantizationResponse* QuantizationResponse::New(::google::protobuf::Arena* arena) const {
   QuantizationResponse* n = new QuantizationResponse;
@@ -9528,11 +8799,15 @@ QuantizationResponse* QuantizationResponse::New(::google::protobuf::Arena* arena
 
 void QuantizationResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:similia.proto.QuantizationResponse)
-  processing_time_ms_ = GOOGLE_LONGLONG(0);
-  if (GetArenaNoVirtual() == NULL && compressing_ids_ != NULL) delete compressing_ids_;
+  if (GetArenaNoVirtual() == NULL && compressing_ids_ != NULL) {
+    delete compressing_ids_;
+  }
   compressing_ids_ = NULL;
-  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) delete indexing_ids_;
+  if (GetArenaNoVirtual() == NULL && indexing_ids_ != NULL) {
+    delete indexing_ids_;
+  }
   indexing_ids_ = NULL;
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
 
 bool QuantizationResponse::MergePartialFromCodedStream(
@@ -9541,13 +8816,13 @@ bool QuantizationResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:similia.proto.QuantizationResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 processing_time_ms = 2;
+      // int64 processing_time_ms = 2;
       case 2: {
-        if (tag == 16) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -9555,33 +8830,28 @@ bool QuantizationResponse::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_compressing_ids;
         break;
       }
 
-      // optional .similia.proto.CompressingClustersIds compressing_ids = 3;
+      // .similia.proto.CompressingClustersIds compressing_ids = 3;
       case 3: {
-        if (tag == 26) {
-         parse_compressing_ids:
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_compressing_ids()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_indexing_ids;
         break;
       }
 
-      // optional .similia.proto.IndexingClustersIds indexing_ids = 4;
+      // .similia.proto.IndexingClustersIds indexing_ids = 4;
       case 4: {
-        if (tag == 34) {
-         parse_indexing_ids:
+        if (tag == 34u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_indexing_ids()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -9609,18 +8879,18 @@ failure:
 void QuantizationResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:similia.proto.QuantizationResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->processing_time_ms(), output);
   }
 
-  // optional .similia.proto.CompressingClustersIds compressing_ids = 3;
+  // .similia.proto.CompressingClustersIds compressing_ids = 3;
   if (this->has_compressing_ids()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, *this->compressing_ids_, output);
   }
 
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 4;
+  // .similia.proto.IndexingClustersIds indexing_ids = 4;
   if (this->has_indexing_ids()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       4, *this->indexing_ids_, output);
@@ -9631,21 +8901,21 @@ void QuantizationResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* QuantizationResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:similia.proto.QuantizationResponse)
-  // optional int64 processing_time_ms = 2;
+  // int64 processing_time_ms = 2;
   if (this->processing_time_ms() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->processing_time_ms(), target);
   }
 
-  // optional .similia.proto.CompressingClustersIds compressing_ids = 3;
+  // .similia.proto.CompressingClustersIds compressing_ids = 3;
   if (this->has_compressing_ids()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         3, *this->compressing_ids_, false, target);
   }
 
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 4;
+  // .similia.proto.IndexingClustersIds indexing_ids = 4;
   if (this->has_indexing_ids()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
@@ -9660,25 +8930,25 @@ size_t QuantizationResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:similia.proto.QuantizationResponse)
   size_t total_size = 0;
 
-  // optional int64 processing_time_ms = 2;
-  if (this->processing_time_ms() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->processing_time_ms());
-  }
-
-  // optional .similia.proto.CompressingClustersIds compressing_ids = 3;
+  // .similia.proto.CompressingClustersIds compressing_ids = 3;
   if (this->has_compressing_ids()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->compressing_ids_);
   }
 
-  // optional .similia.proto.IndexingClustersIds indexing_ids = 4;
+  // .similia.proto.IndexingClustersIds indexing_ids = 4;
   if (this->has_indexing_ids()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->indexing_ids_);
+  }
+
+  // int64 processing_time_ms = 2;
+  if (this->processing_time_ms() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->processing_time_ms());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -9690,7 +8960,7 @@ size_t QuantizationResponse::ByteSizeLong() const {
 
 void QuantizationResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:similia.proto.QuantizationResponse)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const QuantizationResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const QuantizationResponse>(
           &from);
@@ -9699,29 +8969,22 @@ void QuantizationResponse::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.QuantizationResponse)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void QuantizationResponse::MergeFrom(const QuantizationResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.QuantizationResponse)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
-
-void QuantizationResponse::UnsafeMergeFrom(const QuantizationResponse& from) {
-  GOOGLE_DCHECK(&from != this);
-  if (from.processing_time_ms() != 0) {
-    set_processing_time_ms(from.processing_time_ms());
-  }
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_compressing_ids()) {
     mutable_compressing_ids()->::similia::proto::CompressingClustersIds::MergeFrom(from.compressing_ids());
   }
   if (from.has_indexing_ids()) {
     mutable_indexing_ids()->::similia::proto::IndexingClustersIds::MergeFrom(from.indexing_ids());
+  }
+  if (from.processing_time_ms() != 0) {
+    set_processing_time_ms(from.processing_time_ms());
   }
 }
 
@@ -9736,11 +8999,10 @@ void QuantizationResponse::CopyFrom(const QuantizationResponse& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.QuantizationResponse)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool QuantizationResponse::IsInitialized() const {
-
   return true;
 }
 
@@ -9749,25 +9011,21 @@ void QuantizationResponse::Swap(QuantizationResponse* other) {
   InternalSwap(other);
 }
 void QuantizationResponse::InternalSwap(QuantizationResponse* other) {
-  std::swap(processing_time_ms_, other->processing_time_ms_);
   std::swap(compressing_ids_, other->compressing_ids_);
   std::swap(indexing_ids_, other->indexing_ids_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(processing_time_ms_, other->processing_time_ms_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata QuantizationResponse::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = QuantizationResponse_descriptor_;
-  metadata.reflection = QuantizationResponse_reflection_;
-  return metadata;
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[27];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // QuantizationResponse
 
-// optional int64 processing_time_ms = 2;
+// int64 processing_time_ms = 2;
 void QuantizationResponse::clear_processing_time_ms() {
   processing_time_ms_ = GOOGLE_LONGLONG(0);
 }
@@ -9781,7 +9039,7 @@ void QuantizationResponse::set_processing_time_ms(::google::protobuf::int64 valu
   // @@protoc_insertion_point(field_set:similia.proto.QuantizationResponse.processing_time_ms)
 }
 
-// optional .similia.proto.CompressingClustersIds compressing_ids = 3;
+// .similia.proto.CompressingClustersIds compressing_ids = 3;
 bool QuantizationResponse::has_compressing_ids() const {
   return this != internal_default_instance() && compressing_ids_ != NULL;
 }
@@ -9820,7 +9078,7 @@ void QuantizationResponse::set_allocated_compressing_ids(::similia::proto::Compr
   // @@protoc_insertion_point(field_set_allocated:similia.proto.QuantizationResponse.compressing_ids)
 }
 
-// optional .similia.proto.IndexingClustersIds indexing_ids = 4;
+// .similia.proto.IndexingClustersIds indexing_ids = 4;
 bool QuantizationResponse::has_indexing_ids() const {
   return this != internal_default_instance() && indexing_ids_ != NULL;
 }
@@ -9859,9 +9117,6 @@ void QuantizationResponse::set_allocated_indexing_ids(::similia::proto::Indexing
   // @@protoc_insertion_point(field_set_allocated:similia.proto.QuantizationResponse.indexing_ids)
 }
 
-inline const QuantizationResponse* QuantizationResponse::internal_default_instance() {
-  return &QuantizationResponse_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
