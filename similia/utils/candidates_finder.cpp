@@ -183,6 +183,12 @@ std::vector<Candidate> CandidatesFinder::GetCandidates(
     return candidates;
   } else {
     LOG(ERROR) << "MultiGet error: " << status.error_code() << " : " << status.error_message();
+    // Note(Mathias) when this error happens, all subsequent requests fail with deadline exceeded on client side,
+    // while nothing bad is logged on the server side.
+    // This is a dirty quickfix.
+    if (status.error_message().find("Sent message larger than max") == 0) {
+      LOG(FATAL) << "We crash so that supervisor restart us.";
+    }
     return {};
   }
 
