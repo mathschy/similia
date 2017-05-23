@@ -69,6 +69,10 @@ class MultiIndexDeleteRequestDefaultTypeInternal : public ::google::protobuf::in
 } _MultiIndexDeleteRequest_default_instance_;
 class MultiIndexDeleteResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexDeleteResponse> {
 } _MultiIndexDeleteResponse_default_instance_;
+class MultiIndexMultiDeleteRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiDeleteRequest> {
+} _MultiIndexMultiDeleteRequest_default_instance_;
+class MultiIndexMultiDeleteResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MultiIndexMultiDeleteResponse> {
+} _MultiIndexMultiDeleteResponse_default_instance_;
 class QuantizationRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<QuantizationRequest> {
 } _QuantizationRequest_default_instance_;
 class QuantizationResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<QuantizationResponse> {
@@ -79,7 +83,7 @@ namespace protobuf_similia_2fproto_2fsimilia_2eproto {
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[28];
+::google::protobuf::Metadata file_level_metadata[30];
 
 }  // namespace
 
@@ -227,6 +231,16 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _oneof_case_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexDeleteResponse, processing_time_ms_),
   ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiDeleteRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiDeleteRequest, multi_index_delete_request_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiDeleteResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MultiIndexMultiDeleteResponse, processing_time_ms_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantizationRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -267,8 +281,10 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 126, -1, sizeof(MultiIndexMultiAddResponse)},
   { 131, -1, sizeof(MultiIndexDeleteRequest)},
   { 137, -1, sizeof(MultiIndexDeleteResponse)},
-  { 142, -1, sizeof(QuantizationRequest)},
-  { 148, -1, sizeof(QuantizationResponse)},
+  { 142, -1, sizeof(MultiIndexMultiDeleteRequest)},
+  { 147, -1, sizeof(MultiIndexMultiDeleteResponse)},
+  { 152, -1, sizeof(QuantizationRequest)},
+  { 158, -1, sizeof(QuantizationResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -297,6 +313,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexMultiAddResponse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexDeleteRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexDeleteResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexMultiDeleteRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MultiIndexMultiDeleteResponse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_QuantizationRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_QuantizationResponse_default_instance_),
 };
@@ -319,7 +337,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 28);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 30);
   const ::google::protobuf::Descriptor* CompressedElementsMap_CompressedElementEntry_descriptor = protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[10].descriptor;
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
         CompressedElementsMap_CompressedElementEntry_descriptor,
@@ -385,10 +403,14 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[24].reflection;
   _MultiIndexDeleteResponse_default_instance_.Shutdown();
   delete file_level_metadata[25].reflection;
-  _QuantizationRequest_default_instance_.Shutdown();
+  _MultiIndexMultiDeleteRequest_default_instance_.Shutdown();
   delete file_level_metadata[26].reflection;
-  _QuantizationResponse_default_instance_.Shutdown();
+  _MultiIndexMultiDeleteResponse_default_instance_.Shutdown();
   delete file_level_metadata[27].reflection;
+  _QuantizationRequest_default_instance_.Shutdown();
+  delete file_level_metadata[28].reflection;
+  _QuantizationResponse_default_instance_.Shutdown();
+  delete file_level_metadata[29].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -420,6 +442,8 @@ void TableStruct::InitDefaultsImpl() {
   _MultiIndexMultiAddResponse_default_instance_.DefaultConstruct();
   _MultiIndexDeleteRequest_default_instance_.DefaultConstruct();
   _MultiIndexDeleteResponse_default_instance_.DefaultConstruct();
+  _MultiIndexMultiDeleteRequest_default_instance_.DefaultConstruct();
+  _MultiIndexMultiDeleteResponse_default_instance_.DefaultConstruct();
   _QuantizationRequest_default_instance_.DefaultConstruct();
   _QuantizationResponse_default_instance_.DefaultConstruct();
   _CompressedElement_default_instance_.get_mutable()->compressing_clusters_id_ = const_cast< ::similia::proto::CompressingClustersIds*>(
@@ -505,37 +529,44 @@ void AddDescriptorsImpl() {
       "st\022\n\n\002id\030\001 \001(\t\0228\n\014indexing_ids\030\002 \001(\0132\".s"
       "imilia.proto.IndexingClustersIds\"6\n\030Mult"
       "iIndexDeleteResponse\022\032\n\022processing_time_"
-      "ms\030\002 \001(\003\"R\n\023QuantizationRequest\022)\n\010featu"
-      "res\030\001 \001(\0132\027.similia.proto.Features\022\020\n\010im"
-      "age_id\030\002 \001(\t\"\254\001\n\024QuantizationResponse\022\032\n"
-      "\022processing_time_ms\030\002 \001(\003\022>\n\017compressing"
-      "_ids\030\003 \001(\0132%.similia.proto.CompressingCl"
-      "ustersIds\0228\n\014indexing_ids\030\004 \001(\0132\".simili"
-      "a.proto.IndexingClustersIds2g\n\007Similia\022\\"
-      "\n\rSimiliaSearch\022#.similia.proto.SimiliaS"
-      "earchRequest\032$.similia.proto.SimiliaSear"
-      "chResponse\"\0002\310\004\n\022InvertedMultiIndex\022R\n\003A"
-      "dd\022#.similia.proto.MultiIndexAddRequest\032"
-      "$.similia.proto.MultiIndexAddResponse\"\000\022"
-      "R\n\003Get\022#.similia.proto.MultiIndexGetRequ"
-      "est\032$.similia.proto.MultiIndexGetRespons"
-      "e\"\000\022[\n\006Delete\022&.similia.proto.MultiIndex"
-      "DeleteRequest\032\'.similia.proto.MultiIndex"
-      "DeleteResponse\"\000\022a\n\010MultiGet\022(.similia.p"
-      "roto.MultiIndexMultiGetRequest\032).similia"
-      ".proto.MultiIndexMultiGetResponse\"\000\022g\n\nM"
-      "ultiCount\022*.similia.proto.MultiIndexMult"
-      "iCountRequest\032+.similia.proto.MultiIndex"
-      "MultiCountResponse\"\000\022a\n\010MultiAdd\022(.simil"
-      "ia.proto.MultiIndexMultiAddRequest\032).sim"
-      "ilia.proto.MultiIndexMultiAddResponse\"\0002"
-      "n\n\025MultiProductQuantizer\022U\n\010Quantize\022\".s"
-      "imilia.proto.QuantizationRequest\032#.simil"
-      "ia.proto.QuantizationResponse\"\000B&\n\026io.le"
-      "fty.similia.protoB\014SimiliaProtob\006proto3"
+      "ms\030\002 \001(\003\"j\n\034MultiIndexMultiDeleteRequest"
+      "\022J\n\032multi_index_delete_request\030\001 \003(\0132&.s"
+      "imilia.proto.MultiIndexDeleteRequest\";\n\035"
+      "MultiIndexMultiDeleteResponse\022\032\n\022process"
+      "ing_time_ms\030\001 \001(\003\"R\n\023QuantizationRequest"
+      "\022)\n\010features\030\001 \001(\0132\027.similia.proto.Featu"
+      "res\022\020\n\010image_id\030\002 \001(\t\"\254\001\n\024QuantizationRe"
+      "sponse\022\032\n\022processing_time_ms\030\002 \001(\003\022>\n\017co"
+      "mpressing_ids\030\003 \001(\0132%.similia.proto.Comp"
+      "ressingClustersIds\0228\n\014indexing_ids\030\004 \001(\013"
+      "2\".similia.proto.IndexingClustersIds2g\n\007"
+      "Similia\022\\\n\rSimiliaSearch\022#.similia.proto"
+      ".SimiliaSearchRequest\032$.similia.proto.Si"
+      "miliaSearchResponse\"\0002\264\005\n\022InvertedMultiI"
+      "ndex\022R\n\003Add\022#.similia.proto.MultiIndexAd"
+      "dRequest\032$.similia.proto.MultiIndexAddRe"
+      "sponse\"\000\022R\n\003Get\022#.similia.proto.MultiInd"
+      "exGetRequest\032$.similia.proto.MultiIndexG"
+      "etResponse\"\000\022[\n\006Delete\022&.similia.proto.M"
+      "ultiIndexDeleteRequest\032\'.similia.proto.M"
+      "ultiIndexDeleteResponse\"\000\022a\n\010MultiGet\022(."
+      "similia.proto.MultiIndexMultiGetRequest\032"
+      ").similia.proto.MultiIndexMultiGetRespon"
+      "se\"\000\022g\n\nMultiCount\022*.similia.proto.Multi"
+      "IndexMultiCountRequest\032+.similia.proto.M"
+      "ultiIndexMultiCountResponse\"\000\022a\n\010MultiAd"
+      "d\022(.similia.proto.MultiIndexMultiAddRequ"
+      "est\032).similia.proto.MultiIndexMultiAddRe"
+      "sponse\"\000\022j\n\013MultiDelete\022+.similia.proto."
+      "MultiIndexMultiDeleteRequest\032,.similia.p"
+      "roto.MultiIndexMultiDeleteResponse\"\0002n\n\025"
+      "MultiProductQuantizer\022U\n\010Quantize\022\".simi"
+      "lia.proto.QuantizationRequest\032#.similia."
+      "proto.QuantizationResponse\"\000B&\n\026io.lefty"
+      ".similia.protoB\014SimiliaProtob\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3359);
+      descriptor, 3636);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "similia/proto/similia.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -8353,6 +8384,476 @@ void MultiIndexDeleteResponse::set_processing_time_ms(::google::protobuf::int64 
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int MultiIndexMultiDeleteRequest::kMultiIndexDeleteRequestFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+MultiIndexMultiDeleteRequest::MultiIndexMultiDeleteRequest()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:similia.proto.MultiIndexMultiDeleteRequest)
+}
+MultiIndexMultiDeleteRequest::MultiIndexMultiDeleteRequest(const MultiIndexMultiDeleteRequest& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      multi_index_delete_request_(from.multi_index_delete_request_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexMultiDeleteRequest)
+}
+
+void MultiIndexMultiDeleteRequest::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+MultiIndexMultiDeleteRequest::~MultiIndexMultiDeleteRequest() {
+  // @@protoc_insertion_point(destructor:similia.proto.MultiIndexMultiDeleteRequest)
+  SharedDtor();
+}
+
+void MultiIndexMultiDeleteRequest::SharedDtor() {
+}
+
+void MultiIndexMultiDeleteRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* MultiIndexMultiDeleteRequest::descriptor() {
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[26].descriptor;
+}
+
+const MultiIndexMultiDeleteRequest& MultiIndexMultiDeleteRequest::default_instance() {
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+MultiIndexMultiDeleteRequest* MultiIndexMultiDeleteRequest::New(::google::protobuf::Arena* arena) const {
+  MultiIndexMultiDeleteRequest* n = new MultiIndexMultiDeleteRequest;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void MultiIndexMultiDeleteRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:similia.proto.MultiIndexMultiDeleteRequest)
+  multi_index_delete_request_.Clear();
+}
+
+bool MultiIndexMultiDeleteRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexMultiDeleteRequest)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .similia.proto.MultiIndexDeleteRequest multi_index_delete_request = 1;
+      case 1: {
+        if (tag == 10u) {
+          DO_(input->IncrementRecursionDepth());
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+                input, add_multi_index_delete_request()));
+        } else {
+          goto handle_unusual;
+        }
+        input->UnsafeDecrementRecursionDepth();
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:similia.proto.MultiIndexMultiDeleteRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:similia.proto.MultiIndexMultiDeleteRequest)
+  return false;
+#undef DO_
+}
+
+void MultiIndexMultiDeleteRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexMultiDeleteRequest)
+  // repeated .similia.proto.MultiIndexDeleteRequest multi_index_delete_request = 1;
+  for (unsigned int i = 0, n = this->multi_index_delete_request_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->multi_index_delete_request(i), output);
+  }
+
+  // @@protoc_insertion_point(serialize_end:similia.proto.MultiIndexMultiDeleteRequest)
+}
+
+::google::protobuf::uint8* MultiIndexMultiDeleteRequest::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexMultiDeleteRequest)
+  // repeated .similia.proto.MultiIndexDeleteRequest multi_index_delete_request = 1;
+  for (unsigned int i = 0, n = this->multi_index_delete_request_size(); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        1, this->multi_index_delete_request(i), false, target);
+  }
+
+  // @@protoc_insertion_point(serialize_to_array_end:similia.proto.MultiIndexMultiDeleteRequest)
+  return target;
+}
+
+size_t MultiIndexMultiDeleteRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexMultiDeleteRequest)
+  size_t total_size = 0;
+
+  // repeated .similia.proto.MultiIndexDeleteRequest multi_index_delete_request = 1;
+  {
+    unsigned int count = this->multi_index_delete_request_size();
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->multi_index_delete_request(i));
+    }
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void MultiIndexMultiDeleteRequest::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexMultiDeleteRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const MultiIndexMultiDeleteRequest* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexMultiDeleteRequest>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:similia.proto.MultiIndexMultiDeleteRequest)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexMultiDeleteRequest)
+    MergeFrom(*source);
+  }
+}
+
+void MultiIndexMultiDeleteRequest::MergeFrom(const MultiIndexMultiDeleteRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexMultiDeleteRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  multi_index_delete_request_.MergeFrom(from.multi_index_delete_request_);
+}
+
+void MultiIndexMultiDeleteRequest::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:similia.proto.MultiIndexMultiDeleteRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void MultiIndexMultiDeleteRequest::CopyFrom(const MultiIndexMultiDeleteRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexMultiDeleteRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MultiIndexMultiDeleteRequest::IsInitialized() const {
+  return true;
+}
+
+void MultiIndexMultiDeleteRequest::Swap(MultiIndexMultiDeleteRequest* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void MultiIndexMultiDeleteRequest::InternalSwap(MultiIndexMultiDeleteRequest* other) {
+  multi_index_delete_request_.UnsafeArenaSwap(&other->multi_index_delete_request_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata MultiIndexMultiDeleteRequest::GetMetadata() const {
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[26];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// MultiIndexMultiDeleteRequest
+
+// repeated .similia.proto.MultiIndexDeleteRequest multi_index_delete_request = 1;
+int MultiIndexMultiDeleteRequest::multi_index_delete_request_size() const {
+  return multi_index_delete_request_.size();
+}
+void MultiIndexMultiDeleteRequest::clear_multi_index_delete_request() {
+  multi_index_delete_request_.Clear();
+}
+const ::similia::proto::MultiIndexDeleteRequest& MultiIndexMultiDeleteRequest::multi_index_delete_request(int index) const {
+  // @@protoc_insertion_point(field_get:similia.proto.MultiIndexMultiDeleteRequest.multi_index_delete_request)
+  return multi_index_delete_request_.Get(index);
+}
+::similia::proto::MultiIndexDeleteRequest* MultiIndexMultiDeleteRequest::mutable_multi_index_delete_request(int index) {
+  // @@protoc_insertion_point(field_mutable:similia.proto.MultiIndexMultiDeleteRequest.multi_index_delete_request)
+  return multi_index_delete_request_.Mutable(index);
+}
+::similia::proto::MultiIndexDeleteRequest* MultiIndexMultiDeleteRequest::add_multi_index_delete_request() {
+  // @@protoc_insertion_point(field_add:similia.proto.MultiIndexMultiDeleteRequest.multi_index_delete_request)
+  return multi_index_delete_request_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::similia::proto::MultiIndexDeleteRequest >*
+MultiIndexMultiDeleteRequest::mutable_multi_index_delete_request() {
+  // @@protoc_insertion_point(field_mutable_list:similia.proto.MultiIndexMultiDeleteRequest.multi_index_delete_request)
+  return &multi_index_delete_request_;
+}
+const ::google::protobuf::RepeatedPtrField< ::similia::proto::MultiIndexDeleteRequest >&
+MultiIndexMultiDeleteRequest::multi_index_delete_request() const {
+  // @@protoc_insertion_point(field_list:similia.proto.MultiIndexMultiDeleteRequest.multi_index_delete_request)
+  return multi_index_delete_request_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int MultiIndexMultiDeleteResponse::kProcessingTimeMsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+MultiIndexMultiDeleteResponse::MultiIndexMultiDeleteResponse()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:similia.proto.MultiIndexMultiDeleteResponse)
+}
+MultiIndexMultiDeleteResponse::MultiIndexMultiDeleteResponse(const MultiIndexMultiDeleteResponse& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  processing_time_ms_ = from.processing_time_ms_;
+  // @@protoc_insertion_point(copy_constructor:similia.proto.MultiIndexMultiDeleteResponse)
+}
+
+void MultiIndexMultiDeleteResponse::SharedCtor() {
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
+}
+
+MultiIndexMultiDeleteResponse::~MultiIndexMultiDeleteResponse() {
+  // @@protoc_insertion_point(destructor:similia.proto.MultiIndexMultiDeleteResponse)
+  SharedDtor();
+}
+
+void MultiIndexMultiDeleteResponse::SharedDtor() {
+}
+
+void MultiIndexMultiDeleteResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* MultiIndexMultiDeleteResponse::descriptor() {
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[27].descriptor;
+}
+
+const MultiIndexMultiDeleteResponse& MultiIndexMultiDeleteResponse::default_instance() {
+  protobuf_similia_2fproto_2fsimilia_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+MultiIndexMultiDeleteResponse* MultiIndexMultiDeleteResponse::New(::google::protobuf::Arena* arena) const {
+  MultiIndexMultiDeleteResponse* n = new MultiIndexMultiDeleteResponse;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void MultiIndexMultiDeleteResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:similia.proto.MultiIndexMultiDeleteResponse)
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
+}
+
+bool MultiIndexMultiDeleteResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:similia.proto.MultiIndexMultiDeleteResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int64 processing_time_ms = 1;
+      case 1: {
+        if (tag == 8u) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &processing_time_ms_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:similia.proto.MultiIndexMultiDeleteResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:similia.proto.MultiIndexMultiDeleteResponse)
+  return false;
+#undef DO_
+}
+
+void MultiIndexMultiDeleteResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:similia.proto.MultiIndexMultiDeleteResponse)
+  // int64 processing_time_ms = 1;
+  if (this->processing_time_ms() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->processing_time_ms(), output);
+  }
+
+  // @@protoc_insertion_point(serialize_end:similia.proto.MultiIndexMultiDeleteResponse)
+}
+
+::google::protobuf::uint8* MultiIndexMultiDeleteResponse::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:similia.proto.MultiIndexMultiDeleteResponse)
+  // int64 processing_time_ms = 1;
+  if (this->processing_time_ms() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->processing_time_ms(), target);
+  }
+
+  // @@protoc_insertion_point(serialize_to_array_end:similia.proto.MultiIndexMultiDeleteResponse)
+  return target;
+}
+
+size_t MultiIndexMultiDeleteResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:similia.proto.MultiIndexMultiDeleteResponse)
+  size_t total_size = 0;
+
+  // int64 processing_time_ms = 1;
+  if (this->processing_time_ms() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->processing_time_ms());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void MultiIndexMultiDeleteResponse::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:similia.proto.MultiIndexMultiDeleteResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const MultiIndexMultiDeleteResponse* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const MultiIndexMultiDeleteResponse>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:similia.proto.MultiIndexMultiDeleteResponse)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:similia.proto.MultiIndexMultiDeleteResponse)
+    MergeFrom(*source);
+  }
+}
+
+void MultiIndexMultiDeleteResponse::MergeFrom(const MultiIndexMultiDeleteResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:similia.proto.MultiIndexMultiDeleteResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.processing_time_ms() != 0) {
+    set_processing_time_ms(from.processing_time_ms());
+  }
+}
+
+void MultiIndexMultiDeleteResponse::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:similia.proto.MultiIndexMultiDeleteResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void MultiIndexMultiDeleteResponse::CopyFrom(const MultiIndexMultiDeleteResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:similia.proto.MultiIndexMultiDeleteResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MultiIndexMultiDeleteResponse::IsInitialized() const {
+  return true;
+}
+
+void MultiIndexMultiDeleteResponse::Swap(MultiIndexMultiDeleteResponse* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void MultiIndexMultiDeleteResponse::InternalSwap(MultiIndexMultiDeleteResponse* other) {
+  std::swap(processing_time_ms_, other->processing_time_ms_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata MultiIndexMultiDeleteResponse::GetMetadata() const {
+  protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[27];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// MultiIndexMultiDeleteResponse
+
+// int64 processing_time_ms = 1;
+void MultiIndexMultiDeleteResponse::clear_processing_time_ms() {
+  processing_time_ms_ = GOOGLE_LONGLONG(0);
+}
+::google::protobuf::int64 MultiIndexMultiDeleteResponse::processing_time_ms() const {
+  // @@protoc_insertion_point(field_get:similia.proto.MultiIndexMultiDeleteResponse.processing_time_ms)
+  return processing_time_ms_;
+}
+void MultiIndexMultiDeleteResponse::set_processing_time_ms(::google::protobuf::int64 value) {
+  
+  processing_time_ms_ = value;
+  // @@protoc_insertion_point(field_set:similia.proto.MultiIndexMultiDeleteResponse.processing_time_ms)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int QuantizationRequest::kFeaturesFieldNumber;
 const int QuantizationRequest::kImageIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -8407,7 +8908,7 @@ void QuantizationRequest::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* QuantizationRequest::descriptor() {
   protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[26].descriptor;
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[28].descriptor;
 }
 
 const QuantizationRequest& QuantizationRequest::default_instance() {
@@ -8620,7 +9121,7 @@ void QuantizationRequest::InternalSwap(QuantizationRequest* other) {
 
 ::google::protobuf::Metadata QuantizationRequest::GetMetadata() const {
   protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[26];
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[28];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -8781,7 +9282,7 @@ void QuantizationResponse::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* QuantizationResponse::descriptor() {
   protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[27].descriptor;
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[29].descriptor;
 }
 
 const QuantizationResponse& QuantizationResponse::default_instance() {
@@ -9019,7 +9520,7 @@ void QuantizationResponse::InternalSwap(QuantizationResponse* other) {
 
 ::google::protobuf::Metadata QuantizationResponse::GetMetadata() const {
   protobuf_similia_2fproto_2fsimilia_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[27];
+  return protobuf_similia_2fproto_2fsimilia_2eproto::file_level_metadata[29];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS

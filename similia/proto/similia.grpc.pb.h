@@ -168,6 +168,11 @@ class InvertedMultiIndex final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiAddResponse>> AsyncMultiAdd(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiAddResponse>>(AsyncMultiAddRaw(context, request, cq));
     }
+    // Delete multiple elements
+    virtual ::grpc::Status MultiDelete(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest& request, ::similia::proto::MultiIndexMultiDeleteResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiDeleteResponse>> AsyncMultiDelete(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiDeleteResponse>>(AsyncMultiDeleteRaw(context, request, cq));
+    }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexAddResponse>* AsyncAddRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexAddRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexGetResponse>* AsyncGetRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexGetRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -175,6 +180,7 @@ class InvertedMultiIndex final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiGetResponse>* AsyncMultiGetRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiGetRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiCountResponse>* AsyncMultiCountRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiAddResponse>* AsyncMultiAddRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::similia::proto::MultiIndexMultiDeleteResponse>* AsyncMultiDeleteRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -203,6 +209,10 @@ class InvertedMultiIndex final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiAddResponse>> AsyncMultiAdd(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiAddResponse>>(AsyncMultiAddRaw(context, request, cq));
     }
+    ::grpc::Status MultiDelete(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest& request, ::similia::proto::MultiIndexMultiDeleteResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiDeleteResponse>> AsyncMultiDelete(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiDeleteResponse>>(AsyncMultiDeleteRaw(context, request, cq));
+    }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
@@ -212,12 +222,14 @@ class InvertedMultiIndex final {
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiGetResponse>* AsyncMultiGetRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiGetRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiCountResponse>* AsyncMultiCountRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiCountRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiAddResponse>* AsyncMultiAddRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiAddRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiDeleteResponse>* AsyncMultiDeleteRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::RpcMethod rpcmethod_Add_;
     const ::grpc::RpcMethod rpcmethod_Get_;
     const ::grpc::RpcMethod rpcmethod_Delete_;
     const ::grpc::RpcMethod rpcmethod_MultiGet_;
     const ::grpc::RpcMethod rpcmethod_MultiCount_;
     const ::grpc::RpcMethod rpcmethod_MultiAdd_;
+    const ::grpc::RpcMethod rpcmethod_MultiDelete_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -237,6 +249,8 @@ class InvertedMultiIndex final {
     virtual ::grpc::Status MultiCount(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiCountRequest* request, ::similia::proto::MultiIndexMultiCountResponse* response);
     // Add multiple elements to cells.
     virtual ::grpc::Status MultiAdd(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiAddRequest* request, ::similia::proto::MultiIndexMultiAddResponse* response);
+    // Delete multiple elements
+    virtual ::grpc::Status MultiDelete(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest* request, ::similia::proto::MultiIndexMultiDeleteResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_Add : public BaseClass {
@@ -358,7 +372,27 @@ class InvertedMultiIndex final {
       ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_Add<WithAsyncMethod_Get<WithAsyncMethod_Delete<WithAsyncMethod_MultiGet<WithAsyncMethod_MultiCount<WithAsyncMethod_MultiAdd<Service > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_MultiDelete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_MultiDelete() {
+      ::grpc::Service::MarkMethodAsync(6);
+    }
+    ~WithAsyncMethod_MultiDelete() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status MultiDelete(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest* request, ::similia::proto::MultiIndexMultiDeleteResponse* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestMultiDelete(::grpc::ServerContext* context, ::similia::proto::MultiIndexMultiDeleteRequest* request, ::grpc::ServerAsyncResponseWriter< ::similia::proto::MultiIndexMultiDeleteResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_Add<WithAsyncMethod_Get<WithAsyncMethod_Delete<WithAsyncMethod_MultiGet<WithAsyncMethod_MultiCount<WithAsyncMethod_MultiAdd<WithAsyncMethod_MultiDelete<Service > > > > > > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_Add : public BaseClass {
    private:
@@ -457,6 +491,23 @@ class InvertedMultiIndex final {
     }
     // disable synchronous version of this method
     ::grpc::Status MultiAdd(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiAddRequest* request, ::similia::proto::MultiIndexMultiAddResponse* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_MultiDelete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_MultiDelete() {
+      ::grpc::Service::MarkMethodGeneric(6);
+    }
+    ~WithGenericMethod_MultiDelete() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status MultiDelete(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest* request, ::similia::proto::MultiIndexMultiDeleteResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -581,9 +632,29 @@ class InvertedMultiIndex final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedMultiAdd(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::similia::proto::MultiIndexMultiAddRequest,::similia::proto::MultiIndexMultiAddResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_Add<WithStreamedUnaryMethod_Get<WithStreamedUnaryMethod_Delete<WithStreamedUnaryMethod_MultiGet<WithStreamedUnaryMethod_MultiCount<WithStreamedUnaryMethod_MultiAdd<Service > > > > > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_MultiDelete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_MultiDelete() {
+      ::grpc::Service::MarkMethodStreamed(6,
+        new ::grpc::StreamedUnaryHandler< ::similia::proto::MultiIndexMultiDeleteRequest, ::similia::proto::MultiIndexMultiDeleteResponse>(std::bind(&WithStreamedUnaryMethod_MultiDelete<BaseClass>::StreamedMultiDelete, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_MultiDelete() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status MultiDelete(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest* request, ::similia::proto::MultiIndexMultiDeleteResponse* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedMultiDelete(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::similia::proto::MultiIndexMultiDeleteRequest,::similia::proto::MultiIndexMultiDeleteResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_Add<WithStreamedUnaryMethod_Get<WithStreamedUnaryMethod_Delete<WithStreamedUnaryMethod_MultiGet<WithStreamedUnaryMethod_MultiCount<WithStreamedUnaryMethod_MultiAdd<WithStreamedUnaryMethod_MultiDelete<Service > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_Add<WithStreamedUnaryMethod_Get<WithStreamedUnaryMethod_Delete<WithStreamedUnaryMethod_MultiGet<WithStreamedUnaryMethod_MultiCount<WithStreamedUnaryMethod_MultiAdd<Service > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_Add<WithStreamedUnaryMethod_Get<WithStreamedUnaryMethod_Delete<WithStreamedUnaryMethod_MultiGet<WithStreamedUnaryMethod_MultiCount<WithStreamedUnaryMethod_MultiAdd<WithStreamedUnaryMethod_MultiDelete<Service > > > > > > > StreamedService;
 };
 
 // The service definition of the multi product quantizer (used by index processor)

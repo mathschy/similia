@@ -63,6 +63,7 @@ static const char* InvertedMultiIndex_method_names[] = {
   "/similia.proto.InvertedMultiIndex/MultiGet",
   "/similia.proto.InvertedMultiIndex/MultiCount",
   "/similia.proto.InvertedMultiIndex/MultiAdd",
+  "/similia.proto.InvertedMultiIndex/MultiDelete",
 };
 
 std::unique_ptr< InvertedMultiIndex::Stub> InvertedMultiIndex::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -77,6 +78,7 @@ InvertedMultiIndex::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>&
   , rpcmethod_MultiGet_(InvertedMultiIndex_method_names[3], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_MultiCount_(InvertedMultiIndex_method_names[4], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_MultiAdd_(InvertedMultiIndex_method_names[5], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_MultiDelete_(InvertedMultiIndex_method_names[6], ::grpc::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status InvertedMultiIndex::Stub::Add(::grpc::ClientContext* context, const ::similia::proto::MultiIndexAddRequest& request, ::similia::proto::MultiIndexAddResponse* response) {
@@ -127,6 +129,14 @@ InvertedMultiIndex::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>&
   return new ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiAddResponse>(channel_.get(), cq, rpcmethod_MultiAdd_, context, request);
 }
 
+::grpc::Status InvertedMultiIndex::Stub::MultiDelete(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest& request, ::similia::proto::MultiIndexMultiDeleteResponse* response) {
+  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_MultiDelete_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiDeleteResponse>* InvertedMultiIndex::Stub::AsyncMultiDeleteRaw(::grpc::ClientContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::similia::proto::MultiIndexMultiDeleteResponse>(channel_.get(), cq, rpcmethod_MultiDelete_, context, request);
+}
+
 InvertedMultiIndex::Service::Service() {
   AddMethod(new ::grpc::RpcServiceMethod(
       InvertedMultiIndex_method_names[0],
@@ -158,6 +168,11 @@ InvertedMultiIndex::Service::Service() {
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< InvertedMultiIndex::Service, ::similia::proto::MultiIndexMultiAddRequest, ::similia::proto::MultiIndexMultiAddResponse>(
           std::mem_fn(&InvertedMultiIndex::Service::MultiAdd), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      InvertedMultiIndex_method_names[6],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< InvertedMultiIndex::Service, ::similia::proto::MultiIndexMultiDeleteRequest, ::similia::proto::MultiIndexMultiDeleteResponse>(
+          std::mem_fn(&InvertedMultiIndex::Service::MultiDelete), this)));
 }
 
 InvertedMultiIndex::Service::~Service() {
@@ -199,6 +214,13 @@ InvertedMultiIndex::Service::~Service() {
 }
 
 ::grpc::Status InvertedMultiIndex::Service::MultiAdd(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiAddRequest* request, ::similia::proto::MultiIndexMultiAddResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status InvertedMultiIndex::Service::MultiDelete(::grpc::ServerContext* context, const ::similia::proto::MultiIndexMultiDeleteRequest* request, ::similia::proto::MultiIndexMultiDeleteResponse* response) {
   (void) context;
   (void) request;
   (void) response;

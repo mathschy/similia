@@ -159,4 +159,23 @@ Status InvertedMultiIndexService::MultiAdd(ServerContext* context,
   return Status::OK;
 }
 
+Status InvertedMultiIndexService::MultiDelete(ServerContext* context,
+                                              const proto::MultiIndexMultiDeleteRequest* request,
+                                              proto::MultiIndexMultiDeleteResponse* response) {
+  LOG(INFO) << "MultiDelete Request with " << request->multi_index_delete_request_size() << " elements ...";
+  Timer time_delete("inverted_multi_index_service.multi_delete.processing");
+
+  for (const auto& delete_request : request->multi_index_delete_request()) {
+    inverted_multi_index_->DeleteResidualInCluster(delete_request.indexing_ids().id(0), delete_request.indexing_ids().id(1),
+                                                   delete_request.id());
+  }
+
+  int64_t processing_time = time_delete.Stop();
+  response->set_processing_time_ms(processing_time);
+  LOG(INFO) << "MultiDelete with " << request->multi_index_delete_request_size() << " deletions took: " << processing_time
+            << " ms.";
+
+  return Status::OK;
+}
+
 }  // namespace similia

@@ -34,6 +34,10 @@ class InvertedMultiIndexService final: public proto::InvertedMultiIndex::Service
                         const proto::MultiIndexMultiAddRequest* request,
                         proto::MultiIndexMultiAddResponse* response) override;
 
+  grpc::Status MultiDelete(grpc::ServerContext* context,
+                           const proto::MultiIndexMultiDeleteRequest* request,
+                           proto::MultiIndexMultiDeleteResponse* response) override;
+
  private:
   InvertedMultiIndex* inverted_multi_index_;  // not owned.
 };

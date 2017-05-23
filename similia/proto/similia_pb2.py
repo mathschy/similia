@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='similia/proto/similia.proto',
   package='similia.proto',
   syntax='proto3',
-  serialized_pb=_b('\n\x1bsimilia/proto/similia.proto\x12\rsimilia.proto\"B\n\x0b\x46loatMatrix\x12\x10\n\x08num_rows\x18\x01 \x01(\x05\x12\x10\n\x08num_cols\x18\x02 \x01(\x05\x12\x0f\n\x07\x65lement\x18\x03 \x03(\x02\"\x1b\n\x08\x46\x65\x61tures\x12\x0f\n\x07\x65lement\x18\x01 \x03(\x02\"$\n\x16\x43ompressingClustersIds\x12\n\n\x02id\x18\x01 \x03(\x05\"!\n\x13IndexingClustersIds\x12\n\n\x02id\x18\x01 \x03(\x05\"g\n\x11\x43ompressedElement\x12\n\n\x02id\x18\x01 \x01(\t\x12\x46\n\x17\x63ompressing_clusters_id\x18\x02 \x01(\x0b\x32%.similia.proto.CompressingClustersIds\"J\n\x1bSerializedCompressedElement\x12\n\n\x02id\x18\x01 \x01(\t\x12\x1f\n\x17\x63ompressing_clusters_id\x18\x02 \x01(\x0c\"Z\n\x1a\x43ompressedElementsCombined\x12<\n\x12\x63ompressed_element\x18\x01 \x03(\x0b\x32 .similia.proto.CompressedElement\"n\n$SerializedCompressedElementsCombined\x12\x46\n\x12\x63ompressed_element\x18\x01 \x03(\x0b\x32*.similia.proto.SerializedCompressedElement\"h\n\x12\x43ompressedElements\x12\n\n\x02id\x18\x01 \x03(\t\x12\x46\n\x17\x63ompressing_clusters_id\x18\x02 \x03(\x0b\x32%.similia.proto.CompressingClustersIds\"K\n\x1cSerializedCompressedElements\x12\n\n\x02id\x18\x01 \x03(\t\x12\x1f\n\x17\x63ompressing_clusters_id\x18\x02 \x03(\x0c\"\xd1\x01\n\x15\x43ompressedElementsMap\x12W\n\x12\x63ompressed_element\x18\x01 \x03(\x0b\x32;.similia.proto.CompressedElementsMap.CompressedElementEntry\x1a_\n\x16\x43ompressedElementEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x34\n\x05value\x18\x02 \x01(\x0b\x32%.similia.proto.CompressingClustersIds:\x02\x38\x01\"h\n\x14SimiliaSearchRequest\x12\x10\n\x08image_id\x18\x01 \x01(\t\x12\x13\n\x0bnum_nearest\x18\x02 \x01(\x05\x12)\n\x08\x66\x65\x61tures\x18\x03 \x01(\x0b\x32\x17.similia.proto.Features\"_\n\x15SimiliaSearchResponse\x12\x10\n\x08image_id\x18\x01 \x03(\t\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\x12\x18\n\x10squared_distance\x18\x03 \x03(\x01\"\xa2\x01\n\x14MultiIndexAddRequest\x12\x10\n\x08image_id\x18\x01 \x01(\t\x12\x38\n\x0cindexing_ids\x18\x02 \x01(\x0b\x32\".similia.proto.IndexingClustersIds\x12>\n\x0f\x63ompressing_ids\x18\x03 \x01(\x0b\x32%.similia.proto.CompressingClustersIds\"3\n\x15MultiIndexAddResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\"P\n\x14MultiIndexGetRequest\x12\x38\n\x0cindexing_ids\x18\x01 \x01(\x0b\x32\".similia.proto.IndexingClustersIds\"P\n\x15MultiIndexGetResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\x12\x1b\n\x13\x63ompressed_elements\x18\x03 \x01(\x0c\"j\n\x19MultiIndexMultiGetRequest\x12\x38\n\x0cindexing_ids\x18\x01 \x03(\x0b\x32\".similia.proto.IndexingClustersIds\x12\x13\n\x0b\x63ount_limit\x18\x02 \x01(\x05\"U\n\x1aMultiIndexMultiGetResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\x12\x1b\n\x13\x63ompressed_elements\x18\x03 \x03(\x0c\"W\n\x1bMultiIndexMultiCountRequest\x12\x38\n\x0cindexing_ids\x18\x01 \x03(\x0b\x32\".similia.proto.IndexingClustersIds\"I\n\x1cMultiIndexMultiCountResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\x12\r\n\x05\x63ount\x18\x03 \x03(\x05\"a\n\x19MultiIndexMultiAddRequest\x12\x44\n\x17multi_index_add_request\x18\x01 \x03(\x0b\x32#.similia.proto.MultiIndexAddRequest\"8\n\x1aMultiIndexMultiAddResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\"_\n\x17MultiIndexDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x38\n\x0cindexing_ids\x18\x02 \x01(\x0b\x32\".similia.proto.IndexingClustersIds\"6\n\x18MultiIndexDeleteResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\"R\n\x13QuantizationRequest\x12)\n\x08\x66\x65\x61tures\x18\x01 \x01(\x0b\x32\x17.similia.proto.Features\x12\x10\n\x08image_id\x18\x02 \x01(\t\"\xac\x01\n\x14QuantizationResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\x12>\n\x0f\x63ompressing_ids\x18\x03 \x01(\x0b\x32%.similia.proto.CompressingClustersIds\x12\x38\n\x0cindexing_ids\x18\x04 \x01(\x0b\x32\".similia.proto.IndexingClustersIds2g\n\x07Similia\x12\\\n\rSimiliaSearch\x12#.similia.proto.SimiliaSearchRequest\x1a$.similia.proto.SimiliaSearchResponse\"\x00\x32\xc8\x04\n\x12InvertedMultiIndex\x12R\n\x03\x41\x64\x64\x12#.similia.proto.MultiIndexAddRequest\x1a$.similia.proto.MultiIndexAddResponse\"\x00\x12R\n\x03Get\x12#.similia.proto.MultiIndexGetRequest\x1a$.similia.proto.MultiIndexGetResponse\"\x00\x12[\n\x06\x44\x65lete\x12&.similia.proto.MultiIndexDeleteRequest\x1a\'.similia.proto.MultiIndexDeleteResponse\"\x00\x12\x61\n\x08MultiGet\x12(.similia.proto.MultiIndexMultiGetRequest\x1a).similia.proto.MultiIndexMultiGetResponse\"\x00\x12g\n\nMultiCount\x12*.similia.proto.MultiIndexMultiCountRequest\x1a+.similia.proto.MultiIndexMultiCountResponse\"\x00\x12\x61\n\x08MultiAdd\x12(.similia.proto.MultiIndexMultiAddRequest\x1a).similia.proto.MultiIndexMultiAddResponse\"\x00\x32n\n\x15MultiProductQuantizer\x12U\n\x08Quantize\x12\".similia.proto.QuantizationRequest\x1a#.similia.proto.QuantizationResponse\"\x00\x42&\n\x16io.lefty.similia.protoB\x0cSimiliaProtob\x06proto3')
+  serialized_pb=_b('\n\x1bsimilia/proto/similia.proto\x12\rsimilia.proto\"B\n\x0b\x46loatMatrix\x12\x10\n\x08num_rows\x18\x01 \x01(\x05\x12\x10\n\x08num_cols\x18\x02 \x01(\x05\x12\x0f\n\x07\x65lement\x18\x03 \x03(\x02\"\x1b\n\x08\x46\x65\x61tures\x12\x0f\n\x07\x65lement\x18\x01 \x03(\x02\"$\n\x16\x43ompressingClustersIds\x12\n\n\x02id\x18\x01 \x03(\x05\"!\n\x13IndexingClustersIds\x12\n\n\x02id\x18\x01 \x03(\x05\"g\n\x11\x43ompressedElement\x12\n\n\x02id\x18\x01 \x01(\t\x12\x46\n\x17\x63ompressing_clusters_id\x18\x02 \x01(\x0b\x32%.similia.proto.CompressingClustersIds\"J\n\x1bSerializedCompressedElement\x12\n\n\x02id\x18\x01 \x01(\t\x12\x1f\n\x17\x63ompressing_clusters_id\x18\x02 \x01(\x0c\"Z\n\x1a\x43ompressedElementsCombined\x12<\n\x12\x63ompressed_element\x18\x01 \x03(\x0b\x32 .similia.proto.CompressedElement\"n\n$SerializedCompressedElementsCombined\x12\x46\n\x12\x63ompressed_element\x18\x01 \x03(\x0b\x32*.similia.proto.SerializedCompressedElement\"h\n\x12\x43ompressedElements\x12\n\n\x02id\x18\x01 \x03(\t\x12\x46\n\x17\x63ompressing_clusters_id\x18\x02 \x03(\x0b\x32%.similia.proto.CompressingClustersIds\"K\n\x1cSerializedCompressedElements\x12\n\n\x02id\x18\x01 \x03(\t\x12\x1f\n\x17\x63ompressing_clusters_id\x18\x02 \x03(\x0c\"\xd1\x01\n\x15\x43ompressedElementsMap\x12W\n\x12\x63ompressed_element\x18\x01 \x03(\x0b\x32;.similia.proto.CompressedElementsMap.CompressedElementEntry\x1a_\n\x16\x43ompressedElementEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x34\n\x05value\x18\x02 \x01(\x0b\x32%.similia.proto.CompressingClustersIds:\x02\x38\x01\"h\n\x14SimiliaSearchRequest\x12\x10\n\x08image_id\x18\x01 \x01(\t\x12\x13\n\x0bnum_nearest\x18\x02 \x01(\x05\x12)\n\x08\x66\x65\x61tures\x18\x03 \x01(\x0b\x32\x17.similia.proto.Features\"_\n\x15SimiliaSearchResponse\x12\x10\n\x08image_id\x18\x01 \x03(\t\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\x12\x18\n\x10squared_distance\x18\x03 \x03(\x01\"\xa2\x01\n\x14MultiIndexAddRequest\x12\x10\n\x08image_id\x18\x01 \x01(\t\x12\x38\n\x0cindexing_ids\x18\x02 \x01(\x0b\x32\".similia.proto.IndexingClustersIds\x12>\n\x0f\x63ompressing_ids\x18\x03 \x01(\x0b\x32%.similia.proto.CompressingClustersIds\"3\n\x15MultiIndexAddResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\"P\n\x14MultiIndexGetRequest\x12\x38\n\x0cindexing_ids\x18\x01 \x01(\x0b\x32\".similia.proto.IndexingClustersIds\"P\n\x15MultiIndexGetResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\x12\x1b\n\x13\x63ompressed_elements\x18\x03 \x01(\x0c\"j\n\x19MultiIndexMultiGetRequest\x12\x38\n\x0cindexing_ids\x18\x01 \x03(\x0b\x32\".similia.proto.IndexingClustersIds\x12\x13\n\x0b\x63ount_limit\x18\x02 \x01(\x05\"U\n\x1aMultiIndexMultiGetResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\x12\x1b\n\x13\x63ompressed_elements\x18\x03 \x03(\x0c\"W\n\x1bMultiIndexMultiCountRequest\x12\x38\n\x0cindexing_ids\x18\x01 \x03(\x0b\x32\".similia.proto.IndexingClustersIds\"I\n\x1cMultiIndexMultiCountResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\x12\r\n\x05\x63ount\x18\x03 \x03(\x05\"a\n\x19MultiIndexMultiAddRequest\x12\x44\n\x17multi_index_add_request\x18\x01 \x03(\x0b\x32#.similia.proto.MultiIndexAddRequest\"8\n\x1aMultiIndexMultiAddResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\"_\n\x17MultiIndexDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x38\n\x0cindexing_ids\x18\x02 \x01(\x0b\x32\".similia.proto.IndexingClustersIds\"6\n\x18MultiIndexDeleteResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\"j\n\x1cMultiIndexMultiDeleteRequest\x12J\n\x1amulti_index_delete_request\x18\x01 \x03(\x0b\x32&.similia.proto.MultiIndexDeleteRequest\";\n\x1dMultiIndexMultiDeleteResponse\x12\x1a\n\x12processing_time_ms\x18\x01 \x01(\x03\"R\n\x13QuantizationRequest\x12)\n\x08\x66\x65\x61tures\x18\x01 \x01(\x0b\x32\x17.similia.proto.Features\x12\x10\n\x08image_id\x18\x02 \x01(\t\"\xac\x01\n\x14QuantizationResponse\x12\x1a\n\x12processing_time_ms\x18\x02 \x01(\x03\x12>\n\x0f\x63ompressing_ids\x18\x03 \x01(\x0b\x32%.similia.proto.CompressingClustersIds\x12\x38\n\x0cindexing_ids\x18\x04 \x01(\x0b\x32\".similia.proto.IndexingClustersIds2g\n\x07Similia\x12\\\n\rSimiliaSearch\x12#.similia.proto.SimiliaSearchRequest\x1a$.similia.proto.SimiliaSearchResponse\"\x00\x32\xb4\x05\n\x12InvertedMultiIndex\x12R\n\x03\x41\x64\x64\x12#.similia.proto.MultiIndexAddRequest\x1a$.similia.proto.MultiIndexAddResponse\"\x00\x12R\n\x03Get\x12#.similia.proto.MultiIndexGetRequest\x1a$.similia.proto.MultiIndexGetResponse\"\x00\x12[\n\x06\x44\x65lete\x12&.similia.proto.MultiIndexDeleteRequest\x1a\'.similia.proto.MultiIndexDeleteResponse\"\x00\x12\x61\n\x08MultiGet\x12(.similia.proto.MultiIndexMultiGetRequest\x1a).similia.proto.MultiIndexMultiGetResponse\"\x00\x12g\n\nMultiCount\x12*.similia.proto.MultiIndexMultiCountRequest\x1a+.similia.proto.MultiIndexMultiCountResponse\"\x00\x12\x61\n\x08MultiAdd\x12(.similia.proto.MultiIndexMultiAddRequest\x1a).similia.proto.MultiIndexMultiAddResponse\"\x00\x12j\n\x0bMultiDelete\x12+.similia.proto.MultiIndexMultiDeleteRequest\x1a,.similia.proto.MultiIndexMultiDeleteResponse\"\x00\x32n\n\x15MultiProductQuantizer\x12U\n\x08Quantize\x12\".similia.proto.QuantizationRequest\x1a#.similia.proto.QuantizationResponse\"\x00\x42&\n\x16io.lefty.similia.protoB\x0cSimiliaProtob\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -957,6 +957,68 @@ _MULTIINDEXDELETERESPONSE = _descriptor.Descriptor(
 )
 
 
+_MULTIINDEXMULTIDELETEREQUEST = _descriptor.Descriptor(
+  name='MultiIndexMultiDeleteRequest',
+  full_name='similia.proto.MultiIndexMultiDeleteRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='multi_index_delete_request', full_name='similia.proto.MultiIndexMultiDeleteRequest.multi_index_delete_request', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2250,
+  serialized_end=2356,
+)
+
+
+_MULTIINDEXMULTIDELETERESPONSE = _descriptor.Descriptor(
+  name='MultiIndexMultiDeleteResponse',
+  full_name='similia.proto.MultiIndexMultiDeleteResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='processing_time_ms', full_name='similia.proto.MultiIndexMultiDeleteResponse.processing_time_ms', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2358,
+  serialized_end=2417,
+)
+
+
 _QUANTIZATIONREQUEST = _descriptor.Descriptor(
   name='QuantizationRequest',
   full_name='similia.proto.QuantizationRequest',
@@ -990,8 +1052,8 @@ _QUANTIZATIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2250,
-  serialized_end=2332,
+  serialized_start=2419,
+  serialized_end=2501,
 )
 
 
@@ -1035,8 +1097,8 @@ _QUANTIZATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2335,
-  serialized_end=2507,
+  serialized_start=2504,
+  serialized_end=2676,
 )
 
 _COMPRESSEDELEMENT.fields_by_name['compressing_clusters_id'].message_type = _COMPRESSINGCLUSTERSIDS
@@ -1054,6 +1116,7 @@ _MULTIINDEXMULTIGETREQUEST.fields_by_name['indexing_ids'].message_type = _INDEXI
 _MULTIINDEXMULTICOUNTREQUEST.fields_by_name['indexing_ids'].message_type = _INDEXINGCLUSTERSIDS
 _MULTIINDEXMULTIADDREQUEST.fields_by_name['multi_index_add_request'].message_type = _MULTIINDEXADDREQUEST
 _MULTIINDEXDELETEREQUEST.fields_by_name['indexing_ids'].message_type = _INDEXINGCLUSTERSIDS
+_MULTIINDEXMULTIDELETEREQUEST.fields_by_name['multi_index_delete_request'].message_type = _MULTIINDEXDELETEREQUEST
 _QUANTIZATIONREQUEST.fields_by_name['features'].message_type = _FEATURES
 _QUANTIZATIONRESPONSE.fields_by_name['compressing_ids'].message_type = _COMPRESSINGCLUSTERSIDS
 _QUANTIZATIONRESPONSE.fields_by_name['indexing_ids'].message_type = _INDEXINGCLUSTERSIDS
@@ -1082,6 +1145,8 @@ DESCRIPTOR.message_types_by_name['MultiIndexMultiAddRequest'] = _MULTIINDEXMULTI
 DESCRIPTOR.message_types_by_name['MultiIndexMultiAddResponse'] = _MULTIINDEXMULTIADDRESPONSE
 DESCRIPTOR.message_types_by_name['MultiIndexDeleteRequest'] = _MULTIINDEXDELETEREQUEST
 DESCRIPTOR.message_types_by_name['MultiIndexDeleteResponse'] = _MULTIINDEXDELETERESPONSE
+DESCRIPTOR.message_types_by_name['MultiIndexMultiDeleteRequest'] = _MULTIINDEXMULTIDELETEREQUEST
+DESCRIPTOR.message_types_by_name['MultiIndexMultiDeleteResponse'] = _MULTIINDEXMULTIDELETERESPONSE
 DESCRIPTOR.message_types_by_name['QuantizationRequest'] = _QUANTIZATIONREQUEST
 DESCRIPTOR.message_types_by_name['QuantizationResponse'] = _QUANTIZATIONRESPONSE
 
@@ -1267,6 +1332,20 @@ MultiIndexDeleteResponse = _reflection.GeneratedProtocolMessageType('MultiIndexD
   # @@protoc_insertion_point(class_scope:similia.proto.MultiIndexDeleteResponse)
   ))
 _sym_db.RegisterMessage(MultiIndexDeleteResponse)
+
+MultiIndexMultiDeleteRequest = _reflection.GeneratedProtocolMessageType('MultiIndexMultiDeleteRequest', (_message.Message,), dict(
+  DESCRIPTOR = _MULTIINDEXMULTIDELETEREQUEST,
+  __module__ = 'similia.proto.similia_pb2'
+  # @@protoc_insertion_point(class_scope:similia.proto.MultiIndexMultiDeleteRequest)
+  ))
+_sym_db.RegisterMessage(MultiIndexMultiDeleteRequest)
+
+MultiIndexMultiDeleteResponse = _reflection.GeneratedProtocolMessageType('MultiIndexMultiDeleteResponse', (_message.Message,), dict(
+  DESCRIPTOR = _MULTIINDEXMULTIDELETERESPONSE,
+  __module__ = 'similia.proto.similia_pb2'
+  # @@protoc_insertion_point(class_scope:similia.proto.MultiIndexMultiDeleteResponse)
+  ))
+_sym_db.RegisterMessage(MultiIndexMultiDeleteResponse)
 
 QuantizationRequest = _reflection.GeneratedProtocolMessageType('QuantizationRequest', (_message.Message,), dict(
   DESCRIPTOR = _QUANTIZATIONREQUEST,

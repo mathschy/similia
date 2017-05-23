@@ -198,6 +198,15 @@ message MultiIndexDeleteResponse {
   int64 processing_time_ms = 2;
 }
 
+// Request to delete multiple elements in the MultiIndex.
+message MultiIndexMultiDeleteRequest {
+  repeated MultiIndexDeleteRequest multi_index_delete_request = 1;
+}
+
+// Response to MultiIndexMultiDeleteRequest.
+message MultiIndexMultiDeleteResponse {
+  int64 processing_time_ms = 1;
+}
 
 // The service definition of the inverted multi index (read by similia and written by index processor)
 service InvertedMultiIndex {
@@ -218,6 +227,9 @@ service InvertedMultiIndex {
 
   // Add multiple elements to cells.
   rpc MultiAdd(MultiIndexMultiAddRequest) returns (MultiIndexMultiAddResponse) {}
+
+  // Delete multiple elements
+  rpc MultiDelete(MultiIndexMultiDeleteRequest) returns (MultiIndexMultiDeleteResponse) {}
 }
 
 // The quantization request
