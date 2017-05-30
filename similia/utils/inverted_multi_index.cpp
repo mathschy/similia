@@ -145,4 +145,13 @@ void InvertedMultiIndex::DeleteResidualInCluster(int cluster_id1, int cluster_id
   Status s = db_->Delete(WriteOptions(), key);
   CHECK(s.ok()) << s.ToString();
 }
+
+void InvertedMultiIndex::BatchDeleteResidualsInClusters(const std::vector<KeyIds> &key_ids) {
+  rocksdb::WriteBatch batch;
+  for (const KeyIds& key_id : key_ids) {
+    batch.Delete(BuildKeyPrefix(key_id.cluster_id1, key_id.cluster_id2) + key_id.residual_id);
+  }
+  Status s = db_->Write(WriteOptions(), &batch);
+  CHECK(s.ok()) << s.ToString();
+}
 }  // namespace similia

@@ -209,6 +209,19 @@ TEST_F(InvertedMultiIndexTest, AddAndDelete) {
   EXPECT_TRUE(message_differencer_.Equals(compressed_elements, residuals_compressed));
 }
 
+TEST_F(InvertedMultiIndexTest, AddsAndMultiDelete) {
+  CompressedElements compressed_elements_1 = BuildOneCompressedElement("image_id_1", 1);
+  inverted_index_->AddResidualCompressedToCluster(1, 2, compressed_elements_1);
+  CompressedElements compressed_elements_2 = BuildOneCompressedElement("image_id_2", 2);
+  inverted_index_->AddResidualCompressedToCluster(2, 3, compressed_elements_2);
+  std::vector<similia::KeyIds> key_ids = {{1, 2, "image_id_1"}, {2, 3, "image_id_2"}};
+  inverted_index_->BatchDeleteResidualsInClusters(key_ids);
+  int count_1 = inverted_index_->GetCountForCluster(1, 2);
+  EXPECT_EQ(0, count_1);
+  int count_2 = inverted_index_->GetCountForCluster(2, 3);
+  EXPECT_EQ(0, count_2);
+}
+
 int main(int argc, char* argv[]) {
   google::ParseCommandLineFlags(&argc, &argv, true);
   google::InitGoogleLogging(argv[0]);
