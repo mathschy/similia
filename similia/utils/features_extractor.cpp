@@ -139,13 +139,13 @@ std::vector<float> FeaturesExtractor::ExtractFeatures(const cv::Mat& img) {
     VLOG(1) << "Forwarding";
     net_->Forward();
     VLOG(1) << "Forwarded";
-    LOG(INFO) << "num_extracted_layers = " << num_extracted_layers;
+    VLOG(1) << "num_extracted_layers = " << num_extracted_layers;
     for (std::size_t i = 0; i < num_extracted_layers; ++i) { // only 1 for us
       const shared_ptr<Blob<float>> feature_blob = net_->blob_by_name(blob_names_[i]);
       int batch_size = feature_blob->num();
       int dim_features = feature_blob->count() / batch_size;
       const float* feature_blob_data;
-      LOG(INFO) << "batch_size = " << batch_size;
+      VLOG(1) << "batch_size = " << batch_size;
       for (int n = 0; n < batch_size; ++n) {
         feature_blob_data = feature_blob->cpu_data() + feature_blob->offset(n);
         LOG(INFO) << "dim_features = " << dim_features;
